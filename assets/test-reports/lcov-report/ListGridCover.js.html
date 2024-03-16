@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ListGridCover.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> ListGridCover.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react'
+import LongPress from 'react-long';
+import ItemCover from './ItemCover'
+import RatingStars from './RatingStars'
+import ReadInStore from './ReadInStore'
+import defaultBook from '../../images/default_book.png'
+import ListCoverIcons from './ListCoverIcons'
+&nbsp;
+import '../../style-dist/components/ListGridCover.css'
+import '../../style-dist/components/ReadInStore.css'
+import textReplace from '../lib/i18n';
+import KEY from '../lib/constants/languages/keys';
+&nbsp;
+//
+// Extend the ItemCover component to allow for easy default image loading
+// 
+class ListGridCover extends ItemCover {
+&nbsp;
+<span class="fstat-no" title="function not covered" >  co</span>nstructor() {
+<span class="cstat-no" title="statement not covered" >    super();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.LONG_PRESS_TIMEOUT = 600;</span>
+&nbsp;
+    // Bind methods
+<span class="cstat-no" title="statement not covered" >    this.handleLongPress = this.handleLongPress.bind(this);</span>
+<span class="cstat-no" title="statement not covered" >    this.openPdp = this.openPdp.bind(this);</span>
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  re</span>nder() {
+    const loading = <span class="cstat-no" title="statement not covered" >this.props.loading;</span>
+    const eanObj = <span class="cstat-no" title="statement not covered" >this.props.eanObj;</span>
+    const isComingSoon = <span class="cstat-no" title="statement not covered" >eanObj.isComingSoon;</span>
+    const isInLibrary = <span class="cstat-no" title="statement not covered" >this.props.isInLibrary;</span>
+    const availableFormat = <span class="cstat-no" title="statement not covered" >eanObj.availableFormats;</span>
+    const availableCredit = <span class="cstat-no" title="statement not covered" >eanObj.numberOfCredits;</span>
+    const productData = <span class="cstat-no" title="statement not covered" >this.props.productData;</span>
+    const displayAllFormats = <span class="cstat-no" title="statement not covered" >productData ? productData.listFormatType === 'Mixed' : false;</span>
+    const displayAlaCartePrice = <span class="cstat-no" title="statement not covered" >productData ? productData.displayAlaCartePrice === 'true' : false;</span>
+    const displayCredit = <span class="cstat-no" title="statement not covered" >productData ? productData.displayCredit === 'true' : false;</span>
+    const isAudio = <span class="cstat-no" title="statement not covered" >eanObj.productType === 'AUDIOBOOK';</span>
+    const narrator = <span class="cstat-no" title="statement not covered" >eanObj.narrator ? (`${textReplace(KEY.read_by)}: ` + eanObj.narrator) : '';</span>
+    const loadingAriaAttribs = <span class="cstat-no" title="statement not covered" >{</span>
+      "aria-busy": true, "aria-live": "off"
+    };
+&nbsp;
+    let isPriceNaN = <span class="cstat-no" title="statement not covered" >isNaN(Number(eanObj.price))</span>
+    let priceValue = <span class="cstat-no" title="statement not covered" >isPriceNaN ? '' : Number(eanObj.price).toFixed(2);</span>
+    let price = <span class="cstat-no" title="statement not covered" >'';</span>
+    let freeBook = <span class="cstat-no" title="statement not covered" >false;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (priceValue === "0.00" || priceValue === 0 || priceValue === '0') {</span>
+<span class="cstat-no" title="statement not covered" >      price = textReplace(KEY.free);</span>
+<span class="cstat-no" title="statement not covered" >      freeBook = true;</span>
+    }
+    else <span class="cstat-no" title="statement not covered" >if (priceValue !== '') {</span>
+<span class="cstat-no" title="statement not covered" >      price = '$' + priceValue;</span>
+    }
+&nbsp;
+    // If the ean object is missing or malformed show something nice
+    // However, if we are still loading conten do nt show this.
+<span class="cstat-no" title="statement not covered" >    if ((!eanObj || !eanObj.ean) &amp;&amp; !loading) {</span>
+&nbsp;
+      // Can show "filler" covers at the end of lists to keep the "grid" shape
+      // and prevent the last cover(s) from centering
+<span class="cstat-no" title="statement not covered" >      return &lt;div className={'list-grid-cover error not-found' + (this.props.filler ? ' filler' : '')}&gt;</span>
+        &lt;img className="cover" src={defaultBook} alt={textReplace(KEY.loading)} /&gt;
+        &lt;div className={window.SHOW_AUDIOBOOKS ? "audiobook-item-details" : "item-details"}&gt;
+          &lt;RatingStars rating={0} /&gt;
+          &lt;div className="price"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;;
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return (</span>
+      &lt;LongPress
+      onLongPress={this.handleLongPress}
+      time={this.LONG_PRESS_TIMEOUT}&gt;
+      &lt;div {...(loading ? loadingAriaAttribs : { "aria-live": "off" })} className={'list-grid-cover' + (loading ? ' loading' : '')}
+        ref={<span class="fstat-no" title="function not covered" >el</span> =&gt; <span class="cstat-no" title="statement not covered" >this.coverEl = el}</span>
+        onClick={this.openPdp}&gt;
+          {
+            !this.state.isImageEmpty ?
+              &lt;div&gt;&lt;img className="cover" src={this.state.imageSrc} alt={eanObj.title} /&gt;
+                {(isInLibrary || this.state.purchase) &amp;&amp;
+                  &lt;div className={"purchased" + (isComingSoon ? " pre-ordered" : "")} &gt; &lt;span&gt;{isComingSoon ? textReplace(KEY.pre_ordered) : textReplace(KEY.purchased)}&lt;/span&gt;&lt;/div&gt;
+                }
+              &lt;/div&gt;
+              :
+              &lt;div className="no-image-cover"&gt;
+                &lt;div className="title ellipses lines-2"&gt;
+                  {eanObj.title}
+                &lt;/div&gt;
+                &lt;div className="author ellipses lines-2"&gt;
+                  {eanObj.author}
+                &lt;/div&gt;
+              &lt;/div&gt;
+          }
+&nbsp;
+        &lt;div className="readinstore-container"&gt;
+          {!isComingSoon &amp;&amp; !isInLibrary &amp;&amp; !freeBook &amp;&amp; &lt;ReadInStore inStore={this.props.inStore &amp;&amp; this.props.eanObj.isBrowsable === true &amp;&amp; this.props.eanObj.browseMinutes &gt; 0} /&gt;}
+        &lt;/div&gt;
+&nbsp;
+        {
+          // Only show the cover on EPD Home
+          window.Device.isEpdHome ? '' :
+&nbsp;
+            &lt;div className="item-details"&gt;
+              {
+                this.props.showDetails ? &lt;div className="title-author"&gt;
+                  &lt;div className="title ellipses lines-2"&gt;
+                    {eanObj.title}
+                  &lt;/div&gt;
+                  { !loading &amp;&amp; &lt;div className="author ellipses"&gt;By {eanObj.author}&lt;/div&gt;}
+                  &lt;div&gt;
+                    &lt;div className="narrator ellipses"&gt;
+                      {narrator}
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt; : ''
+              }
+&nbsp;
+              {isComingSoon ?
+                &lt;div className="pre-order"&gt;{textReplace(KEY.pre_order)}&lt;/div&gt;
+                :
+                &lt;RatingStars rating={eanObj.rating} /&gt;
+              }
+&nbsp;
+              &lt;div className="price"&gt;
+              { !isInLibrary &amp;&amp; !isPriceNaN ?
+                    &lt;ListCoverIcons
+                      isAudio={isAudio}
+                      isGrid={true}
+                      priceValue={priceValue}
+                      price={price}
+                      availableFormat={availableFormat}
+                      availableCredit={availableCredit}
+                      displayAllFormats={displayAllFormats}
+                      displayAlaCartePrice={displayAlaCartePrice}
+                      displayCredit={displayCredit}&gt;
+                    &lt;/ListCoverIcons&gt; : '\u00A0'}
+              &lt;/div&gt;
+            &lt;/div&gt;
+        }
+      &lt;/div&gt;
+      &lt;/LongPress&gt;
+&nbsp;
+    );
+  }
+&nbsp;
+  setPurchaseFlag = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >    this.setState({ purchase: true });</span>
+<span class="cstat-no" title="statement not covered" >    this.props.updateLibrary();</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  op</span>enPdp(evt) {
+<span class="cstat-no" title="statement not covered" >    evt.preventDefault();</span>
+    const eanObj = <span class="cstat-no" title="statement not covered" >this.props.eanObj;</span>
+<span class="cstat-no" title="statement not covered" >    this.props.onClick(this.props.index); </span>// Send back the EAN position in the list
+&nbsp;
+    // Check for an Internet connection (only EPD Home shows offline - native caches it, not the normal Shop)
+<span class="cstat-no" title="statement not covered" >    window.Device.isConnected(<span class="fstat-no" title="function not covered" >co</span>nnected =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      if (connected) {</span>
+<span class="cstat-no" title="statement not covered" >        window.sessionStorage.setItem("hash_before_entering_pdp",window.location.hash);</span>
+<span class="cstat-no" title="statement not covered" >        window.listCover = this;</span>
+<span class="cstat-no" title="statement not covered" >        window.Device.showProductDetails(eanObj.title, eanObj.ean);</span>
+      }
+      else {
+<span class="cstat-no" title="statement not covered" >        window.Device.showToast({</span>
+          message: textReplace(KEY.internet_connection_needed)
+        });
+      }
+    });
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  ha</span>ndleLongPress(evt) {
+    const eanObj = <span class="cstat-no" title="statement not covered" >this.props.eanObj;</span>
+    const imageUrl = <span class="cstat-no" title="statement not covered" >this.state.imageSrc;</span>
+&nbsp;
+    const rect = <span class="cstat-no" title="statement not covered" >this.coverEl.getBoundingClientRect();</span>
+    const centerY = <span class="cstat-no" title="statement not covered" >Math.round(rect.top + (rect.height / 2));</span>
+    const centerX = <span class="cstat-no" title="statement not covered" >Math.round(rect.left + (rect.width / 2));</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    console.log('LONG PRESS');</span>
+<span class="cstat-no" title="statement not covered" >    window.sessionStorage.setItem("hash_before_entering_pdp",window.location.hash);</span>
+<span class="cstat-no" title="statement not covered" >    window.listCover = this;</span>
+<span class="cstat-no" title="statement not covered" >    window.Device.showManageActionSheet(eanObj.ean, centerX, centerY, imageUrl);</span>
+  }
+}
+&nbsp;
+export default ListGridCover;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jan 04 2024 21:31:55 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>

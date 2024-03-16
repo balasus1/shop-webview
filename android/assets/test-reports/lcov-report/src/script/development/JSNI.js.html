@@ -1,0 +1,2610 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/script/development/JSNI.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/script/development</a> JSNI.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457
+458
+459
+460
+461
+462
+463
+464
+465
+466
+467
+468
+469
+470
+471
+472
+473
+474
+475
+476
+477
+478
+479
+480
+481
+482
+483
+484
+485
+486
+487
+488
+489
+490
+491
+492
+493
+494
+495
+496
+497
+498
+499
+500
+501
+502
+503
+504
+505
+506
+507
+508
+509
+510
+511
+512
+513
+514
+515
+516
+517
+518
+519
+520
+521
+522
+523
+524
+525
+526
+527
+528
+529
+530
+531
+532
+533
+534
+535
+536
+537
+538
+539
+540
+541
+542
+543
+544
+545
+546
+547
+548
+549
+550
+551
+552
+553
+554
+555
+556
+557
+558
+559
+560
+561
+562
+563
+564
+565
+566
+567
+568
+569
+570
+571
+572
+573
+574
+575
+576
+577
+578
+579
+580
+581
+582
+583
+584
+585
+586
+587
+588
+589
+590
+591
+592
+593
+594
+595
+596
+597
+598
+599
+600
+601
+602
+603
+604
+605
+606
+607
+608
+609
+610
+611
+612
+613
+614
+615
+616
+617
+618
+619
+620
+621
+622
+623
+624
+625
+626
+627
+628
+629
+630
+631
+632
+633
+634
+635
+636
+637
+638
+639
+640
+641
+642
+643
+644
+645
+646
+647
+648
+649
+650
+651
+652
+653
+654
+655
+656
+657
+658
+659
+660
+661
+662
+663
+664
+665
+666
+667
+668
+669
+670
+671
+672
+673
+674
+675
+676
+677
+678
+679
+680
+681
+682
+683
+684
+685
+686
+687
+688
+689
+690
+691
+692
+693
+694
+695
+696
+697
+698
+699
+700
+701
+702
+703
+704
+705
+706
+707
+708
+709
+710
+711
+712
+713
+714
+715
+716
+717
+718
+719
+720
+721
+722
+723
+724
+725
+726
+727
+728
+729
+730
+731
+732
+733
+734
+735
+736
+737
+738
+739
+740
+741
+742
+743
+744
+745
+746
+747
+748
+749
+750
+751
+752
+753
+754
+755
+756
+757
+758
+759
+760
+761
+762
+763
+764
+765
+766
+767
+768
+769
+770
+771
+772
+773
+774
+775
+776
+777
+778
+779
+780
+781
+782
+783
+784
+785
+786
+787
+788
+789
+790
+791
+792
+793
+794
+795
+796
+797
+798
+799
+800
+801
+802
+803
+804
+805
+806
+807
+808
+809
+810
+811
+812
+813
+814
+815
+816
+817
+818
+819
+820
+821
+822
+823
+824
+825
+826
+827
+828
+829
+830
+831
+832
+833
+834
+835
+836
+837
+838
+839
+840
+841
+842
+843
+844
+845
+846
+847
+848
+849
+850
+851
+852
+853
+854
+855
+856</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//
+// This is a JSNI simulation for browser testing
+//
+&nbsp;
+const JSNI = (() =&gt; {
+  let SESSION_DATA, IN_LIBRARY_ITEMS, RECENT_LIBRARY_ITEMS, FAVORITE_CATEGORIES_DATA, LIBRARY_DATA, customers, devices;
+&nbsp;
+  // TEST_PURCHASE = {
+  //   ean: "9781559366090",
+  //   images: {
+  //     ProductPageBookCover: {
+  //       path: "http://img1.imagesbn.com/p/9781559366090_p0_v1_s170x364_e404.jpg"
+  //     }
+  //   },
+  //   author: "Tracy Letts",
+  //   title: "August: Osage County",
+  //   filePath: "/data/data/com.nook.app/files/B&amp;N Downloads/Books/9781559366090_epub.v4.epub",
+  //   productType: 1,
+  //   deviceId: 8887178,
+  //   lendingState: "NONE",
+  //   downloadRestrictionCause: "DOWNLOAD_RESTRICTION_NONE",
+  //   isDownloadable: true
+  // };
+&nbsp;
+  IN_LIBRARY_ITEMS = {
+    "9780440335160": {
+      isDownloaded: 0,
+      isInLibrary: 1,
+      isSample: 0
+    },
+    "9780698168572": {
+      isDownloaded: 0,
+      isInLibrary: 1,
+      isSample: 0
+    }
+  };
+&nbsp;
+  RECENT_LIBRARY_ITEMS = {
+    "9781455584239": {
+      isDownloaded: 0,
+      isInLibrary: 1,
+      isSample: 0
+    },
+    "9780440335160": {
+      isDownloaded: 0,
+      isInLibrary: 1,
+      isSample: 0
+    },
+    "9780307596734": {
+      isDownloaded: 0,
+      isInLibrary: 1,
+      isSample: 0
+    },
+    "9780759525795": {
+      isDownloaded: 0,
+      isInLibrary: 1,
+      isSample: 0
+    },
+    "9780545388719": {
+      isDownloaded: 0,
+      isInLibrary: 1,
+      isSample: 0
+    },
+&nbsp;
+    // These will show up for side-loaded content on Android
+    // We filter them out in the Device class
+    "c6ccfeb08806abce0407ac774886c36f17f40f66a80f9e037e40aefb9a71e0ad": {
+      isDownloaded: 0,
+      isInLibrary: 1,
+      isSample: 0
+    },
+    "478f0d393e6c3777f10531484abe14451be07e2edab8b5087a5209d7d7d663d2": {
+      isDownloaded: 0,
+      isInLibrary: 1,
+      isSample: 0
+    }
+  };
+&nbsp;
+  // Legacy Array format. Used before 5.0
+  //
+  // RECENT_LIBRARY_ITEMS = [
+  //   {ean: "9780307377586",
+  //   images: {
+  //     ProductPageBookCover: {
+  //       path: "http://img1.imagesbn.com/p/9780307377586_p0_v1_s170x364_e404.jpg",
+  //     },
+  //   },
+  //   author: "Håkan Nesser",
+  //   title: "Mind\'s Eye (Inspector Van Veeteren Series #1)",
+  //   filePath: "/data/data/com.nook.app/files/B&amp;N Downloads/Books/9780307377586_epub.v4.epub",
+  //   productType: 1,
+  //   deviceId: 8887178,
+  //   lendingState: "NONE",
+  //   downloadRestrictionCause: "DOWNLOAD_RESTRICTION_NONE",
+  //   isDownloadable: true,
+  //   lendingState: "NONE",}
+  // ,
+  //   {ean: "9780440335160",
+  //   images: {
+  //     ProductPageBookCover: {
+  //       path: "http://img1.imagesbn.com/p/9780440335160_p0_v3_s170x364_e404.jpg",
+  //     },
+  //   },
+  //   author: "Diana Gabaldon",
+  //   title: "Outlander (Outlander Series #1)",
+  //   xfilePath: "/data/data/com.nook.app/files/B&amp;N Downloads/Books/9780440335160_epub.v29.epub",
+  //   productType: 1,
+  //   deviceId: 8887178,
+  //   lendingState: "NONE",
+  //   downloadRestrictionCause: "DOWNLOAD_RESTRICTION_NONE",
+  //   isDownloadable: true,
+  //   lendingState: "NONE",}
+  // ,
+  //   {ean: "9780307596734",
+  //   images: {
+  //     ProductPageBookCover: {
+  //       path: "http://img1.imagesbn.com/p/9780307596734_p0_v2_s170x364_e404.jpg",
+  //     },
+  //   },
+  //   author: "Don Bartlett and Jo Nesbo",
+  //   title: "The Redeemer (Harry Hole Series #6)",
+  //   xfilePath: "/data/data/com.nook.app/files/B&amp;N Downloads/Books/9780307596734_epub.v4.epub",
+  //   productType: 1,
+  //   deviceId: 8887178,
+  //   lendingState: "NONE",
+  //   downloadRestrictionCause: "DOWNLOAD_RESTRICTION_NONE",
+  //   isDownloadable: true,
+  //   lendingState: "NONE",}
+  // ,
+  //   {ean: "9780759525795",
+  //   images: {
+  //     ProductPageBookCover: {
+  //       path: "http://img2.imagesbn.com/p/9780759525795_p0_v9_s170x364_e404.jpg",
+  //     },
+  //   },
+  //   author: "Michael Connelly",
+  //   title: "The Concrete Blonde (Harry Bosch Series #3)",
+  //   filePath: "/data/data/com.nook.app/files/B&amp;N Downloads/Books/9780759525795_epub.v13.epub",
+  //   productType: 1,
+  //   deviceId: 8887178,
+  //   lendingState: "NONE",
+  //   downloadRestrictionCause: "DOWNLOAD_RESTRICTION_NONE",
+  //   isDownloadable: true,
+  //   lendingState: "NONE",}
+  // ,
+  //   {ean: "2949000750639",
+  //   images: {
+  //     ProductPageBookCover: {
+  //       path: "http://img1.imagesbn.com/p/2949000573870_p0_v1_s170x364_e404.jpg",
+  //     },
+  //   },
+  //   author: "Unkown",
+  //   title: "Dragontagious",
+  //   productType: 6,
+  //   deviceId: 8887178,
+  //   downloadRestrictionCause: "DOWNLOAD_RESTRICTION_NONE",
+  //   isDownloadable: true,
+  //   lendingState: "NONE",}
+  // ]
+&nbsp;
+  FAVORITE_CATEGORIES_DATA = [
+      {
+      "id": "18933",
+      "label": "Biography"
+      }
+  ];
+&nbsp;
+  LIBRARY_DATA = [
+    {
+      ean: "9781455584239",
+      images: {
+        ProductPageBookCover: {
+          path: "http://img1.imagesbn.com/p/9780307377586_p0_v1_s170x364_e404.jpg"
+        }
+      },
+      author: "Håkan Nesser",
+      title: "Mind's Eye (Inspector Van Veeteren Series #1)",
+      filePath: "/data/data/com.nook.app/files/B&amp;N Downloads/Books/9780307377586_epub.v4.epub",
+      productType: 1,
+      deviceId: 8887178,
+      lendingState: "NONE",
+      downloadRestrictionCause: "DOWNLOAD_RESTRICTION_NONE",
+      isDownloadable: true
+    }, {
+      ean: "9780440335160",
+      images: {
+        ProductPageBookCover: {
+          path: "http://img1.imagesbn.com/p/9780440335160_p0_v3_s170x364_e404.jpg"
+        }
+      },
+      author: "Diana Gabaldon",
+      title: "Outlander (Outlander Series #1)",
+      xfilePath: "/data/data/com.nook.app/files/B&amp;N Downloads/Books/9780440335160_epub.v29.epub",
+      productType: 1,
+      deviceId: 8887178,
+      lendingState: "NONE",
+      downloadRestrictionCause: "DOWNLOAD_RESTRICTION_NONE",
+      isDownloadable: true
+    }, {
+      ean: "9780307596734",
+      images: {
+        ProductPageBookCover: {
+          path: "http://img1.imagesbn.com/p/9780307596734_p0_v2_s170x364_e404.jpg"
+        }
+      },
+      author: "Don Bartlett and Jo Nesbo",
+      title: "The Redeemer (Harry Hole Series #6)",
+      xfilePath: "/data/data/com.nook.app/files/B&amp;N Downloads/Books/9780307596734_epub.v4.epub",
+      productType: 1,
+      deviceId: 8887178,
+      lendingState: "NONE",
+      downloadRestrictionCause: "DOWNLOAD_RESTRICTION_NONE",
+      isDownloadable: true
+    }, {
+      ean: "9780759525795",
+      images: {
+        ProductPageBookCover: {
+          path: "http://img2.imagesbn.com/p/9780759525795_p0_v9_s170x364_e404.jpg"
+        }
+      },
+      author: "Michael Connelly",
+      title: "The Concrete Blonde (Harry Bosch Series #3)",
+      filePath: "/data/data/com.nook.app/files/B&amp;N Downloads/Books/9780759525795_epub.v13.epub",
+      productType: 1,
+      deviceId: 8887178,
+      lendingState: "NONE",
+      downloadRestrictionCause: "DOWNLOAD_RESTRICTION_NONE",
+      isDownloadable: true
+    }, {
+      ean: "2949000750639",
+      images: {
+        ProductPageBookCover: {
+          path: "http://img1.imagesbn.com/p/2949000573870_p0_v1_s170x364_e404.jpg"
+        }
+      },
+      author: "Unkown",
+      title: "Dragontagious",
+      productType: 6,
+      deviceId: 8887178,
+      downloadRestrictionCause: "DOWNLOAD_RESTRICTION_NONE",
+      isDownloadable: true,
+      lendingState: "NONE"
+    }, {
+      ean: "2949000660747",
+      images: {
+        ProductPageBookCover: {
+          path: "http://img1.imagesbn.com/p/2949000639118_p0_v1_s170x364_e404.jpg"
+        }
+      },
+      author: "Unkown",
+      title: "Pilot",
+      productType: 6,
+      deviceId: 8887178,
+      downloadRestrictionCause: "DOWNLOAD_RESTRICTION_NONE",
+      isDownloadable: true,
+      lendingState: "NONE"
+    }, {
+      ean: "9781400076314",
+      images: {
+        ProductPageBookCover: {
+          path: "http://img1.imagesbn.com/p/9781400076314_p0_v1_s170x364_e404.jpg"
+        }
+      },
+      author: "Erik Larson",
+      title: "Devil in the White City",
+      filePath: "/data/data/com.nook.app/files/B&amp;N Downloads/Books/9781400076314_epub.v13.epub",
+      productType: 1,
+      deviceId: 8887178,
+      downloadRestrictionCause: "DOWNLOAD_RESTRICTION_NONE",
+      isDownloadable: true,
+      lendingState: "NONE"
+    }, {
+      ean: "9780545388719",
+      images: {
+        ProductPageBookCover: {
+          path: "http://img1.imagesbn.com/p/9780545388719_p0_v1_s170x364_e404.jpg"
+        }
+      },
+      author: "Libba Bray",
+      title: "Beauty Queens",
+      filePath: "/data/data/com.nook.app/files/B&amp;N Downloads/Books/9780545388719_epub.v13.epub",
+      productType: 1,
+      deviceId: 8887178,
+      downloadRestrictionCause: "DOWNLOAD_RESTRICTION_NONE",
+      isDownloadable: true,
+      lendingState: "LENT"
+    }, {
+      ean: "2949001021189",
+      images: {
+        ProductPageBookCover: {
+          path: "http://img1.imagesbn.com/p/2949001021189_p0_v1_s170x364_e404.jpg"
+        }
+      },
+      author: "Unknown",
+      title: "Dawn of the Planet of the Apes",
+      xfilePath: "/data/data/com.nook.app/files/B&amp;N Downloads/Videos/2949001021189_epub.v4.epub",
+      productType: 5,
+      deviceId: 8887178,
+      downloadRestrictionCause: "DOWNLOAD_RESTRICTION_NONE",
+      isDownloadable: true,
+      isRental: true,
+      rentalState: "RENTED_NOT_WATCHED",
+      rentalMillisRemaining: 5000
+    }, {
+      ean: "2949000963800",
+      images: {
+        ProductPageBookCover: {
+          path: "http://img1.imagesbn.com/p/2949000963800_p0_v1_s170x364_e404.jpg"
+        }
+      },
+      author: "Unknown",
+      title: "Captain America: The Winter Soldier",
+      xfilePath: "/data/data/com.nook.app/files/B&amp;N Downloads/Videos/2949000963800_epub.v4.epub",
+      productType: 5,
+      deviceId: 8887178,
+      downloadRestrictionCause: "DOWNLOAD_RESTRICTION_NONE",
+      isDownloadable: true,
+      isRental: false,
+      rentalState: "",
+      rentalMillisRemaining: 0
+    }, {
+      ean: "2949001021042",
+      images: {
+        ProductPageBookCover: {
+          path: "http://img1.imagesbn.com/p/2949001021042_p0_v1_s170x364_e404.jpg"
+        }
+      },
+      author: "Unknown",
+      title: "Maleficent",
+      filePath: "/data/data/com.nook.app/files/B&amp;N Downloads/Videos/2949001021042_epub.v4.epub",
+      productType: 5,
+      deviceId: 8887178,
+      downloadRestrictionCause: "DOWNLOAD_RESTRICTION_NONE",
+      isDownloadable: true,
+      isRental: true,
+      rentalState: "RENTED_NOT_WATCHED",
+      rentalMillisRemaining: 600000
+    }, {
+      ean: "9780393350661",
+      images: {
+        ProductPageBookCover: {
+          path: "http://img1.imagesbn.com/p/9780393350661_p0_v1_s170x364_e404.jpg"
+        }
+      },
+      author: "Eric Lomax",
+      title: "The Railway Man",
+      xfilePath: "/data/data/com.nook.app/files/B&amp;N Downloads/Books/9780393350661_epub.v4.epub",
+      productType: 1,
+      deviceId: 8887178,
+      lendingState: "NONE",
+      downloadRestrictionCause: "DOWNLOAD_RESTRICTION_NONE",
+      isDownloadable: true
+    }, {
+      ean: "9781559366090",
+      images: {
+        ProductPageBookCover: {
+          path: "http://img1.imagesbn.com/p/9781559366090_p0_v1_s170x364_e404.jpg"
+        }
+      },
+      author: "Tracy Letts",
+      title: "August: Osage County",
+      filePath: "/data/data/com.nook.app/files/B&amp;N Downloads/Books/9781559366090_epub.v4.epub",
+      productType: 1,
+      deviceId: 8887178,
+      downloadRestrictionCause: "DOWNLOAD_RESTRICTION_NONE",
+      isDownloadable: true,
+      lendingState: "BORROWED"
+    }
+  ];
+&nbsp;
+  customers = {
+    US: {
+      newUser: { // example@bn.com
+        country: "US",
+        retailer: "BN2",
+        locale: "en_US",
+        accountId: "61997512",
+        customerId: "Ks2TtS1cq1aLMnm0",
+        profileId: "33787393",
+        childProfile: false,
+        group: [],
+        gpbUrl: "https://bncs.barnesandnoble.com/bncloud/serviceD?version=1"
+      },
+      generic: {
+        country: "US",
+        retailer: "BN2",
+        locale: "en_US",
+        accountId: "14511688",
+        customerId: "n70sXMlPxdMaHFh2",
+        profileId: "47",
+        childProfile: false,
+        group: [],
+        gpbUrl: "https://bncs.barnesandnoble.com/bncloud/serviceD?version=1"
+      },
+      child: {
+        country: "US",
+        retailer: "BN2",
+        locale: "en_US",
+        accountId: "27723941",
+        customerId: "n70sXMlPxdMaHFh2",
+        profileId: "20470191",
+        childProfile: true,
+        group: [],
+        gpbUrl: "https://bncs.barnesandnoble.com/bncloud/serviceD?version=1"
+      },
+      poolBNewUser: { // newUser@bn.com
+        country: "US",
+        retailer: "BN2",
+        locale: "en_US",
+        accountId: "137189440",
+        customerId: "N0056POkG64JZWk0",
+        profileId: "191835259",
+        childProfile: false,
+        group: [],
+        gpbUrl: "https://bncs-b.barnesandnoble.com/bncloud/serviceD?version=1"
+      },
+      poolBOldUser: { // newUser@bn.com
+        country: "US",
+        retailer: "BN2",
+        locale: "en_US",
+        accountId: "59693713",
+        customerId: "Mx29CgxZEl4JZWk0",
+        profileId: "31213813",
+        childProfile: false,
+        group: [],
+        gpbUrl: "https://bncs-b.barnesandnoble.com/bncloud/serviceD?version=1"
+      },
+      childQA: {
+        country: "US",
+        retailer: "BN2",
+        locale: "en_US",
+        accountId: "11228205",
+        customerId: "100Cn9vjIRJYO810",
+        profileId: "400656",
+        childProfile: true,
+        group: [],
+        gpbUrl: "https://csqa.barnesandnoble.com/bncloud/serviceD?version=1"
+      },
+      badCategoryPods: {
+        country: "US",
+        retailer: "BN2",
+        locale: "en_US",
+        accountId: "42221557",
+        customerId: "n70sXMlPxdMaHFh2",
+        profileId: "33774049",
+        childProfile: true,
+        group: [],
+        gpbUrl: "https://bncs.barnesandnoble.com/bncloud/serviceD?version=1"
+      },
+      steve: {
+        country: "US",
+        retailer: "BN2",
+        locale: "en_US",
+        accountId: "16500736",
+        customerId: "nH0tpzQQ7Swqs8C1",
+        profileId: "18050",
+        group: []
+      },
+      noAffinity: {
+        country: "US",
+        retailer: "BN2",
+        locale: "en_US",
+        accountId: "63246354",
+        customerId: "Ni0EEUjdV34JZWk0",
+        profileId: "34659323",
+        gpbUrl: "https://bncs.barnesandnoble.com/bncloud/serviceD?version=1",
+        group: []
+      },
+      badAffinities: {
+        country: "US",
+        retailer: "BN2",
+        locale: "en_US",
+        accountId: "62470829",
+        customerId: "tg5zeyfcc3aLMnm0",
+        profileId: "34111960",
+        gpbUrl: "https://bncs.barnesandnoble.com/bncloud/serviceD?version=1",
+        group: []
+      },
+      noRelatedCategories: {
+        country: "US",
+        retailer: "BN2",
+        locale: "en_US",
+        accountId: "64668721",
+        customerId: "Sn2oh7bfeoKpxel0",
+        profileId: "50968485",
+        gpbUrl: "https://bncs.barnesandnoble.com/bncloud/serviceD?version=1",
+        group: []
+      },
+      qa: {
+        country: "US",
+        retailer: "BN2",
+        locale: "en_US",
+        accountId: "123",
+        customerId: "C00I3xxfV8JYO810",
+        profileId: "123",
+        childProfile: false,
+        gpbUrl: "https://csqa.barnesandnoble.com/bncloud/serviceD?version=1",
+        group: []
+      },
+      qa2: {
+        country: "US",
+        retailer: "BN2",
+        locale: "en_US",
+        accountId: "528447478",
+        customerId: "o00rgVkQ9TJYO810",
+        profileId: "9792",
+        childProfile: false,
+        gpbUrl: "https://csqa2.barnesandnoble.com/bncloud/serviceD?version=1",
+        group: []
+      },
+      noAffinities: {
+        country: "US",
+        retailer: "BN2",
+        locale: "en_US",
+        accountId: "63246354",
+        customerId: "Ni0EEUjdV34JZWk0",
+        profileId: "34659323",
+        gpbUrl: "https://bncs.barnesandnoble.com/bncloud/serviceD?version=1",
+        group: []
+      },
+      jim: {
+        country: "US",
+        retailer: "BN2",
+        locale: "en_US",
+        accountId: "3621713",
+        customerId: "B25Pbab9qL0Z6Jd3",
+        profileId: "552",
+        group: []
+      },
+      ios: {
+        country: "US",
+        retailer: "BN2",
+        locale: "en_US",
+        accountId: "7859800",
+        customerId: "200DgkSO5UujN6K4",
+        profileId: "21246022",
+        group: []
+      }
+    }
+  };
+&nbsp;
+  devices = {
+    paperback7: {
+      deviceId: "111601414",
+      productDeviceId: 133,
+      nookModel: "BNTV450"
+    },
+    avatar7: {
+      deviceId: "111601414",
+      productDeviceId: 134,
+      nookModel: "SGTV100"
+    },
+    avatar10: {
+      deviceId: "111601414",
+      productDeviceId: 133,
+      nookModel: "SGTV300"
+    },
+    avatar96: {
+      deviceId: "111601414",
+      productDeviceId: 133,
+      nookModel: "SM-T560NU"
+    },
+    phone: {
+      deviceId: "111601414",
+      productDeviceId: 132,
+      nookModel: "ANDMBL"
+    },
+    tablet: {
+      deviceId: "111601414",
+      productDeviceId: 130,
+      nookModel: "ANDTBL"
+    },
+    piper: {
+      deviceId: "111601414",
+      productDeviceId: 141,
+      nookModel: "BNRV510"
+    },
+    jay: {
+      deviceId: "111601414",
+      productDeviceId: 142,
+      nookModel: "BNRV520"
+    },
+    iphone: {
+      deviceId: "111601414",
+      productDeviceId: 127,
+      nookModel: "IPHENTC"
+    },
+    quill: {
+      deviceId: "111601414",
+      productDeviceId: 151,
+      nookModel: "BNRV700"
+    },
+  };
+&nbsp;
+&nbsp;
+  //
+  // Change this to test different session features such as
+  // child profile, QA, iOS, etc.
+  // 
+  SESSION_DATA = {
+    customer: customers.US.generic,
+    device: devices.iphone,
+    purchasePopupExists: 'true',
+    appVersion: '6.6.0',
+    showAudiobooks: 'true',
+    oneCreditPrice: '$14.99',
+    purchaseDisabled: 'false',
+    noAudiobookSupport: 'false',
+    shopPermissionEnable: 'true'
+  };
+&nbsp;
+  function JSNI() {
+    this.isMock = true;
+  }
+&nbsp;
+  JSNI.prototype.getSessionInfo = function() {
+    return JSON.stringify(SESSION_DATA);
+  };
+&nbsp;
+  JSNI.prototype.getSessionInfoAsync = <span class="fstat-no" title="function not covered" >fu</span>nction(success, failure) {
+    var handler;
+<span class="cstat-no" title="statement not covered" >    handler = (<span class="fstat-no" title="function not covered" >fu</span>nction(_this) {</span>
+<span class="cstat-no" title="statement not covered" >      return <span class="fstat-no" title="function not covered" >fu</span>nction() {</span>
+<span class="cstat-no" title="statement not covered" >        return window[success](_this.getSessionInfo());</span>
+      };
+    })(this);
+<span class="cstat-no" title="statement not covered" >    return setTimeout(handler, 100);</span>
+  };
+&nbsp;
+  JSNI.prototype.getCategories = <span class="fstat-no" title="function not covered" >fu</span>nction(key) {
+<span class="cstat-no" title="statement not covered" >    console.log("JSNI/getCategories: " + key);</span>
+<span class="cstat-no" title="statement not covered" >    return (localStorage.getItem(key) || "");</span>
+  };
+&nbsp;
+  JSNI.prototype.setCategories = <span class="fstat-no" title="function not covered" >fu</span>nction(key, value) {
+<span class="cstat-no" title="statement not covered" >    console.log("JSNI/setCategories: ", key);</span>
+<span class="cstat-no" title="statement not covered" >    return (localStorage.setItem(key, value));</span>
+  };
+&nbsp;
+  JSNI.prototype.getCategoriesAsync = <span class="fstat-no" title="function not covered" >fu</span>nction(key, success, failure) {
+    var handler;
+<span class="cstat-no" title="statement not covered" >    handler = (<span class="fstat-no" title="function not covered" >fu</span>nction(_this) {</span>
+<span class="cstat-no" title="statement not covered" >      return <span class="fstat-no" title="function not covered" >fu</span>nction() {</span>
+<span class="cstat-no" title="statement not covered" >        return window[success](_this.getCategories(key));</span>
+      };
+    })(this);
+<span class="cstat-no" title="statement not covered" >    return setTimeout(handler, 100);</span>
+  };
+&nbsp;
+  JSNI.prototype.getExploreYourFavorites = <span class="fstat-no" title="function not covered" >fu</span>nction(key) {
+<span class="cstat-no" title="statement not covered" >    console.log("JSNI/getExploreYourFavorites: " + key);</span>
+<span class="cstat-no" title="statement not covered" >    return (localStorage.getItem(key) || "");</span>
+  };
+&nbsp;
+  JSNI.prototype.getExploreYourFavoritesAsync = <span class="fstat-no" title="function not covered" >fu</span>nction(key, success) {
+    var handler;
+<span class="cstat-no" title="statement not covered" >    handler = (<span class="fstat-no" title="function not covered" >fu</span>nction(_this) {</span>
+<span class="cstat-no" title="statement not covered" >      return <span class="fstat-no" title="function not covered" >fu</span>nction() {</span>
+<span class="cstat-no" title="statement not covered" >        return window[success](_this.getExploreYourFavorites(key));</span>
+      };
+    })(this);
+<span class="cstat-no" title="statement not covered" >    return setTimeout(handler, 100);</span>
+  };
+&nbsp;
+  JSNI.prototype.getGiftCardInfo = <span class="fstat-no" title="function not covered" >fu</span>nction(success, fail) {
+    var handler;
+<span class="cstat-no" title="statement not covered" >    handler = <span class="fstat-no" title="function not covered" >fu</span>nction() {</span>
+<span class="cstat-no" title="statement not covered" >      return window[success]({</span>
+        balance: "$5.00",
+        hasBalance: false
+      });
+    };
+<span class="cstat-no" title="statement not covered" >    return setTimeout(handler, 100);</span>
+  };
+&nbsp;
+  JSNI.prototype.getCurrentlyReadingItem = <span class="fstat-no" title="function not covered" >fu</span>nction(success, fail) {
+    var handler;
+<span class="cstat-no" title="statement not covered" >    handler = <span class="fstat-no" title="function not covered" >fu</span>nction() {</span>
+<span class="cstat-no" title="statement not covered" >      return window[success](LIBRARY_DATA[0]);</span>
+    };
+<span class="cstat-no" title="statement not covered" >    return setTimeout(handler, 100);</span>
+  };
+&nbsp;
+  JSNI.prototype.getRecentLibraryItems = <span class="fstat-no" title="function not covered" >fu</span>nction(cnt, success, fail) {
+    var handler;
+<span class="cstat-no" title="statement not covered" >    handler = <span class="fstat-no" title="function not covered" >fu</span>nction() {</span>
+      const items = <span class="cstat-no" title="statement not covered" >RECENT_LIBRARY_ITEMS;</span>
+<span class="cstat-no" title="statement not covered" >      console.log('JSNI/getRecentLibraryItems', items);</span>
+<span class="cstat-no" title="statement not covered" >      return window[success](items);</span>
+    };
+<span class="cstat-no" title="statement not covered" >    return setTimeout(handler, 100);</span>
+  };
+&nbsp;
+  JSNI.prototype.getLibraryItems = function(eans, success, fail) {
+    var handler;
+    handler = <span class="fstat-no" title="function not covered" >fu</span>nction() {
+      let items = <span class="cstat-no" title="statement not covered" >{};</span>
+<span class="cstat-no" title="statement not covered" >      Object.keys(IN_LIBRARY_ITEMS).map(<span class="fstat-no" title="function not covered" >ea</span>n =&gt; <span class="cstat-no" title="statement not covered" >eans.indexOf(ean) &gt;= 0 ? items[ean] = IN_LIBRARY_ITEMS[ean] : null)</span></span>
+<span class="cstat-no" title="statement not covered" >      console.log("JSNI/getLibraryItems: ", items);</span>
+<span class="cstat-no" title="statement not covered" >      return window[success](items);</span>
+    };
+    return setTimeout(handler, 100);
+  };
+&nbsp;
+  
+  JSNI.prototype.closeFavCatModal = <span class="fstat-no" title="function not covered" >fu</span>nction(selectedFavCategories, success, failure) {
+<span class="cstat-no" title="statement not covered" >    return console.log("JSNI/closeFavCatModal: " + JSON.stringify(selectedFavCategories));</span>
+  };
+&nbsp;
+  JSNI.prototype.isSelectedFavInSession = <span class="fstat-no" title="function not covered" >fu</span>nction(cb) {
+<span class="cstat-no" title="statement not covered" >    return console.log(`JSNI NATIVE isSelectedFavInSession:${cb}`);</span>
+  };
+&nbsp;
+  JSNI.prototype.openItem = <span class="fstat-no" title="function not covered" >fu</span>nction(ean) {
+<span class="cstat-no" title="statement not covered" >    return console.log("JSNI/openItem: " + ean);</span>
+  };
+&nbsp;
+  JSNI.prototype.openProductDetails = <span class="fstat-no" title="function not covered" >fu</span>nction(ean) {
+<span class="cstat-no" title="statement not covered" >    console.log('JSNI NATIVE PDP: ', ean)</span>
+  }
+&nbsp;
+  JSNI.prototype.setUpEnabled = <span class="fstat-no" title="function not covered" >fu</span>nction(val) {
+<span class="cstat-no" title="statement not covered" >    return console.log("JSNI/setUpEnabled: " + val);</span>
+  };
+&nbsp;
+  JSNI.prototype.modifyHeader = function(enableBack, title, background, hideTools) {
+    return console.log("JSNI/modifyHeader: ", arguments);
+  };
+&nbsp;
+  JSNI.prototype.tagEvent = function(event, data, context, ltv) {
+    return console.log("JSNI/tagEvent: ", event, data, ltv);
+  };
+&nbsp;
+  JSNI.prototype.tagScreen = function(screen) {
+    return console.log("JSNI/tagScreen: ", screen);
+  };
+&nbsp;
+  JSNI.prototype.showGetConnected = <span class="fstat-no" title="function not covered" >fu</span>nction() {
+<span class="cstat-no" title="statement not covered" >    alert('NATIVE SCREEN: You are not connected to the Internet. Please reconnect.');</span>
+<span class="cstat-no" title="statement not covered" >    return console.log("JSNI/showGetConnected");</span>
+  }
+&nbsp;
+  JSNI.prototype.showError = function() {
+    alert('NATIVE SCREEN: There was an unknown error.');
+    return console.log("JSNI/showError");
+  }
+&nbsp;
+  JSNI.prototype.showMenu = <span class="fstat-no" title="function not covered" >fu</span>nction() {
+<span class="cstat-no" title="statement not covered" >    alert('Native Sort Menu');</span>
+<span class="cstat-no" title="statement not covered" >    return console.log('JSNI/showMenu', arguments)</span>
+  }
+&nbsp;
+  JSNI.prototype.downloadItem = <span class="fstat-no" title="function not covered" >fu</span>nction(ean) {
+<span class="cstat-no" title="statement not covered" >    return console.log("JSNI/downloadItem: " + ean);</span>
+  };
+&nbsp;
+  JSNI.prototype.launchBrowseAudiobooks = <span class="fstat-no" title="function not covered" >fu</span>nction() {
+<span class="cstat-no" title="statement not covered" >    return console.log("JSNI/launchBrowseAudiobooks");</span>
+  };
+&nbsp;
+  JSNI.prototype.editFavCategories = <span class="fstat-no" title="function not covered" >fu</span>nction() {
+<span class="cstat-no" title="statement not covered" >    return console.log("JSNI/editFavCategories");</span>
+  };
+&nbsp;
+  JSNI.prototype.onLibraryItemStateChange = <span class="fstat-no" title="function not covered" >fu</span>nction(ean, state) {
+<span class="cstat-no" title="statement not covered" >    return console.log(`JSNI/onLibraryItemStateChange: ${ean}, ${state}`);</span>
+  };
+&nbsp;
+  JSNI.prototype.onLibraryItemDownloadProgress = <span class="fstat-no" title="function not covered" >fu</span>nction(ean, pct) {
+<span class="cstat-no" title="statement not covered" >    return console.log(`JSNI/onLibraryItemDownloadProgress: ${ean}, ${pct}`);</span>
+  };
+&nbsp;
+  JSNI.prototype.launchUrl = <span class="fstat-no" title="function not covered" >fu</span>nction(url) {
+<span class="cstat-no" title="statement not covered" >    console.log("JSNI/launchUrl", url);</span>
+<span class="cstat-no" title="statement not covered" >    if (confirm('Open URL?' + url)) {</span>
+<span class="cstat-no" title="statement not covered" >      window.open(url);</span>
+    }
+  }
+&nbsp;
+  JSNI.prototype.closeSubscriptionScreen = <span class="fstat-no" title="function not covered" >fu</span>nction() {
+<span class="cstat-no" title="statement not covered" >    return console.log("JSNI/closeSubscriptionScreen");</span>
+  };
+&nbsp;
+  // JSNI.prototype.purchase = function(ean, title, price, success, fail) {
+  //   console.log("JSNI/purchase: " + ean + ", " + title + ", " + price);
+  //   return setTimeout(function() {
+  //     window.onLibraryItemStateChange(ean, 'PURCHASE_REQUESTED');
+  //     return setTimeout(function() {
+  //       TEST_PURCHASE.ean = ean;
+  //       TEST_PURCHASE.title = title;
+  //       TEST_PURCHASE.author = "Test Author";
+  //       TEST_PURCHASE.images.ProductPageBookCover.path = "http://img1.imagesbn.com/p/" + ean + "_p0_v1_s170x364_e404.jpg";
+  //       TEST_PURCHASE.filePath = "/data/data/com.nook.app/files/B&amp;N Downloads/Books/" + ean + "_epub.v4.epub";
+  //       LIBRARY_DATA.push(TEST_PURCHASE);
+  //       return window.onLibraryItemStateChange(ean, 'PURCHASE_SUCCEEDED');
+  //     }, 1200);
+  //   }, 350);
+  // };
+&nbsp;
+  JSNI.prototype.getAppPackage = <span class="fstat-no" title="function not covered" >fu</span>nction(ean) {
+<span class="cstat-no" title="statement not covered" >    return "file:///package/" + ean;</span>
+  };
+&nbsp;
+  JSNI.prototype.getFilePath = <span class="fstat-no" title="function not covered" >fu</span>nction(ean) {
+<span class="cstat-no" title="statement not covered" >    return "file:///path/" + ean;</span>
+  };
+&nbsp;
+  JSNI.prototype.test_simulateDownload = <span class="fstat-no" title="function not covered" >fu</span>nction(ean) {
+    var pct, update;
+<span class="cstat-no" title="statement not covered" >    pct = 0;</span>
+<span class="cstat-no" title="statement not covered" >    update = (<span class="fstat-no" title="function not covered" >fu</span>nction(_this) {</span>
+<span class="cstat-no" title="statement not covered" >      return <span class="fstat-no" title="function not covered" >fu</span>nction() {</span>
+<span class="cstat-no" title="statement not covered" >        if (!(pct &gt; 100)) {</span>
+<span class="cstat-no" title="statement not covered" >          window.onLibraryItemDownloadProgress(ean, pct);</span>
+<span class="cstat-no" title="statement not covered" >          pct += 1;</span>
+<span class="cstat-no" title="statement not covered" >          return setTimeout(update, 30);</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >          return window.onLibraryItemStateChange(ean, "DOWNLOAD_SUCCEEDED");</span>
+        }
+      };
+    })(this);
+<span class="cstat-no" title="statement not covered" >    window.onLibraryItemStateChange(ean, "DOWNLOADING");</span>
+<span class="cstat-no" title="statement not covered" >    return setTimeout(update, 30);</span>
+  };
+&nbsp;
+  JSNI.prototype.close = <span class="fstat-no" title="function not covered" >fu</span>nction() {
+<span class="cstat-no" title="statement not covered" >    if (confirm('App Closing (Browser reload)')) {</span>
+<span class="cstat-no" title="statement not covered" >      return window.location.reload();</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return window.Router.push(window.Router._default);</span>
+  };
+&nbsp;
+  JSNI.prototype.reload = <span class="fstat-no" title="function not covered" >fu</span>nction() {
+<span class="cstat-no" title="statement not covered" >    return window.location.reload();</span>
+  };
+&nbsp;
+  JSNI.prototype.reloadAsync = <span class="fstat-no" title="function not covered" >fu</span>nction(success, failure) {
+    var handler;
+<span class="cstat-no" title="statement not covered" >    handler = (<span class="fstat-no" title="function not covered" >fu</span>nction(_this) {</span>
+<span class="cstat-no" title="statement not covered" >      return <span class="fstat-no" title="function not covered" >fu</span>nction() {</span>
+<span class="cstat-no" title="statement not covered" >        return window[success](_this.reload());</span>
+      };
+    })(this);
+<span class="cstat-no" title="statement not covered" >    return setTimeout(handler, 100);</span>
+  };
+&nbsp;
+  JSNI.prototype.showManageActionSheet = <span class="fstat-no" title="function not covered" >fu</span>nction(ean, x, y, src) {
+<span class="cstat-no" title="statement not covered" >    alert('Long Press: ' + ean + ', ' + x + ', ' + y + ', ' + src);</span>
+  };
+&nbsp;
+  return JSNI;
+&nbsp;
+})();
+&nbsp;
+export default JSNI;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Dec 18 2023 16:27:02 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

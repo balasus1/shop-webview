@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for Categories.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> Categories.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">182x</span>
+<span class="cline-any cline-yes">50x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">132x</span>
+<span class="cline-any cline-yes">132x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * This component renders one of two child components:
+ *
+ * 1. CategoryLanding - loads the categories landing page with curated categories for chosen departments
+ * 2. StoreCategories - loads the sub-categories within a specific department
+ */
+import React, { Component } from 'react'
+import storeCodes, { storeCodeMap, categoryStores } from '../lib/constants/storeCodes'
+import { fetchStoreCategories, fetchSubCategories } from '../lib/fetch'
+import CategoryLanding from './CategoryLanding'
+import StoreCategories from './StoreCategories'
+&nbsp;
+&nbsp;
+class Categories extends Component {
+&nbsp;
+  constructor(props) {
+    super(props);
+&nbsp;
+    // State for this component only, not shared with others
+    this.state = {
+      isFetchingCategories: false, // Control the loading animation
+    }
+&nbsp;
+    this.categoryStores = storeCodes.filter((store, idx) =&gt; categoryStores.indexOf(idx) &gt;= 0 &amp;&amp; categoryStores.indexOf(idx) &lt;= storeCodeMap.digaud);
+    
+    // Children can only see kids categories
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (this.props.customer.childProfile) {
+<span class="cstat-no" title="statement not covered" >      this.categoryStores = [storeCodes[storeCodeMap.kids]];</span>
+    }
+&nbsp;
+    // Bind methods
+    this.loadCategories = this.loadCategories.bind(this);
+    window.addEventListener('onScrollToPage', this.setSubCategoriesHeight);
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  se</span>tSubCategoriesHeight(e) {
+<span class="cstat-no" title="statement not covered" >    if (window.subCategories) {</span>
+      const wrapper = <span class="cstat-no" title="statement not covered" >document.getElementById('shop-wrapper');</span>
+      let landingHeight = <span class="cstat-no" title="statement not covered" >wrapper.clientHeight - 50;</span>
+<span class="cstat-no" title="statement not covered" >      window.subCategories.style.height = (landingHeight * e.detail.page) + "px";</span>
+<span class="cstat-no" title="statement not covered" >      wrapper.scrollTop = (e.detail.page - 1) * landingHeight;</span>
+    }
+  }
+&nbsp;
+&nbsp;
+  componentWillMount() {
+&nbsp;
+    // Always start at the top of the page
+    var position = sessionStorage.getItem("categoriesPosition") || 0;
+    window.scroll(0, position);
+    sessionStorage.setItem("showCategoriesList", "list");
+  
+    // 
+    // Load a static copy of the DREF tree for use with "related categories".
+    // This is not the best way to do this but for now it's the only option.
+    // This file was generated by Steve Smith using data available in the LMS.
+    // There is currently no API that can provide this data.
+    //
+    // if (Object.keys(this.props.data.staticMap).length === 0) {
+    //   fetchStaticDrefMap( (err, drefMap) =&gt; {
+    //     if (err) {
+    //       // Return silently, hopefully this doesn't happen since the file is hosted as part of Shop
+    //       return;
+    //     }
+    //     this.props.setDrefMap(drefMap);
+    //   });
+    // }
+  }
+&nbsp;
+  componentDidMount() {
+    // Always start at the top of the list
+&nbsp;
+    var position = sessionStorage.getItem("categoriesPosition") || 0;
+&nbsp;
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (!this.props.noAnalytics) {
+      window.scroll(0, 0);
+    }
+&nbsp;
+    let interval = setInterval(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >      if (document.readyState === 'complete') {</span>
+<span class="cstat-no" title="statement not covered" >        clearInterval(interval);</span>
+<span class="cstat-no" title="statement not covered" >        window.scroll(0, position);</span>
+      }
+    }, 300);
+    
+    sessionStorage.removeItem('categoriesPosition');
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  co</span>mponentWillUnmount() {
+&nbsp;
+    // Store the last scroll position so we always come back to it
+<span class="cstat-no" title="statement not covered" >    sessionStorage.setItem('categoriesPosition', window.scrollY);</span>
+&nbsp;
+  }
+&nbsp;
+  //
+  // This funciton fetches categories, either for a store (department)
+  // or sub-categories (based on toFetch.isStore boolean).
+  // 
+  // This function is passed to the child components to allow them to fetch.
+  // 
+<span class="fstat-no" title="function not covered" >  lo</span>adCategories(toFetch, options) {
+    let device = <span class="cstat-no" title="statement not covered" >this.props.device;</span>
+    let customer = <span class="cstat-no" title="statement not covered" >this.props.customer;</span>
+    let urlParams = <span class="cstat-no" title="statement not covered" >{</span>
+      countryCode: customer.country,
+      accountId: customer.accountId,
+      profileId: customer.profileId,
+      productDeviceId: device.productDeviceId
+    };
+&nbsp;
+    let data = <span class="cstat-no" title="statement not covered" >this.props.data;</span>
+&nbsp;
+    // Only load if not already loaded
+<span class="cstat-no" title="statement not covered" >    if (!data.categories[toFetch.dref] || !data.categories[toFetch.dref].length) {</span>
+      
+<span class="cstat-no" title="statement not covered" >      this.setState({ isFetchingCategories: true });</span>
+&nbsp;
+      // Callback function - fetch complete
+      const done = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(e</span>rr, response) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        if (err) {</span>
+<span class="cstat-no" title="statement not covered" >          console.error('Error fetching category data.', err.message);</span>
+<span class="cstat-no" title="statement not covered" >          window.Device.showError('Error fetching category data. ' + err);          </span>
+<span class="cstat-no" title="statement not covered" >          response = {eans:[], categories:[], links:[]};</span>
+        }
+        else {
+<span class="cstat-no" title="statement not covered" >          this.setState({ isFetchingCategories: false });</span>
+        }
+&nbsp;
+        const catData = <span class="cstat-no" title="statement not covered" >{</span>
+          data: response,
+          eanData: response.eans
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (toFetch.isStoreCode) {</span>
+<span class="cstat-no" title="statement not covered" >          this.props.setStoreCategories(catData, toFetch.storeCode); </span>// Trigger a redux dispatch
+        }
+        else {
+<span class="cstat-no" title="statement not covered" >          this.props.setSubCategories(catData, toFetch.dref); </span>// Trigger a redux dispatch
+        }
+      };
+&nbsp;
+      // Fetch store categories
+<span class="cstat-no" title="statement not covered" >      if (toFetch.isStoreCode) {</span>
+<span class="cstat-no" title="statement not covered" >        fetchStoreCategories(toFetch.storeCode, urlParams, done); </span>// Cached for 12 hrs
+      }
+&nbsp;
+      // Fetch subcategories
+      else {
+<span class="cstat-no" title="statement not covered" >        fetchSubCategories(toFetch.storeCode, toFetch.dref, urlParams, done, options); </span>// Cached 12 hrs if option.cacheResponse
+      }
+    }
+  }
+&nbsp;
+&nbsp;
+  renderCategoryLanding(categories) {
+    return &lt;CategoryLanding
+      affinities={ this.props.affinities }
+      /* staticMap={ this.props.data.staticMap } // Used for the recommended categories */
+      categories={ categories }
+      stores={ this.categoryStores }
+      eanData={ this.props.eanData }
+      isChild={ this.props.customer.childProfile }
+      isFetching={ this.state.isFetchingCategories }
+      loadCategories={ this.loadCategories } /&gt;;
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  re</span>nderStoreCategories(categories) {
+    const currentStore = <span class="cstat-no" title="statement not covered" >storeCodes[storeCodeMap[this.props.match.params.catStoreCode]] || null</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return &lt;StoreCategories</span>
+      currentStore={ currentStore }
+      currentDref={ this.props.match.params.catDref || null }
+      categories={ categories }
+      drefHash={ this.props.data.drefHash }
+      isFetching={ this.state.isFetchingCategories }
+      loadCategories={ this.loadCategories } /&gt;;
+  }
+&nbsp;
+&nbsp;
+  render() {
+&nbsp;
+    // Sort the category refinements by title
+    const sorted = this.sortCategories();
+&nbsp;
+    // Render categories page for a given store code
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (this.props.match.params.catStoreCode) {
+<span class="cstat-no" title="statement not covered" >      return this.renderStoreCategories(sorted);</span>
+    }
+&nbsp;
+    // Render the categories landing page
+    else {
+      return this.renderCategoryLanding(sorted);
+    }
+  }
+&nbsp;
+&nbsp;
+  sortCategories() {
+    const sortingCopy = Object.assign({}, this.props.data.categories);
+    for (let code in sortingCopy) {
+      // Required for JSlint
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (!sortingCopy.hasOwnProperty(code)) {
+<span class="cstat-no" title="statement not covered" >        continue;</span>
+      }
+      const refinements = sortingCopy[code].refinements;
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (!refinements) {
+<span class="cstat-no" title="statement not covered" >        sortingCopy[code].refinements = [];</span>
+<span class="cstat-no" title="statement not covered" >        console.warn('No refinements found for', code);</span>
+<span class="cstat-no" title="statement not covered" >        continue;</span>
+      }
+&nbsp;
+      let sortedRefinements = refinements.sort((a,b) =&gt; {
+        if (a.title &lt; b.title) {
+          return -1;
+        }
+        <span class="missing-if-branch" title="else path not taken" >E</span>if (a.title &gt; b.title) {
+          return 1;
+        }
+<span class="cstat-no" title="statement not covered" >        return 0;</span>
+      });
+      sortingCopy[code].refinements = sortedRefinements;
+    }
+&nbsp;
+    return sortingCopy;
+  }
+}
+&nbsp;
+export default Categories;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jan 04 2024 21:31:55 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for SingleItemPromo.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> SingleItemPromo.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react'
+import ItemCover from './ItemCover'
+import platforms from '../lib/constants/platforms'
+import UnSupportedPod from "./UnSupportedPod";
+import textReplace from '../lib/i18n';
+import KEY from '../lib/constants/languages/keys';
+&nbsp;
+&nbsp;
+class SingleItemPromo extends Component {
+&nbsp;
+  // static pod header title as props
+&nbsp;
+&nbsp;
+  renderCover(eanObj) {
+    return &lt;div className="cover"&gt;
+      &lt;ItemCover eanObj={eanObj} /&gt;
+    &lt;/div&gt;;
+  }
+&nbsp;
+&nbsp;
+  render() {
+    const pod = this.props.pod;
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (!pod.data.ean) {
+<span class="cstat-no" title="statement not covered" >      return &lt;UnSupportedPod /&gt;;</span>
+    }
+&nbsp;
+    const eanObj = this.props.eanData[pod.data.ean.ean];
+    const title = pod.data.title;
+    const subtitle = pod.data.subtitle;
+    const price = eanObj.price;
+    const actionLabel = pod.data.action_label.toUpperCase();
+    const discountAmt = eanObj.discountAmt;
+    const discountPercent = "save " + eanObj.discountPercent + " %";
+    const showDisplayAmount = discountAmt ? <span class="branch-0 cbranch-no" title="branch not covered" >true </span>: false;
+    const showDisplayPercent = eanObj.discountPercent ? <span class="branch-0 cbranch-no" title="branch not covered" >true </span>: false;
+    const showPrice = pod.html_template_name !== 'singleItemNoPricePromo';
+&nbsp;
+    // iOS isn't allow to "sell" anything
+    let cta = (!window.purchaseDisabled &amp;&amp; actionLabel) ? actionLabel : <span class="branch-1 cbranch-no" title="branch not covered" >textReplace(KEY.more_details);</span>
+&nbsp;
+&nbsp;
+    return (
+      &lt;div&gt;
+    &lt;div role="link" className="pod single-item" onClick={<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.props.onClick(pod)}</span>&gt;
+      {this.renderCover(eanObj)}
+      &lt;div className="pod-details"&gt;
+        &lt;div className="text-container"&gt;
+        { this.props.tnc.show_tnc &amp;&amp;
+<span class="branch-1 cbranch-no" title="branch not covered" >            &lt;div className="subtitle ellipses lines-2 tnc"&gt; {this.props.tnc.tnc.link} &lt;/div&gt;</span>
+        }
+          &lt;div className="title ellipses lines-2"&gt;{title}&lt;/div&gt;
+          {subtitle &amp;&amp; &lt;div className={"subtitle ellipses lines-2"}&gt;{subtitle}&lt;/div&gt;}
+          {showPrice &amp;&amp; &lt;div className="price"&gt;${price}&lt;/div&gt;}
+          {showDisplayAmount &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >showPrice </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >&lt;div className="list-price"&gt; {eanObj.displayListPrice}&lt;/div&gt;}</span>
+          {showDisplayPercent &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >showPrice </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >&lt;div className="sale-percent"&gt;&amp;nbsp;{'| ' + discountPercent}&lt;/div&gt;}</span>
+        &lt;/div&gt;
+        &lt;div tabIndex="0" role="link" aria-label={cta} className="cta ellipses lines-1"&gt;{cta}&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;      
+    &lt;/div&gt;)
+  }
+}
+&nbsp;
+export default SingleItemPromo;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jan 04 2024 21:31:55 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>

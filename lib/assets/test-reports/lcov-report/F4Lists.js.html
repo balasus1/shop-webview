@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for F4Lists.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> F4Lists.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react'
+import ListCarousel from './ListCarousel'
+import ShopRetry from './ShopRetry'
+import Scroller from '../classes/Scroller'
+import platforms from '../lib/constants/platforms'
+import HeroListCarousel from './HeroListCarousel'
+&nbsp;
+import '../../style-dist/components/F4Lists.css'
+import F6Component from './F6Component'
+import { constants } from '../lib/utils'
+&nbsp;
+&nbsp;
+class F4Lists extends Component {
+&nbsp;
+  constructor(props) {
+    super(props);
+&nbsp;
+    this.isEpd = window.Device.shopPlatform === 'epd' || window.Device.shopPlatform === 'quill';
+    
+    // Lazy rendering so we only show a subset of the carousels until the user scrolls down
+    this.INITIAL_DISPLAY_COUNT = 2; // Load the first 2, then the last 4 after a delay
+    this.LAZY_SCROLL_TRIGGER = 100; //Made 100 to work for kids profile as it doesn't have recommendations.
+&nbsp;
+    this.state = {
+      isLazyWaiting: true,
+    };
+    <span class="missing-if-branch" title="if path not taken" >I</span>if(this.isEpd &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >sessionStorage.getItem('forMePageNo'))</span> { //Increase the display count while retaining page for EPD.
+<span class="cstat-no" title="statement not covered" >      this.INITIAL_DISPLAY_COUNT = (sessionStorage.getItem('forMePageNo') * 2) - 2; </span>//subtract 2 as for me page don't have F4/F6 list
+    }
+    // Define empty lists to render as carousels while loading
+    this.loadingLists = new Array(6).fill({ title: '', eans: [null, null, null, null, null, null] });
+  }
+  
+  
+  componentDidMount() {
+&nbsp;
+    // Use "lazy rendering" so that we don't have to fetch the images immediately
+    // If the user scrolls down, we will render the rest of the carousels and the
+    // images will be fetched/rendered.
+    const lazyRender = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >      console.log('Lazy loading more F4s after scroll');</span>
+<span class="cstat-no" title="statement not covered" >      this.setState({ isLazyWaiting: false });</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (this.isEpd) {</span>
+<span class="cstat-no" title="statement not covered" >        window.removeEventListener('onEPDPageDown', lazyRender);</span>
+      }
+      else <span class="cstat-no" title="statement not covered" >if (this.lazyScroller) {</span>
+<span class="cstat-no" title="statement not covered" >        this.lazyScroller.unregister(); </span>// Only call the callback once
+      }
+    };
+&nbsp;
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (!this.isEpd) {
+      this.lazyScroller = new Scroller();
+      <span class="missing-if-branch" title="if path not taken" >I</span>if(window.Device.shopPlatform === platforms.android &amp;&amp; '7.1.1' === window.Device.getAndroidVersion()){
+<span class="cstat-no" title="statement not covered" >        this.lazyScroller.register(lazyRender.bind(this), { scrollGreaterThan: 550 });</span>
+      } else {
+        this.lazyScroller.register(lazyRender.bind(this), { scrollGreaterThan: this.LAZY_SCROLL_TRIGGER });
+      }
+    }
+&nbsp;
+    else {
+<span class="cstat-no" title="statement not covered" >      window.addEventListener('onEPDPageDown', lazyRender.bind(this));</span>
+    }
+  }
+  
+&nbsp;
+  render() {
+    let loading = false;
+    let f4List = this.props.data;
+    let data = (f4List &amp;&amp; f4List.data) || [];
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (this.props.isFetchingF4 || !data.length) {
+      loading = true;
+      data = this.loadingLists;
+    }
+&nbsp;
+    // Render the retry button
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (!this.props.isFetchingF4 &amp;&amp; data &amp;&amp; !data.length) {
+<span class="cstat-no" title="statement not covered" >      return &lt;div className="f4-lists"&gt;&lt;ShopRetry status={ f4List.status } /&gt;&lt;/div&gt;;</span>
+    }
+&nbsp;
+    //Lazy rendering for performance. Shop has to render A LOT of covers on For Me
+    if (this.state.isLazyWaiting &amp;&amp; this.props.position &lt; 600) {
+      data = data.length &gt; this.INITIAL_DISPLAY_COUNT ? data.slice(0, this.INITIAL_DISPLAY_COUNT) : <span class="branch-1 cbranch-no" title="branch not covered" >data;</span>
+    }
+&nbsp;
+    return &lt;div className="f4-lists" ref={ ref =&gt; this.f4Lists = ref }&gt;
+      { data.map( (list, i) =&gt; (
+        list.type === constants.F6 ? 
+<span class="branch-0 cbranch-no" title="branch not covered" >        &lt;F6Component</span>
+        key={ i }
+        index={ i+1 }
+        list={ list }
+        eanData={ this.props.eanData }
+        onCoverClick={ this.props.onCoverClick } /&gt;
+        :
+        ((list.eans.length &gt; 3 &amp;&amp; (list.type == constants.PERFECT_COVER || list.type == constants.TWO_ROWS)) ? 
+<span class="branch-0 cbranch-no" title="branch not covered" >        &lt;HeroListCarousel</span>
+          listCarousel={'debug-f4-list'}
+          key={ i }
+          loading={ loading }
+          index={ i+1 }
+          list={ list }
+          eanData={ this.props.eanData }
+          onCoverClick={ this.props.onCoverClick }
+          onListClick={ this.props.onListClick } /&gt; 
+        
+        : 
+        &lt;ListCarousel 
+          listCarousel={'f4-list'}
+          key={ i }
+          loading={ loading }
+          index={ i+1 }
+          list={ list }
+          eanData={ this.props.eanData }
+          onCoverClick={ this.props.onCoverClick }
+          onListClick={ this.props.onListClick } /&gt;
+      ))) }
+    &lt;/div&gt;;
+  }
+}
+&nbsp;
+export default F4Lists;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jan 04 2024 21:31:55 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,771 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/script/components/CustomDropdown.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/script/components</a> CustomDropdown.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">99x</span>
+<span class="cline-any cline-yes">99x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">99x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react'
+import epdGridIcon from '../../images/grid-icons/grid.svg'
+import epdListIcon from '../../images/list-icons/list.svg'
+import gridIcon from '../../images/grid-icons/grid@3x.png'
+import listIcon from '../../images/list-icons/list@3x.png'
+import '../../style-dist/components/CustomDropdown.css'
+&nbsp;
+import platforms from '../lib/constants/platforms'
+import textReplace from '../lib/i18n'
+import KEY from '../lib/constants/languages/keys'
+<span class="missing-if-branch" title="if path not taken" >I</span>if (window.location.href.match(platforms.epd)) {
+<span class="cstat-no" title="statement not covered" >  require('../../style-dist/components/CustomDropdown.epd.css');</span>
+<span class="cstat-no" title="statement not covered" >  require('../../style-dist/loading.epd.css');</span>
+}
+<span class="missing-if-branch" title="if path not taken" >I</span>if (window.location.href.match(platforms.quill)) {
+<span class="cstat-no" title="statement not covered" >  require('../../style-dist/components/CustomDropdown.quill.css');</span>
+<span class="cstat-no" title="statement not covered" >  require('../../style-dist/loading.epd.css');</span>
+}
+&nbsp;
+&nbsp;
+class CustomDropdown extends Component {
+&nbsp;
+  constructor(props) {
+    super(props);
+&nbsp;
+    this.showHTMLMenu = window.location.href.match('localhost') != null || <span class="branch-1 cbranch-no" title="branch not covered" >!window.Device.canShowMenu();</span>
+    this.showHTMLMenuAud = window.location.href.match('localhost');
+    this.isEpd = window.location.href.match(platforms.epd);
+    this.isQuill= window.location.href.match(platforms.quill);
+    this.isEPD = this.isEpd || this.isQuill;
+    this.isCategoryList = window.location.hash.match(/categories.*\/list$/);
+    this.state = {
+      showList: (performance.navigation.type === 1  &amp;&amp; sessionStorage.getItem("showList") !== 'list') ? true :  false, // Control the loading animation
+    }
+&nbsp;
+    // Bind Methods
+    this.renderOption = this.renderOption.bind(this);
+    this.renderValueSelected = this.renderValueSelected.bind(this);
+    this.openSortMenu = this.openSortMenu.bind(this);
+    this.closePopup = this.closePopup.bind(this);
+    this.toggleList = this.toggleList.bind(this);
+&nbsp;
+    // Global sort handler
+    window.handleSortChange = <span class="fstat-no" title="function not covered" >va</span>lue =&gt; <span class="cstat-no" title="statement not covered" >this.props.onChange({</span>
+      target: { value }
+    });
+    window.handleGridChange = <span class="fstat-no" title="function not covered" >va</span>lue =&gt; <span class="cstat-no" title="statement not covered" >this.props.onChangeGrid({</span>
+      target: { value }
+    });
+  }
+&nbsp;
+&nbsp;
+  renderOption(option, i) {
+    const selected = this.props.value === option.props.value;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (option.props.value === undefined) {
+<span class="cstat-no" title="statement not covered" >      return '';</span>
+    }
+&nbsp;
+    return &lt;li key={i}
+      className={ 'item' + (selected ? ' selected' : '') }
+      onClick={ <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >        this.closePopup();</span>
+<span class="cstat-no" title="statement not covered" >        this.props.onChange({</span>
+          target: { value: option.props.value }
+        });
+      }}&gt;
+        &lt;span&gt;{ option.props.children }&lt;/span&gt;
+    &lt;/li&gt;;
+  }
+&nbsp;
+  renderValueSelected() {
+    const chosenOption = this.props.ebookOptions.find( c =&gt; {
+      return c.props.value === this.props.value
+    });
+    return chosenOption !== undefined ? chosenOption.props.children : 'default';
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  op</span>enSortMenu(evt) {
+    const appVersion = <span class="cstat-no" title="statement not covered" >window.APP_VERSION;</span>
+    let isAppLower = <span class="cstat-no" title="statement not covered" >false;</span>
+    const pixelRatio = <span class="cstat-no" title="statement not covered" >window.devicePixelRatio || 1;</span>
+    const rect = <span class="cstat-no" title="statement not covered" >evt.target.getBoundingClientRect();</span>
+    let topLeftX = <span class="cstat-no" title="statement not covered" >rect.x * pixelRatio;</span>
+    let topLeftY = <span class="cstat-no" title="statement not covered" >rect.y * pixelRatio;</span>
+    let bottomRightX = <span class="cstat-no" title="statement not covered" >topLeftX + rect.width * pixelRatio;</span>
+    let bottomRightY = <span class="cstat-no" title="statement not covered" >topLeftY + rect.height * pixelRatio;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (</span>
+      (appVersion &lt; "5.2.5" &amp;&amp;
+        window.Device.shopPlatform === platforms.ios) ||
+      (appVersion &lt; "5.0.4" &amp;&amp; window.Device.shopPlatform !== platforms.ios)
+    ) {
+<span class="cstat-no" title="statement not covered" >      isAppLower = true;</span>
+    } else <span class="cstat-no" title="statement not covered" >if (</span>
+      window.Device.isLegacyAndroid() &amp;&amp;
+      window.Device.shopPlatform === platforms.android
+    ) {
+<span class="cstat-no" title="statement not covered" >      isAppLower = true;</span>
+    }
+    let hasTopList = <span class="cstat-no" title="statement not covered" >this.props.hasTopList;</span>
+<span class="cstat-no" title="statement not covered" >    console.log(`hasTopList: ${hasTopList}`);</span>
+    const topX = <span class="cstat-no" title="statement not covered" >(this.isQuill || this.isEpd) ? (this.isQuill ? 90 : 60) :</span>
+      (isAppLower ? evt.clientX : topLeftX.toFixed());
+    const topY = <span class="cstat-no" title="statement not covered" >(this.isQuill || this.isEpd) ? (this.isQuill ? (hasTopList ? 115 : 60) : (hasTopList ? 25 : 15)) :</span>
+      (isAppLower ? evt.clientY : topLeftY.toFixed());
+&nbsp;
+    const bottomX = <span class="cstat-no" title="statement not covered" >(this.isQuill || this.isEpd) ? (this.isQuill ? 210 : 125) :</span>
+      (isAppLower ? evt.clientX : bottomRightX.toFixed());
+    const bottomY = <span class="cstat-no" title="statement not covered" >(this.isQuill || this.isEpd) ? (this.isQuill ? (hasTopList ? 95 : 50) : (hasTopList ? 45 : 30)) :</span>
+      (isAppLower ? evt.clientY : bottomRightY.toFixed());
+&nbsp;
+      // reset epd pageNo on native sort.
+<span class="cstat-no" title="statement not covered" >      window.resetPageNo = true; </span>
+<span class="cstat-no" title="statement not covered" >      window.categoryPageReset = true;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (window.paginationComponent &amp;&amp; this.isEPD) {</span>
+      let currentPage = <span class="cstat-no" title="statement not covered" >window.paginationComponent.getPageNo();</span>
+<span class="cstat-no" title="statement not covered" >      if(!this.isCategoryList &amp;&amp; currentPage) {</span>
+<span class="cstat-no" title="statement not covered" >        window.paginationComponent.gotoPage(!this.isCategoryList ? 1 : currentPage);</span>
+      }
+    }
+&nbsp;
+&nbsp;
+    // Show the native sort menu
+<span class="cstat-no" title="statement not covered" >    if (!this.showHTMLMenu) {</span>
+<span class="cstat-no" title="statement not covered" >      console.log(`Native-showHTMLMenu:topX:${topX}, topY:${topY}, bottomX:${bottomX}, bottomY:${bottomY}`);</span>
+      const menuItemValue = <span class="cstat-no" title="statement not covered" >this.props.dictionary.find(<span class="fstat-no" title="function not covered" >d </span>=&gt; <span class="cstat-no" title="statement not covered" >d.value === this.props.value)</span>;</span>
+      const menuItemLabel = <span class="cstat-no" title="statement not covered" >menuItemValue &amp;&amp; menuItemValue.label;</span>
+<span class="cstat-no" title="statement not covered" >      console.log(menuItemValue);</span>
+<span class="cstat-no" title="statement not covered" >      return window.Device.showMenu(</span>
+        this.props.dictionary,
+        topX,
+        topY,
+        bottomX,
+        bottomY,
+        textReplace(KEY.sort_by),
+        menuItemLabel,
+        'handleSortChange');
+    }
+&nbsp;
+    // Show HTML sort menu for debug
+    else {
+<span class="cstat-no" title="statement not covered" >    console.log(`customDropDown: sortMenu - topX:${topX} topY:${topY} bottomX:${bottomX} bottomY:${bottomY}`)</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (!this.props.showSort) {</span>
+        // document.documentElement.classList.add('no-scroll');
+        // document.body.classList.add('no-scroll');
+      }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (this.isPhone()) {</span>
+        // Update the native header
+<span class="cstat-no" title="statement not covered" >        console.log('isPhone');</span>
+<span class="cstat-no" title="statement not covered" >        window.Device.modifyHeader({</span>
+          enableBack: true,
+          title: textReplace(KEY.sort_list_by),
+          background: 'E2E7F2',
+          hideTools: true
+        });
+      }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      window.location.href += '/sort';</span>
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  to</span>ggleList() {
+<span class="cstat-no" title="statement not covered" >    this.setState({showList:this.state.showList === false ? true : false});</span>
+<span class="cstat-no" title="statement not covered" >    this.props.onChangeGrid({</span>
+      target: { value:this.state.showList === false ? 'grid' : 'list' }
+    });
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  cl</span>osePopup(e) {
+<span class="cstat-no" title="statement not covered" >    window.history.back();</span>
+  }
+&nbsp;
+&nbsp;
+  isPhone() {
+    return window.Device.getMinDimension() &lt; 500;
+  }
+&nbsp;
+&nbsp;
+  renderHTMLDropdown(isPhone) {
+    return &lt;div className="dropdown-wrapper"&gt;
+      { this.props.showSort &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >!isPhone </span>&amp;&amp;  <span class="branch-2 cbranch-no" title="branch not covered" >&lt;div className="smoke-screen" onClick={ this.closePopup } /&gt; </span>}
+&nbsp;
+      &lt;ul className={ 'dropdown-menu' + (this.props.showSort ? <span class="branch-0 cbranch-no" title="branch not covered" >' show' </span>: '') }&gt;
+        { !isPhone &amp;&amp; &lt;p className="title"&gt;{textReplace(KEY.sort_list_by)}&lt;/p&gt; }
+        { this.props.children.map(this.renderOption) }
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  }
+&nbsp;
+&nbsp;
+  render() {
+    const isPhone = this.isPhone();
+    const isEPD = this.isQuill || this.isEpd;
+    const title = this.props.title || textReplace(KEY.sorted_by);
+    const titleSuffix = &lt;span className="count"&gt;{ this.props.suffix }&lt;/span&gt;;
+    const showIcon = this.state.showList === false ? listIcon : gridIcon;
+&nbsp;
+    return &lt;div className={ 'custom-dropdown' + (isPhone ? <span class="branch-0 cbranch-no" title="branch not covered" >' phone' </span>: ' tablet') }&gt;
+      &lt;label&gt;
+        &lt;div&gt;
+          {  
+            (
+              &lt;div className={'chosen-item ' + (isEPD ? (<span class="branch-0 cbranch-no" title="branch not covered" >this.props.showGrid ? 'list' : 'grid')</span> : '')} &gt;
+                &lt;span className="ellipses"&gt; 
+                  &lt;span className="sort-title named-sort"&gt;{ title }&lt;/span&gt;
+                  &lt;span role="link" onClick={ this.openSortMenu } className="sort-type"&gt;
+                    &amp;nbsp; { this.renderValueSelected() }
+                  &lt;/span&gt;
+                  { titleSuffix }
+                &lt;/span&gt;
+                { isEPD ? <span class="branch-0 cbranch-no" title="branch not covered" >&lt;React.Fragment&gt;</span>
+                            &lt;div className="view-container"&gt;
+                              &lt;div className="img-holder"&gt;
+                                &lt;img src={ epdGridIcon } alt={textReplace(KEY.grid_icon)}
+                                  className={'grid-icon ' + 
+                                  (this.state.showList === false ? 'on' : 'off')} onClick={ <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.state.showList === false ? '' : this.toggleList() </span>}&gt;&lt;/img&gt;
+                                &lt;img src={ epdListIcon } alt={textReplace(KEY.list_icon)}
+                                  className={'list-icon ' + (this.state.showList === true ? 'on' : 'off')} onClick={ <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.state.showList === false ? this.toggleList() : '' </span>}&gt;&lt;/img&gt;
+                              &lt;/div&gt;
+                            &lt;/div&gt;
+                          &lt;/React.Fragment&gt;
+                                 :
+                          &lt;img src={ showIcon } alt={textReplace(KEY.list_icon)} className="list-icon" 
+                                onClick={ <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.toggleList() </span>}&gt;&lt;/img&gt;
+                  }
+              &lt;/div&gt;
+            )
+          }
+        &lt;/div&gt;
+      &lt;/label&gt;
+      
+      { /* Show and HTML sort menu when debuggin */ }
+      { this.showHTMLMenu &amp;&amp; this.renderHTMLDropdown(isPhone) }
+    &lt;/div&gt;;
+  }
+}
+&nbsp;
+export default CustomDropdown;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Dec 18 2023 16:27:02 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

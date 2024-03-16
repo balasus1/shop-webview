@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">All files</a> / <a href="index.html">src</a> index.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**<span class="cstat-no" title="statement not covered" ></span>
+ * This file initializes the entire Shop application, it is the first file to run.
+ * It loads the React component called "Root" which defines our application structure.
+ */
+&nbsp;
+// eslint-disable-next-line
+import './script/lib/polyfill'
+&nbsp;
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import browserReady from './script/lib/native/browserReady'
+import deviceTest from './script/lib/native/deviceTest'
+import shopReducer from './script/reducers/index'
+import Root from './script/components/Root'
+&nbsp;
+import './style-dist/index.css'
+&nbsp;
+const AKAMAI_HOST = <span class="cstat-no" title="statement not covered" >"docs.nook.com";</span>
+//
+// Control a global "debug" flag that shows "HELPFUL" info in the UI
+//
+<span class="cstat-no" title="statement not covered" >window.NOOK_DEBUG = false;</span>
+<span class="cstat-no" title="statement not covered" >window.NOOK_DEV = false;</span>
+<span class="cstat-no" title="statement not covered" >window.LOCALHOST = !!window.location.href.match("localhost") || </span>
+!!window.location.href.match(AKAMAI_HOST);
+&nbsp;
+&nbsp;
+//
+// Create the Redux store, this is where all of our application state is stored.
+// 
+// The reducer is a special function that listend for Redux "dispatch" events and
+// returns a new application state.
+// 
+const store = createStore(shopReducer, w<span class="cstat-no" title="statement not covered" >indow.__REDUX_DEVTOOLS_EXTENSION__ &amp;&amp; window.__REDUX_DEVTOOLS_EXTENSION__());</span>
+&nbsp;
+&nbsp;
+browserReady(() =&gt; {
+  const root = document.getElementById('root');
+  ReactDOM.render(
+    &lt;Provider store={store}&gt;
+      &lt;Root /&gt;
+    &lt;/ Provider&gt;,
+    root
+  );
+});
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >window.getHtmlShopVersion = <span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  return process.env.REACT_APP_VERSION;</span>
+}
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >window.deviceTest = deviceTest;</span>
+&nbsp;
+&nbsp;
+//
+// Keep track of the previous page the user visited
+//
+<span class="cstat-no" title="statement not covered" >window.onhashchange = <span class="fstat-no" title="function not covered" >ev</span>ent =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  sessionStorage.oldURL = event.oldURL;</span>
+<span class="cstat-no" title="statement not covered" >  sessionStorage.newURL = event.newURL;</span>
+}
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >window.onerror = <span class="fstat-no" title="function not covered" >fu</span>nction(m, s, l, c, err) {</span>
+<span class="cstat-no" title="statement not covered" >  console.log("==&gt; Uncaught Exception");</span>
+<span class="cstat-no" title="statement not covered" >  console.log("  &gt; " + m);</span>
+<span class="cstat-no" title="statement not covered" >  console.log("  &gt; file: " + s);</span>
+<span class="cstat-no" title="statement not covered" >  console.log("  &gt; line:" + l);</span>
+<span class="cstat-no" title="statement not covered" >  console.log("  &gt; col :" + c);</span>
+<span class="cstat-no" title="statement not covered" >  console.log("  &gt; err :" + err);</span>
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Dec 18 2023 16:27:02 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

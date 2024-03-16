@@ -1,0 +1,738 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for CategoriesRelated.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> CategoriesRelated.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
+&nbsp;
+import '../../style-dist/components/CategoriesRelated.css'
+&nbsp;
+import platforms from '../lib/constants/platforms'
+&nbsp;
+<span class="missing-if-branch" title="if path not taken" >I</span>if (window.location.href.match(platforms.epd))
+<span class="cstat-no" title="statement not covered" >  require('../../style-dist/components/CategoriesRelated.epd.css')</span>
+<span class="missing-if-branch" title="if path not taken" >I</span>if (window.location.href.match(platforms.quill))
+<span class="cstat-no" title="statement not covered" >  require('../../style-dist/components/CategoriesRelated.quill.css')</span>
+  
+class CategoriesRelated extends Component {
+&nbsp;
+  constructor(props) {
+    super(props);
+&nbsp;
+    // Local state for this component
+    this.state = {
+      relatedCategories: []
+    }
+&nbsp;
+    // Bind methods
+    this.loadIfNoData = this.loadIfNoData.bind(this);
+    this.renderRelated = this.renderRelated.bind(this);
+  }
+&nbsp;
+&nbsp;
+  componentWillMount() {
+&nbsp;
+    // We hit this when going back to the page that renders this component after the first render
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (this.props.dref) {
+      this.load();
+    }
+  }
+&nbsp;
+&nbsp;
+  componentDidUpdate(prevProps, prevState) {
+    const catLoaded = this.props.dref &amp;&amp; this.props.categories[this.props.dref] &amp;&amp; !prevProps.categories[this.props.dref];
+      
+    // Try to load when the dref changes
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (this.props.dref !== prevProps.dref) {
+<span class="cstat-no" title="statement not covered" >      this.load();</span>
+    }
+&nbsp;
+    // Try to load when the category for the passed dref is loaded
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (catLoaded) {
+<span class="cstat-no" title="statement not covered" >      this.load();</span>
+    }
+&nbsp;
+    // Try to load when the parent cateogry of the passed dref is loaded
+    const category = this.props.categories[this.props.dref];
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (category) {
+      const names = category.parent.names;
+      const parentDref = names ? <span class="branch-0 cbranch-no" title="branch not covered" >names[0].id </span>: '';
+      const parentLoaded = this.props.categories[parentDref] !== undefined &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >prevProps.categories[parentDref] === undefined;</span>
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (parentLoaded) {
+<span class="cstat-no" title="statement not covered" >        this.load();</span>
+      }
+    }
+  }
+&nbsp;
+&nbsp;
+  /**
+   * Load two related categories. These will be "siblings" of the passed dref.
+   */
+  load() {
+    this.loadIfNoData();
+    
+    // Nothing to do if the passed dref's category isn't loaded yet
+    const category = this.props.categories[this.props.dref];
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (!category) {
+<span class="cstat-no" title="statement not covered" >      return;</span>
+    }
+&nbsp;
+    // Get the parent category of the passed category dref
+    const names = category.parent.names;
+    const parentDref = names ? <span class="branch-0 cbranch-no" title="branch not covered" >names[0].id </span>: null;
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (!parentDref) {
+      return;
+    }
+    const parentCategory = <span class="cstat-no" title="statement not covered" >this.props.categories[parentDref];</span>
+<span class="cstat-no" title="statement not covered" >    if (!parentCategory) {</span>
+<span class="cstat-no" title="statement not covered" >      return;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.getRelatedCategories(parentCategory, <span class="fstat-no" title="function not covered" >re</span>latedCategories =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      this.setState({ relatedCategories });</span>
+    });
+  }
+&nbsp;
+&nbsp;
+  loadIfNoData() {
+    const props = this.props;
+    const dref = props.dref;
+    const category = this.props.categories[dref];
+    // Nothing to do until the category for the passed dref is loaded from the cloud
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (!category) {
+<span class="cstat-no" title="statement not covered" >      return;</span>
+    }
+&nbsp;
+    // Fetch the parent category of the passed dref from the cloud
+    let parentDref;
+    try {
+      const names = category.parent.names;
+      parentDref = names ? <span class="branch-0 cbranch-no" title="branch not covered" >names[0].id </span>: null;
+      <span class="missing-if-branch" title="else path not taken" >E</span>if (!parentDref) {
+        return;
+      }
+    } catch (e) {
+<span class="cstat-no" title="statement not covered" >      console.warn('Unknown DREF: ', dref)</span>
+<span class="cstat-no" title="statement not covered" >      return console.warn(e);</span>
+    }
+&nbsp;
+    let load = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+      
+<span class="cstat-no" title="statement not covered" >      props.loadCategories({</span>
+        storeCode: props.storeCode,
+        dref: parentDref,
+        isStoreCode: false
+      });
+    }
+&nbsp;
+    // Fetch categories for this store/dref combo if not loaded already
+<span class="cstat-no" title="statement not covered" >    if (dref &amp;&amp; !props.categories[parentDref]) {</span>
+<span class="cstat-no" title="statement not covered" >      load();</span>
+    }
+  }
+&nbsp;
+&nbsp;
+  renderRelated(cat, i) {
+    const label = cat ? <span class="branch-0 cbranch-no" title="branch not covered" >cat.title </span>: '';
+    const dref = cat ? <span class="branch-0 cbranch-no" title="branch not covered" >cat.id.split(',').pop() </span>: '';
+    const storeCode = this.props.storeCode;
+    return &lt;NavLink aria-live="off" key={i} 
+        className="related"
+        to={ `categories/${storeCode}/${dref}` }
+        onClick={ <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >          this.props.onClick('relatedCat', {</span>
+            podPosition: this.props.index+1,
+            podHeroName: this.props.heroCategory,
+            podRelatedCategoryName: label
+          });
+        }}&gt;
+      &lt;div&gt;
+        &lt;span role="link" aria-label={label} className="ellipses lines-2"&gt;
+          { label }
+        &lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/NavLink&gt;;
+  }
+&nbsp;
+&nbsp;
+  render() {
+    let loading = false;
+    let related;
+    let data = this.state.relatedCategories;
+    const loadingAriaAttribs = {
+      "aria-busy": true, "aria-live":"off"
+    };
+&nbsp;
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (!data.length) {
+      loading = true;
+      data = [null, null,null, null];
+    }
+&nbsp;
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (!related) {
+      related = data.map(this.renderRelated);
+    }
+&nbsp;
+    return &lt;div  {...(loading ? loadingAriaAttribs : <span class="branch-1 cbranch-no" title="branch not covered" >{"aria-live":"off"})</span>} className={ 'categories-related' + (loading ? ' loading' : <span class="branch-1 cbranch-no" title="branch not covered" >'')</span> }&gt;
+      &lt;hr tabIndex="0" role="heading" aria-level="2" content-label="RELATED CATEGORIES" aria-label="RELATED CATEGORIES" /&gt;
+      { related }
+    &lt;/div&gt;;
+  }
+&nbsp;
+&nbsp;
+  // 
+  // Choose 2 random children of the parent category ("siblings" of the passed dref prop).
+  // If there are not more than 2 children, use children of the parent's parent
+  // by recursively calling this function.
+  // 
+<span class="fstat-no" title="function not covered" >  ge</span>tRelatedCategories(parentCategory, callback) {
+    const showCount = <span class="cstat-no" title="statement not covered" >window.SHOW_AUDIOBOOKS ? 4 : 2;</span>
+    const children = <span class="cstat-no" title="statement not covered" >parentCategory.refinements;</span>
+&nbsp;
+    // if (children.length &lt;= showCount) {
+    //   // Not enough categories to choose from. Use siblings of the parent (recursive)
+    //   const grandparentId = parentCategory.parent.names[0].id;
+    //   return this.getRelatedCategories(this.props.staticMap[parentCategory.parent], callback);
+    // }
+&nbsp;
+    let related = <span class="cstat-no" title="statement not covered" >this.getRandomUnique(children, showCount, this.props.dref);</span>
+&nbsp;
+    // Load each of these into the drefHash in Redux for later use (on click)
+    // for (let i=0; i&lt;related.length; i++) {
+    //   const cat = related[i];
+&nbsp;
+    //   this.props.loadCategories({
+    //     storeCode: this.props.storeCode,
+    //     dref: cat.id,
+    //     isStoreCode: false
+    //   });
+    // }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return callback(related);</span>
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  ge</span>tRandomUnique(drefArray, count, excludeId) {
+    // Make a copy of the array
+    const tmp = <span class="cstat-no" title="statement not covered" >drefArray.slice(drefArray);</span>
+    let ret = <span class="cstat-no" title="statement not covered" >[];</span>
+    
+    let i = <span class="cstat-no" title="statement not covered" >0;</span>
+<span class="cstat-no" title="statement not covered" >    while (i &lt; count) {</span>
+      const index = <span class="cstat-no" title="statement not covered" >Math.floor(Math.random() * tmp.length);</span>
+<span class="cstat-no" title="statement not covered" >      if (tmp[index].id.split(',').indexOf(excludeId) &gt;= 0) {</span>
+<span class="cstat-no" title="statement not covered" >        continue;</span>
+      }
+&nbsp;
+      const removed = <span class="cstat-no" title="statement not covered" >tmp.splice(index, 1);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      ret.push(removed[0]);</span>
+<span class="cstat-no" title="statement not covered" >      i++;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return ret;</span>
+  }
+}
+&nbsp;
+export default CategoriesRelated;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jan 04 2024 21:31:55 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>

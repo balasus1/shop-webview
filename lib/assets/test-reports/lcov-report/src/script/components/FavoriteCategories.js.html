@@ -1,0 +1,1413 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/script/components/FavoriteCategories.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/script/components</a> FavoriteCategories.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447
+448
+449
+450
+451
+452
+453
+454
+455
+456
+457</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react'
+import { favoriteCategories, postFavoriteCategoriesNative } from '../lib/fetch'
+import {constants, getImageName, reOrder, isSameObject} from '../lib/utils'
+import platforms from '../lib/constants/platforms'
+import EpdPaginationContainer from '../containers/EpdPaginationContainer'
+import checkedBox from '../../images/static/icons/check_fav_lcd.svg'
+import CategoriesContainer from '../containers/CategoriesContainer'
+import defaultBook from '../../../public/images/categories_icons_medium/default.svg'
+import closeButton from '../../images/X.svg'
+import leftArrow from '../../images/left_arrow.svg'
+import noFavSelectionCheck from '../../images/static/icons/no_fav_selection_check.svg'
+import '../../style-dist/components/FavoriteCategories.css'
+import textReplace from '../lib/i18n'
+import KEY from '../lib/constants/languages/keys'
+require('../../style-dist/components/FavoriteCategories.epd.css');
+<span class="missing-if-branch" title="if path not taken" >I</span>if (window.location.href.match(platforms.quill)) {
+<span class="cstat-no" title="statement not covered" >  require('../../style-dist/components/FavoriteCategories.quill.css');</span>
+}
+  
+class FavoriteCategories extends Component {
+<span class="fstat-no" title="function not covered" >  co</span>nstructor(props) {
+<span class="cstat-no" title="statement not covered" >    super(props);</span>
+<span class="cstat-no" title="statement not covered" >    this.shopType = this.props.match.params.shopType;</span>
+<span class="cstat-no" title="statement not covered" >    window.favInProfile = !!this.props.match.params.shopType</span>
+<span class="cstat-no" title="statement not covered" >    this.isEPD = window.location.href.match(platforms.epd) || window.location.href.match(platforms.quill);</span>
+<span class="cstat-no" title="statement not covered" >    this.isEpd = window.location.href.match(platforms.epd);</span>
+<span class="cstat-no" title="statement not covered" >    this.isIOS = window.location.href.match(platforms.ios);</span>
+<span class="cstat-no" title="statement not covered" >    this.state = {</span>
+      isTab: (!this.shopType || this.isEPD) &amp;&amp; window.innerWidth &gt; 480,
+      isChecked: true,
+      selectedFavCategories: [],
+      saving: false,
+      displayBackIcon: false
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.categoryStoreCode = 'nkbk';</span>
+<span class="cstat-no" title="statement not covered" >    this.shopHome = (this.shopType &amp;&amp;</span>
+      ((this.shopType === textReplace(KEY.audiobook).toLowerCase()) ? "audiobook" : "ebook")) //invoked from profile screen
+      || (window.SHOW_AUDIOBOOKS ? "audiobook" : "ebook"); //Not invoked from profile
+<span class="cstat-no" title="statement not covered" >    this.isInFavoriteCategoriesPage = !!window.location.href.match("favCategories");</span>
+    // bind methods
+<span class="cstat-no" title="statement not covered" >    this.selectFavCategories = this.selectFavCategories.bind(this);</span>
+<span class="cstat-no" title="statement not covered" >    this.closeFavCategories = this.closeFavCategories.bind(this);</span>
+<span class="cstat-no" title="statement not covered" >    this.setSelectedFavsHeight = this.setSelectedFavsHeight.bind(this);</span>
+<span class="cstat-no" title="statement not covered" >    this.isOrientationLandscape = this.isOrientationLandscape.bind(this);</span>
+<span class="cstat-no" title="statement not covered" >    this.isEPD = window.location.href.match(platforms.epd) || window.location.href.match(platforms.quill);</span>
+<span class="cstat-no" title="statement not covered" >    this.key = `selectedFavCategories_${this.props.customer.accountId}-${this.props.customer.profileId}-${this.shopHome}`;</span>
+<span class="cstat-no" title="statement not covered" >    this.blurEvent = window.location.href.match(platforms.ios) ? "blur" : "visibilitychange";</span>
+<span class="cstat-no" title="statement not covered" >    this.initialLoad = true;</span>
+	}
+&nbsp;
+<span class="fstat-no" title="function not covered" >  co</span>mponentDidMount() {
+&nbsp;
+    const showBackIcon = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+      let displayBackIcon = <span class="cstat-no" title="statement not covered" >!(window.screen.width &lt; 480) </span> // not phone
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (window.screen.width &lt; 480 || window.screen.height &lt; 480) {</span>
+<span class="cstat-no" title="statement not covered" >        displayBackIcon = false;</span>
+      }
+&nbsp;
+      else <span class="cstat-no" title="statement not covered" >if(window.screen.width &gt;= 480 &amp;&amp; window.innerWidth &lt;= Math.ceil(.4 * window.screen.width)) { // splitscreen </span>
+<span class="cstat-no" title="statement not covered" >        displayBackIcon = true;</span>
+      }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      this.setState({ displayBackIcon });</span>
+&nbsp;
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (this.isIOS) {</span>
+<span class="cstat-no" title="statement not covered" >      window.addEventListener('resize', this.isOrientationLandscape);</span>
+<span class="cstat-no" title="statement not covered" >      if (window.favInProfile) {</span>
+<span class="cstat-no" title="statement not covered" >        this.isOrientationLandscape();</span>
+      }
+    }
+    else {
+<span class="cstat-no" title="statement not covered" >      window.addEventListener("resize", <span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        this.setState({ isTab: (!this.shopType || this.isEPD) &amp;&amp; window.innerWidth &gt; 480 });</span>
+<span class="cstat-no" title="statement not covered" >        if (window.favInProfile) {</span>
+<span class="cstat-no" title="statement not covered" >          showBackIcon();</span>
+        }
+      });
+<span class="cstat-no" title="statement not covered" >      if (window.favInProfile) {</span>
+<span class="cstat-no" title="statement not covered" >        showBackIcon();</span>
+      }
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    window.scroll(0,0); </span>//start from top of the page.
+    let interval = <span class="cstat-no" title="statement not covered" >setInterval(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      if (document.readyState === 'complete') {</span>
+<span class="cstat-no" title="statement not covered" >        clearInterval(interval);</span>
+<span class="cstat-no" title="statement not covered" >        window.scroll(0, 0);</span>
+      }
+    }, 300);
+&nbsp;
+    const preserveSelection = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+      let customer = <span class="cstat-no" title="statement not covered" >this.props.customer;</span>
+      let urlParams = <span class="cstat-no" title="statement not covered" >{</span>
+        accountId: customer.accountId,
+        profileId: customer.profileId,
+        shopHome: this.shopHome
+      };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (sessionStorage.getItem('reloaded') != null) { // Retain selected favs on refresh.</span>
+<span class="cstat-no" title="statement not covered" >        console.log("This Screen is reloaded...Retaining selected cats..")</span>
+        let value = <span class="cstat-no" title="statement not covered" >localStorage.getItem(this.key);</span>
+<span class="cstat-no" title="statement not covered" >        this.state.selectedFavCategories = JSON.parse(value)</span>
+<span class="cstat-no" title="statement not covered" >        this.saveFavCategories(true);</span>
+<span class="cstat-no" title="statement not covered" >        setTimeout(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >          this.loaded = true;</span>
+        }, 1000)
+      }
+      else {
+<span class="cstat-no" title="statement not covered" >        this.loadFavCategories(urlParams);</span>
+      }
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    window.addEventListener('onScrollToPage', this.setSelectedFavsHeight);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    window.addEventListener(this.blurEvent, this.saveOnBlur());</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    preserveSelection();</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  sa</span>veOnBlur() {
+<span class="cstat-no" title="statement not covered" >    if (!this.initialLoad &amp;&amp; performance.navigation.type !== 1) { // Retain selected favs on refresh.</span>
+<span class="cstat-no" title="statement not covered" >      this.closeFavCategories(true);</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.initialLoad = false; </span>// Do not close on initial load. 
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (this.shopType &amp;&amp; window.screen.width &lt;= 480) {</span>
+<span class="cstat-no" title="statement not covered" >      window.Device.modifyHeader({</span>
+        enableBack: true,
+        title: constants.FAV_CATEGORIES,
+        hideTools: true,
+        hideBottomNav: false
+      });
+    }
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  se</span>tSelectedFavsHeight(e) {
+<span class="cstat-no" title="statement not covered" >    if (!this.shopType &amp;&amp; window.selectedCats &amp;&amp; e.detail.categoryType === constants.SELECTED_FAVS) {</span>
+      let isEPD = <span class="cstat-no" title="statement not covered" >window.location.href.match(platforms.epd);</span>
+      let landingHeight = <span class="cstat-no" title="statement not covered" >isEPD ? 390 : 603;</span>
+<span class="cstat-no" title="statement not covered" >      window.selectedCats.style.height = (landingHeight * e.detail.page) + "px";</span>
+<span class="cstat-no" title="statement not covered" >      window.selectedCats.scrollTop = (e.detail.page - 1) * (landingHeight);</span>
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  is</span>OrientationLandscape() {
+<span class="cstat-no" title="statement not covered" >    window.Device.isOrientationLandscape(<span class="fstat-no" title="function not covered" >re</span>sponse =&gt; {</span>
+      const responseObj = <span class="cstat-no" title="statement not covered" >(typeof response === 'object') ? response : JSON.parse(response);</span>
+<span class="cstat-no" title="statement not covered" >      if (responseObj) {</span>
+        const innerWidth = <span class="cstat-no" title="statement not covered" >parseInt(JSON.parse(responseObj.innerWidth));</span>
+<span class="cstat-no" title="statement not covered" >        if (window.favInProfile) {</span>
+<span class="cstat-no" title="statement not covered" >          this.setState({ displayBackIcon: !JSON.parse(responseObj.splitscreen)});</span>
+        } else <span class="cstat-no" title="statement not covered" >if (innerWidth &gt; 480) {</span>
+<span class="cstat-no" title="statement not covered" >          this.setState({ isTab: !responseObj.orientation ? true : responseObj.orientation });</span>
+        } else <span class="cstat-no" title="statement not covered" >if (!window.favInProfile &amp;&amp; innerWidth &lt; 480) {</span>
+<span class="cstat-no" title="statement not covered" >          this.setState({isTab: false});</span>
+        }
+      }
+    });
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  co</span>mponentDidUpdate(prevProps, prevState) {
+<span class="cstat-no" title="statement not covered" >    if(this.isIOS &amp;&amp; (prevState.isTab &amp;&amp; (prevState.isTab !== this.state.isTab))) {</span>
+<span class="cstat-no" title="statement not covered" >      this.isOrientationLandscape();</span>
+    } else <span class="cstat-no" title="statement not covered" >if(this.isIOS &amp;&amp; (!prevState.isTab &amp;&amp; (prevState.isTab !== this.state.isTab))) {</span>
+<span class="cstat-no" title="statement not covered" >      this.isOrientationLandscape();</span>
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  co</span>mponentWillUnmount() {
+<span class="cstat-no" title="statement not covered" >    this.initialLoad = false;</span>
+<span class="cstat-no" title="statement not covered" >    window.removeEventListener(this.blurEvent, this.saveOnBlur());</span>
+<span class="cstat-no" title="statement not covered" >    window.removeEventListener('resize', this.isOrientationLandscape);</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  lo</span>adFavCategories(urlParams) {
+    const props = <span class="cstat-no" title="statement not covered" >this.props;</span>
+<span class="cstat-no" title="statement not covered" >    favoriteCategories('get', urlParams, null, <span class="fstat-no" title="function not covered" >(e</span>rr, resp)  =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      this.loaded = true;</span>
+<span class="cstat-no" title="statement not covered" >      if(err) {</span>
+<span class="cstat-no" title="statement not covered" >        console.error('Error fetching Favorite Categories.');</span>
+<span class="cstat-no" title="statement not covered" >        resp = {favorites:[]};</span>
+      }
+      let responseData = <span class="cstat-no" title="statement not covered" >this.shopHome === "ebook" ? resp.data.ebook : resp.data.audiobook</span>
+<span class="cstat-no" title="statement not covered" >      if(!responseData) { // Remove this check once NOOKCLOUD-5665 goes to prod</span>
+<span class="cstat-no" title="statement not covered" >        responseData = resp.data.favorites;</span>
+      }
+<span class="cstat-no" title="statement not covered" >      this.setState({selectedFavCategories: responseData});</span>
+<span class="cstat-no" title="statement not covered" >      props.setFavCategories(responseData); </span>// Trigger a redux dispatch
+    });
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  as</span>ync saveFavCategories(noRedirect) {
+    let customer = <span class="cstat-no" title="statement not covered" >this.props.customer;</span>
+    let oldFavCategories = <span class="cstat-no" title="statement not covered" >this.props.data.favCategories;</span>
+    let newlySelectedFavCategories = <span class="cstat-no" title="statement not covered" >this.state.selectedFavCategories;</span>
+    let urlParams = <span class="cstat-no" title="statement not covered" >{</span>
+      accountId: customer.accountId,
+      profileId: customer.profileId,
+      shopHome: this.shopHome
+    };
+    let payLoad = <span class="cstat-no" title="statement not covered" >{</span>
+      "favorites": newlySelectedFavCategories
+    }
+&nbsp;
+    const redirect = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(e</span>rr) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      if(noRedirect) {<span class="cstat-no" title="statement not covered" >return;}</span></span>
+<span class="cstat-no" title="statement not covered" >      if (err) {</span>
+<span class="cstat-no" title="statement not covered" >        console.error('Error saving Favorite Categories.' + err);</span>
+<span class="cstat-no" title="statement not covered" >        this.props.updateFavCategories(oldFavCategories);</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
+      }
+      else {
+<span class="cstat-no" title="statement not covered" >        if (this.shopType &amp;&amp; window.location.hash.match(`/favCategories/${this.shopType}`)) { //shop type will be there when navigated from profile.</span>
+<span class="cstat-no" title="statement not covered" >            window.history.back();</span>
+        }
+        else <span class="cstat-no" title="statement not covered" >if (!this.shopType &amp;&amp; !window.location.hash.match('/favupdate')) {</span>
+<span class="cstat-no" title="statement not covered" >        localStorage.setItem(this.key, JSON.stringify(newlySelectedFavCategories));</span>
+<span class="cstat-no" title="statement not covered" >        if (window.Device.shopPlatform !== platforms.ios &amp;&amp; !window.LOCALHOST) {//deeplink to for me screen as the other redirection method works only for IOS.</span>
+<span class="cstat-no" title="statement not covered" >          window.Device.launchUrl({ url: 'http://www.nook.com/app/' + (window.SHOW_AUDIOBOOKS ? "audiobookstore" : "store") });</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >          window.location.hash = window.location.hash.replace("/favCategories", "/for_me/favupdate");</span>
+        }
+      }
+    }
+  }
+&nbsp;
+    //Check if any changes made.
+<span class="cstat-no" title="statement not covered" >    if (newlySelectedFavCategories &amp;&amp; oldFavCategories &amp;&amp; !isSameObject(newlySelectedFavCategories, oldFavCategories)) {</span>
+<span class="cstat-no" title="statement not covered" >      if (!noRedirect) {</span>
+<span class="cstat-no" title="statement not covered" >        window.Device.showToast({</span>
+          message: textReplace(KEY.saving_favorites)
+        });
+      }
+    } else <span class="cstat-no" title="statement not covered" >if (this.shopType) {</span>
+<span class="cstat-no" title="statement not covered" >      redirect();</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    localStorage.setItem(this.key, JSON.stringify(newlySelectedFavCategories));</span>
+<span class="cstat-no" title="statement not covered" >    this.props.updateFavCategories(newlySelectedFavCategories);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (!window.LOCALHOST) {</span>
+<span class="cstat-no" title="statement not covered" >      payLoad = {</span>
+        shopType: urlParams.shopHome,
+        categories: newlySelectedFavCategories,
+        closeModal: !noRedirect
+      }
+<span class="cstat-no" title="statement not covered" >      try {</span>
+<span class="cstat-no" title="statement not covered" >        postFavoriteCategoriesNative(payLoad);</span>
+      } catch (e) {
+<span class="cstat-no" title="statement not covered" >        console.log('Error posting Favorite Categories to native: ' + e);</span>
+      }
+<span class="cstat-no" title="statement not covered" >      redirect();</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      favoriteCategories('post', urlParams, payLoad, <span class="fstat-no" title="function not covered" >(e</span>rr, resp) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        redirect(err);</span>
+      });
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  re</span>nderFavorite(eachCategory, i) {
+<span class="cstat-no" title="statement not covered" >    return (</span>
+      &lt;div key={eachCategory.id} className="fav-category"&gt;
+        &lt;img src={ this.state.categoryImage[eachCategory.id] } className="category-icon" alt={ eachCategory.label } /&gt;
+        &lt;div className={'category-name ellipses'}&gt;{  this.state.categoryLabel[eachCategory.id] || eachCategory.label }&lt;/div&gt;
+        &lt;form&gt;
+          &lt;input
+              type="image"
+              src={ checkedBox }
+              alt={textReplace(KEY.submit)}
+              className="fav-selection-checkbox"
+              id={ eachCategory.id }
+              name={ eachCategory.label }
+              defaultChecked={ this.state.isChecked }
+              value={ eachCategory.label }
+              onClick={ this.selectFavCategories }
+          /&gt;
+        &lt;/form&gt;
+&nbsp;
+      &lt;/div&gt;
+    );
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  re</span>nderFiller() {
+    let maxSelected = <span class="cstat-no" title="statement not covered" >this.shopType ? 10 : 9;</span>
+    let noOfFillers = <span class="cstat-no" title="statement not covered" >maxSelected - (this.state.selectedFavCategories.length % maxSelected);</span>
+    let fillers = <span class="cstat-no" title="statement not covered" >[];</span>
+<span class="cstat-no" title="statement not covered" >    for (let i = 0; (i &lt; noOfFillers &amp;&amp; noOfFillers &lt; maxSelected); i++) {</span>
+<span class="cstat-no" title="statement not covered" >      fillers.push(&lt;div key={i + "filler"} className="fav-category filler"&gt;&lt;/div&gt;);</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return fillers;</span>
+  }
+&nbsp;
+  // select only checked favorite categories and store in array
+<span class="fstat-no" title="function not covered" >  se</span>lectFavCategories(event) {
+    let updatedItems = <span class="cstat-no" title="statement not covered" >[...this.state.selectedFavCategories];</span>
+    const isIndexFound = <span class="cstat-no" title="statement not covered" >updatedItems.findIndex(<span class="fstat-no" title="function not covered" >se</span>lectedCategory =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    return selectedCategory.label === event.target.name;</span>
+    });
+<span class="cstat-no" title="statement not covered" >    if (event.target.checked) {</span>
+<span class="cstat-no" title="statement not covered" >      if(isIndexFound === -1) {</span>
+<span class="cstat-no" title="statement not covered" >        updatedItems.push({"id": event.target.id, "label": event.target.value});</span>
+      } else {
+<span class="cstat-no" title="statement not covered" >        updatedItems.splice(isIndexFound, 1);</span>
+      }
+    } else {
+<span class="cstat-no" title="statement not covered" >      if (isIndexFound &gt; -1) {</span>
+<span class="cstat-no" title="statement not covered" >        updatedItems.splice(isIndexFound, 1);</span>
+      } else {
+<span class="cstat-no" title="statement not covered" >        updatedItems.push({"id": event.target.id, "label": event.target.value});</span>
+      }
+    }
+    const ordered = <span class="cstat-no" title="statement not covered" >reOrder(updatedItems, 'label');</span>
+<span class="cstat-no" title="statement not covered" >    this.setState({selectedFavCategories: ordered});</span>
+<span class="cstat-no" title="statement not covered" >    localStorage.setItem(this.key, JSON.stringify(ordered));</span>
+    
+<span class="cstat-no" title="statement not covered" >    if (updatedItems &amp;&amp; updatedItems.length === 0 &amp;&amp; window.selectedCats) {</span>
+<span class="cstat-no" title="statement not covered" >      window.selectedCats.removeAttribute("style");</span>
+    }
+    else {
+<span class="cstat-no" title="statement not covered" >      sessionStorage.setItem('reloaded', "true");</span>
+    }
+<span class="cstat-no" title="statement not covered" >    this.initialLoad = false;</span>
+  }
+&nbsp;
+  closeFavCategories = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >    try {</span>
+<span class="cstat-no" title="statement not covered" >      if (this.loaded) {</span>
+<span class="cstat-no" title="statement not covered" >        this.saveFavCategories();</span>
+      }
+<span class="cstat-no" title="statement not covered" >      sessionStorage.removeItem('reloaded');</span>
+    } catch (e) {
+<span class="cstat-no" title="statement not covered" >      console.log(`Error while saving favorite categories: ${e}`);</span>
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  re</span>nder() {
+    const isFavCategorySelected = <span class="cstat-no" title="statement not covered" >this.state.selectedFavCategories</span>
+        &amp;&amp; this.state.selectedFavCategories.length &gt; 0
+&nbsp;
+        let categoryImage = <span class="cstat-no" title="statement not covered" >[];</span>
+        let categoryLabel = <span class="cstat-no" title="statement not covered" >[];</span>
+<span class="cstat-no" title="statement not covered" >        this.state.categoryImage = [];</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (this.state.selectedFavCategories &amp;&amp; this.state.selectedFavCategories.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >          for (let index = 0; index &lt; this.state.selectedFavCategories.length; index++) {</span>
+            let cat = <span class="cstat-no" title="statement not covered" >this.state.selectedFavCategories[index];</span>
+&nbsp;
+            const getFileName = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(a</span>rg, catName) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                try {</span>
+                    const images = <span class="cstat-no" title="statement not covered" >require.context('../../../public/images/categories_icons_medium', true);</span>
+                    let imgsrc = <span class="cstat-no" title="statement not covered" >images(`./${arg}`);</span>
+<span class="cstat-no" title="statement not covered" >                    categoryImage[cat.id] = imgsrc;</span>
+<span class="cstat-no" title="statement not covered" >                    categoryLabel[cat.id] = catName;</span>
+                }
+                catch (error) {
+<span class="cstat-no" title="statement not covered" >                    categoryImage[cat.id] = defaultBook;</span>
+                }
+<span class="cstat-no" title="statement not covered" >                this.state.categoryImage = categoryImage</span>
+<span class="cstat-no" title="statement not covered" >                this.state.categoryLabel = categoryLabel</span>
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            getImageName(cat, getFileName);</span>
+          }
+        }
+     
+    const categoriesTitle = <span class="cstat-no" title="statement not covered" >this.shopType === "ebook" ? constants.EBOOK_CATEGORIES : constants.AUDIOBOOK_CATEGORIES;</span>
+    const isCategoriesSelected = <span class="cstat-no" title="statement not covered" >this.state.selectedFavCategories &amp;&amp; this.state.selectedFavCategories.length &gt; 0;</span>
+    const shopTypeHeader = <span class="cstat-no" title="statement not covered" >(this.shopType &amp;&amp; isCategoriesSelected) ? categoriesTitle : "";</span>
+    const sectionHeaderTitle = <span class="cstat-no" title="statement not covered" >&lt;div className="title ellipses lines-1"&gt;{shopTypeHeader || constants.FAV_CATEGORIES_TITLE_HEADER}&lt;/div&gt;;</span>
+    const favCategoryInstruction = <span class="cstat-no" title="statement not covered" >!this.shopType ? &lt;div className="instruction"&gt;</span>
+      { constants.EXPLORE_FAVORITES_USAGE_INFO + constants.EDIT_FAVORITES_USAGE_INFO }&lt;/div&gt; : ""
+<span class="cstat-no" title="statement not covered" >    return (</span>
+      &lt;div className={"edit-fav-categories" + (this.shopType ? " fav-in-profile" : "")} ref={<span class="fstat-no" title="function not covered" >el</span> =&gt; <span class="cstat-no" title="statement not covered" >window.favInProfileContainer = el}</span> &gt;
+        &lt;div className={'favCategories-container ' + ((this.state.isTab &amp;&amp; !window.favInProfile) ? "tab" : "")}&gt;
+          &lt;div className={'description-container ' + (this.isIOS ? "ios" : "")}&gt;
+            &lt;div className={"title-container" + ((this.shopType &amp;&amp; !this.isEPD) ? " justify" : "")}&gt;
+            {(this.shopType) &amp;&amp; !this.isEpd &amp;&amp; (this.state.displayBackIcon || (this.shopType &amp;&amp; this.isEPD)) &amp;&amp; 
+            &lt;a className="close-button" onClick={this.closeFavCategories}&gt;
+                &lt;img src={leftArrow} alt={textReplace(KEY.close_edit_favs)} /&gt;
+              &lt;/a&gt;}
+              {sectionHeaderTitle}
+              {!this.shopType &amp;&amp; &lt;a className="close-button" onClick={this.closeFavCategories}&gt;
+                &lt;img src={closeButton} alt={textReplace(KEY.close_edit_favs)} /&gt;
+              &lt;/a&gt;}
+            &lt;/div&gt;
+            {!window.favInProfile &amp;&amp; !this.state.isTab &amp;&amp; favCategoryInstruction}
+          &lt;/div&gt;
+&nbsp;
+        { (this.state.isTab &amp;&amp; !window.favInProfile) ?
+            &lt;div className="two-column-container"&gt;
+                &lt;div className="selected-fav-categories"&gt;
+                { favCategoryInstruction }
+                {!this.shopType &amp;&amp; this.isEPD &amp;&amp; &lt;hr&gt;&lt;/hr&gt;}
+                {this.shopType &amp;&amp; this.isEPD &amp;&amp;
+                  &lt;div className="title"&gt;{constants.SELECTED_CATEGORIES}&lt;/div&gt;
+                }
+                  &lt;div className="fav-selection-container"&gt;
+                    { !this.isEPD &amp;&amp; &lt;div className="title"&gt;{ constants.FAV_CATEGORIES }&lt;/div&gt; }
+                    &lt;div className={'fav-container '  + (this.shopType ? "profile " : "") + (!isFavCategorySelected ? "no-selection" : "")} ref={<span class="fstat-no" title="function not covered" >el</span> =&gt; <span class="cstat-no" title="statement not covered" >window.selectedCats = el}</span>&gt;
+                      { !isFavCategorySelected  &amp;&amp;
+                          &lt;React.Fragment&gt;
+                            &lt;img src={noFavSelectionCheck} alt={textReplace(KEY.no_fav_selected)} /&gt;
+                            &lt;div className="no-fav-selection-content"&gt;
+                             {textReplace(KEY.tap_categories)}  &lt;b&gt;{textReplace(KEY.all_categories)}&lt;/b&gt; {textReplace(KEY.add_favorites)}
+                            &lt;/div&gt;
+                          &lt;/React.Fragment&gt;
+                      }
+                        { this.state.selectedFavCategories &amp;&amp; this.state.selectedFavCategories.map(<span class="fstat-no" title="function not covered" >ca</span>tegory =&gt; {
+<span class="cstat-no" title="statement not covered" >                          return this.renderFavorite(category, category.id);</span>
+                        }) }
+                        {
+                          this.isEPD &amp;&amp; this.state.selectedFavCategories &amp;&amp; !this.shopType &amp;&amp; this.renderFiller()
+                        }
+                    &lt;/div&gt;
+                    { this.isEPD &amp;&amp; isFavCategorySelected &amp;&amp; &lt;EpdPaginationContainer noborder={ false } firstPageCustomDown={ '' } screenLocation={window.location.href} categoryType={ 'selected-favorites' } pageNo={1} seeAllCustom={''} /&gt; }
+                  &lt;/div&gt;
+                &lt;/div&gt;
+&nbsp;
+                &lt;div className={'selected-fav-categories all-categories ' + (this.isIOS ? "ios" : "")}&gt;
+                  &lt;div className="title"&gt;{ constants.ALL_CATEGORIES }&lt;/div&gt;
+                  &lt;CategoriesContainer
+                      addOrRemoveItem={ <span class="fstat-no" title="function not covered" >(e</span>) =&gt; {
+<span class="cstat-no" title="statement not covered" >                        this.selectFavCategories(e);</span>
+                      } }
+                      selectedFavCategories={this.state.selectedFavCategories}
+                      isInFavoriteCategoriesPage={ this.isInFavoriteCategoriesPage }/&gt;
+                  { this.isEPD &amp;&amp; &lt;EpdPaginationContainer noborder={ false } firstPageCustomDown={ '' } screenLocation={window.location.href} categoryType={ 'all-categories' } pageNo={1} seeAllCustom={''} /&gt; }
+                &lt;/div&gt;
+              &lt;/div&gt; :
+              &lt;React.Fragment&gt;
+               { isCategoriesSelected &amp;&amp; &lt;div className="selected-fav-categories"&gt;
+                  { this.state.isTab &amp;&amp; !this.shopType &amp;&amp; favCategoryInstruction }
+                  &lt;div className="title"&gt;{ constants.FAV_CATEGORIES }&lt;/div&gt;
+                  { this.state.selectedFavCategories &amp;&amp; this.state.selectedFavCategories.map(<span class="fstat-no" title="function not covered" >ca</span>tegory =&gt; {
+<span class="cstat-no" title="statement not covered" >                    return this.renderFavorite(category, category.id);</span>
+                  }) }
+                &lt;/div&gt; }
+              &lt;div className={"selected-fav-categories all-categories" + ((this.shopType &amp;&amp; !this.isEPD)? " profile" : "") }&gt;
+              &lt;div className="title"&gt;{ constants.ALL_CATEGORIES }&lt;/div&gt;
+              &lt;CategoriesContainer addOrRemoveItem={ <span class="fstat-no" title="function not covered" >(e</span>) =&gt; { <span class="cstat-no" title="statement not covered" >this.selectFavCategories(e);}</span> }
+                                    selectedFavCategories={this.state.selectedFavCategories}
+                                    isInFavoriteCategoriesPage={ this.isInFavoriteCategoriesPage }/&gt;
+            &lt;/div&gt;
+            &lt;/React.Fragment&gt;
+        }
+      &lt;/div&gt;&lt;/div&gt;
+    )
+  }
+}
+&nbsp;
+export default FavoriteCategories;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Dec 18 2023 16:27:02 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

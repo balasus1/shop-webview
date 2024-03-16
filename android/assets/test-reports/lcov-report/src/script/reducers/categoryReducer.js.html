@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/script/reducers/categoryReducer.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/script/reducers</a> categoryReducer.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import actions from '../lib/constants/actionTypes'
+&nbsp;
+const initialState = {
+  categories: {},
+  staticMap: {},
+  drefHash: {
+    // 1607: {id: "1607", title: "Kid's Books", childCount: 2},
+    // 3158: {id: "3158", title: "eNewsPapers", childCount: 2},
+    // 3159: {id: "3159", title: "eMagazines", childCount: 2},
+    // 21954: {id: "21954", title: "Digital Audiobooks", childCount: 2},
+    // 21955: {id: "21955", title: "Kid's AudioBooks", childCount: 2},
+  }
+};
+&nbsp;
+const categoryData = (state = initialState, action) =&gt; {
+  let stateCopy = Object.assign({}, state);
+  let catCopy = Object.assign({}, state.categories);
+&nbsp;
+  switch (action.type) {
+<span class="branch-0 cbranch-no" title="branch not covered" >    case actions.SET_CATEGORY_DATA:</span>
+      let catStore = <span class="cstat-no" title="statement not covered" >{};</span>
+<span class="cstat-no" title="statement not covered" >      catStore[action.code] = {</span>
+        refinements: action.data.refinements,
+        parent: action.data.parent || null,
+        spots: action.data.spots || null
+      };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      Object.assign(catCopy, catStore);</span>
+<span class="cstat-no" title="statement not covered" >      stateCopy.categories = catCopy;</span>
+<span class="cstat-no" title="statement not covered" >      return stateCopy;</span>
+&nbsp;
+    // This is a hash of category names that we will keep as we fetch
+    // categories.
+<span class="branch-1 cbranch-no" title="branch not covered" >    case actions.SET_DREF_HASH:</span>
+      const hash = <span class="cstat-no" title="statement not covered" >{};</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (action.data &amp;&amp; action.data) {</span>
+<span class="cstat-no" title="statement not covered" >        for (let key in action.data.allCategories) {</span>
+          let cat = <span class="cstat-no" title="statement not covered" >action.data.allCategories[key]</span>
+<span class="cstat-no" title="statement not covered" >          hash[cat.id] = cat;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        for (let key in action.data.topCategories) {</span>
+          let cat = <span class="cstat-no" title="statement not covered" >action.data.topCategories[key]</span>
+<span class="cstat-no" title="statement not covered" >          if (!hash[cat.id]) {</span>
+<span class="cstat-no" title="statement not covered" >            hash[cat.id] = cat;</span>
+          }
+        }
+      }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      Object.assign(stateCopy.drefHash, hash);</span>
+<span class="cstat-no" title="statement not covered" >      return stateCopy;</span>
+      
+    // This is a static map that contains (nearly) everything
+    // ONLY USE THIS FOR THE RECOMMENDED CATEGORY "PODS"
+    // case actions.SET_STATIC_DREF_MAP:
+    //   stateCopy.staticMap = action.data;
+    //   return stateCopy;
+    
+    default:
+      return state;
+  }
+}
+&nbsp;
+export default categoryData
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Dec 18 2023 16:27:02 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

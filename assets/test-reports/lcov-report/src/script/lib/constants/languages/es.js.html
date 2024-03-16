@@ -1,0 +1,747 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/script/lib/constants/languages/es.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../index.html">All files</a> / <a href="index.html">src/script/lib/constants/languages</a> es.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235</td><td class="line-coverage quiet"><span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const STRINGS_ES = {
+  //AudiobookSubscription.js
+  get_started: "Comience con ",
+  your_free_audiobook: "Tu Audiolibro Gratis",
+  when_you_subscribe: "Cuando Te Suscribes Hoy",
+  start_free_trial: "COMIENZA TU PRUEBA GRATUITA",
+  cancel_text: " por mes después de 30 días. Cancele en cualquier momento.",
+  listening_perks: "Tus Ventajas de Escuchar",
+  everyday_savings: "AHORROS CADA DÍA",
+  save_on_subscription: "Ahorre hasta un 60 % en audiolibros seleccionados cuando utilice los créditos de su suscripción.",
+  credit_1book: "1 CRÉDITO = 1 LIBRO",
+  credit_1book_text: "Con 1 crédito obtendrás 1 audiolibro: elige entre más de 300 000 títulos",
+  listen_anywhere: "Escuche en cualquier lugar",
+  switch_devices: "Cambie sin problemas entre dispositivos: le reservaremos su lugar.",
+  no_commitment: "SIN COMPROMISO",
+  free_subscription: "Suscripción gratuita durante 30 días. Cancele en cualquier momento, sin preguntas",
+  listen_anytime: "Escuche en cualquier momento y lugar",
+  download_free: "Descargue hoy la aplicación gratuita Barnes &amp; Noble NOOK.",
+  via: "VÍA",
+  listen_your_purchased_books: "Puede escuchar los audiolibros que compró en su biblioteca digital en BN.com ingresando a: ",
+  account_library: "Mi Cuenta &gt; Mi Biblioteca Digital",
+  via_nook_app: "VÍA TU APLICACIÓN NOOK",
+  listen_offline: "Toca la portada de cualquier audiolibro de tu biblioteca para descargarlo y poder escucharlo sin conexión en cualquier momento.",
+  interested_in_audiobooks: "¿Interesado en escuchar audiolibros sin suscripción?",
+  browse_titles: "Ningún problema. Explore más de 300.000 títulos disponibles para compra individual.",
+  browse_audio_books: "EXPLORAR B&amp;N AUDIOLIBROS",
+  have_questions: "¿Tiene más preguntas?",
+  call_us: "Llámenos los 7 días de la semana de 9AM ET a 12AM ET.",
+  review_faq: " o revise nuestras preguntas frecuentes.",
+  read_faq: "LEA NUESTRAS PREGUNTAS FRECUENTES",
+  //AudiobookSubscriptionEPD.js
+  for_book_people: "Audiolibros para la gente de los libros, de la gente de los libros",
+  get_started_with: "Comience con su audiolibro gratuito cuando se suscriba hoy.",
+  cancel_anytime: " (+ impuestos) por mes después de 30 días. Cancele en cualquier momento.",
+  what_you_get: "Qué obtienes al suscribirte",
+  savings: "SUSCRIPCIÓN = AHORRO",
+  free_book: "¡Obtén un libro gratis al suscribirte hoy!",
+  redeem_credit: "¡Canjea tu crédito mensual para tu próxima escucha! Los créditos son válidos por un año.",
+  credits_save: "LOS CRÉDITOS TE AHORRAN MÁS",
+  saving_over: "Ahorros sobre el precio de compra de no suscriptores en cientos de miles de audiolibros.",
+  cancel: "Cancele en cualquier momento, sin preguntas.",
+  via_devices: "VÍA APLICACIONES Y DISPOSITIVOS NOOK",
+  browse_audiobook_titles: "Ningún problema. Explore más de 300.000 audiolibros disponibles para compra individual.",
+  see_all_categories: "Ver Todas Las Categorías",
+  //BecauseYouRead.js, CategoriesRecommended.js
+  recommended_for_you: "Recomendado Para Ti",
+  //Categories.js
+  error_fetching_category_data: "Error al recuperar los datos de la categoría.",
+  //CategoeryLanding.js
+  explore: "Explorar",
+  see_all: "Ver Todos",
+  //CategoryList.js
+  categorylist_error: "Vaya, hubo un problema al cargar las categorías. Por favor, inténtelo de nuevo más tarde.",
+  filter: "FILTRAR",
+  all_results: "Todos resultados",
+  sorted_by: "Ordenado por",
+  //Channels.js
+  nook_channels: "NOOK Canales",
+  //CustomDropdown.js
+  sort_by: "Ordenar por",
+  sort_list_by: "Ordenar lista por",
+  filter_list_by: "Filtrar lista por",
+  default: "Por defecto",
+  //EpdControls.js
+  of: "de",
+  //EpdHomeOffline.js
+  you_are_offline: "Parece que no estás conectado...",
+  no_internet: "Lo sentimos, no podemos encontrar una conexión a Internet. Conéctese a una red para ver nuevas recomendaciones.",
+  //F5Lols.js
+  cta_explore: "EXPLORAR",
+  more_lists: "Más Listas Para Ti",
+  see_more: "VER MÁS",
+  //FavoriteCategories.js
+  saving_favorites: "Guardando favoritos seleccionados...",
+  tap_categories: "Toque categorías de la ",
+  add_favorites: "Sección para añadirlas a tus favoritas.",
+  //ForMe.js
+  //ItemCover.js
+  by: "por",
+  //ListCarousel.js
+  browse_all: "Explorar Todo",
+  //ListCover.js
+  rating: "Clasificación",
+  or: "o",
+  credit: "Crédito",
+  audio_book_icon: "icono audiolibro",
+  free: "GRATIS",
+  purchased: "COMPRADO",
+  pre_order: "RESERVAR",
+  pre_ordered: "PREORDENADO",
+  internet_connection_needed: "Se necesita una conexión a Internet para descargar este contenido..",
+  //ListGridCover.js
+  read_by: "Leído por",
+  //ListOfLists.js
+  lists: "listas",
+  //ListSort.js
+  top_matches: "Mejores resultados",
+  best_sellers: "Más vendidos",
+  newest_oldest: "Del más nuevo al más antiguo",
+  oldest_newest: "Del más antiguo al más nuevo",
+  price_low_high: "Precio: del más bajo al más alto",
+  price_high_low: "Precio: del más alto al más bajo",
+  title_a_z: "Título: de la A a la Z",
+  title_z_a: "Título: de la Z a la A",
+  audiobooks: "Audiolibros",
+  books: "Libros",
+  no_results_found: "No se encontraron resultados",
+  shop_now: "COMPRA AHORA",
+  more_details: "MÁS DETALLES",
+  merchandising_pod_error: "Error del módulo de comercialización",
+  //ReadInStore.js
+  read_in_store: "LEER EN TIENDA",
+  //ShopRetry.js
+  something_went_wrong: "Perdón, algo salió mal. Vamos a intentarlo de nuevo.",
+  retry: "REINTENTAR",
+  //SubscriptionPromo.js
+  audiobook_subscription: "Suscripción a Audiolibros",
+  //networking.js
+  network_connectivity: "Por favor, asegúrese de tener conectividad de red.",
+  //Shop.js
+  explore_more_lists: "Explorar Más Listas",
+  explore_more_categories: "Explorar Más Categorías",
+  see_all_titles: "Ver Todos Los Títulos",
+  //StoreCategories.js
+  browse_categories: "Explorar Categorías",
+  top_categories: "Categorías Principales",
+  all_categories: "Todas las Categorías",
+  //utils.js
+  favorite_categories: "Categorías Favoritas",
+  ebooks: "eBooks",
+  kids_ebooks: "eBooks para Niños",
+  kids_audiobooks: "Audiolibros para Niños",
+  featured_collections: "Colecciones Destacadas",
+  explore_favorites: "Explora tus Favoritos",
+  select_categories: "Selecciona tus Categorías",
+  explore_categories_info: `Seleccione sus categorías preferidas para acceder rápidamente a los títulos que coinciden con sus intereses seleccionados por nuestros libreros. `,
+  edit_favorites: "Editar Mis Favoritos",
+  edit_favorites_info: "Puedes cambiar tu lista en cualquier momento.",
+  lets_go: "¡Vamonos!",
+  ebook: "eBook",
+  audiobook: "Audiolibro",
+  categories: "Categorías",
+  edit: "EDITAR",
+  add_categories: "AGREGAR CATEGORIAS",
+  no_fav: "Aún no has guardado ninguna categoría.",
+  ebook_categories: "eBook Categorías",
+  audiobook_categories: "Audiolibro Categorías",
+  selected_categories: "Categorías Seleccionadas",
+  content_unavailable: "Contenido no disponible actualmente. Por favor, inténtelo de nuevo más tarde.",
+  //img alt texts
+  loading: "Cargando",
+  list_icon: "icono lista",
+  grid_icon: "icono cuadrícula",
+  top_categories_icon: "Icono de Categorías Principales",
+  all_categories_icon: "Icono de Todas las Categorías",
+  no_fav_selected: "No se han seleccionado categorías favoritas.",
+  close_edit_favs: "Cerrar la pantalla Editar categorías favoritas",
+  submit: "Enviar",
+  more: "Más",
+  right_arrow: "Flecha Derecha",
+  book_icon: "Icono de Libro",
+  edit_fav_categories: "Editar Categorías Favoritas",
+  down_arrow: "Flecha Abajo",
+  up_arrow: "Flecha Arriba",
+  filter_icon: "Icono de filtro",
+  categories_icon: "Icono de categorías",
+  close_sub_categories: "Cerrar Subcategorías",
+  //Category Names
+  thrillers: "Suspense",
+  romance: "Romance",
+  mystery_crime: "Misterio y crimen",
+  science_fiction: "Ciencia ficción y fantasía",
+  biography: "Biografía",
+  manga: "manga",
+  kids: "Niñas",
+  magazines: "Revistas",
+  newspapers: "Periódicos",
+  african_americans: "Afroamericanas",
+  art_architecture_photography: "Arte, Arquitectura y Fotografía",
+  art_architecture: "Arte y Arquitectura",
+  business: "Negocio",
+  business_careers: "Negocios y carreras",
+  comics_graphic_novels: "Cómics y novelas gráficas",
+  computers: "Ordenadores",
+  cooking_food_wine: "Cocina, comida y vino",
+  cooking_food: "Cocinando comida",
+  crafts_hobbies: "Artesanías, pasatiempos y antigüedades",
+  arts_crafts: "Arte y Artesanía",
+  diet_health: "Dieta y salud",
+  health_medicine: "Salud y Medicina",
+  professional_education: "Educación profesional",
+  education_teaching: "Educación y enseñanza",
+  engineering: "Ingeniería",
+  fiction_literature: "Ficción y literatura",
+  history: "Historia",
+  horror: "Horror",
+  kids: "Niñas",
+  law: "Ley",
+  politics_government_law: "Política, Gobierno y Derecho",
+  medical_nursing_books: "Libros de medicina y enfermería",
+  newage_spirituality: "Nueva Era, Espiritualidad y Creencias Alternativas",
+  parenting: "Crianza y familia",
+  family: "Familia y crecimiento",
+  poetry: "Poesía",
+  reference: "Referencia",
+  reference_study_aids: "Ayudas de referencia y estudio",
+  religion_inspiration: "Religión e inspiración",
+  religion_beliefs: "Religión y Creencias",
+  science_nature: "Ciencia y naturaleza",
+  science_technology: "Tecnología científica",
+  nature: "Naturaleza",
+  science_fiction_fantasy: "Ciencia ficción y fantasía",
+  self_help: "Autoayuda",
+  social_sciences: "Ciencias Sociales",
+  sports_adventure: "Deportes y Aventura",
+  teens: "Adolescentes",
+  transportation: "Transporte",
+  travel: "Viajar",
+  true_crime: "Crimen verdadero",
+  westerns: "Westerns",
+  general_fiction: "Ficción general",
+  mystery_crimes_thrillers: "Misterio, crímenes y thrillers",
+  current_affairs: "Asuntos actuales",
+  young_adult: "Adulta joven",
+  entertainment: "Entretenimiento",
+  entertainment_performing_arts: "Entretenimiento y artes escénicas",
+  home_garden: "Hogar, jardín y mascotas",
+  humour_books: "Libros de humor",
+  newstand: "Puesto de periódicos",
+  philosophy: "Filosofía",
+  politics_current_events: "Política y actualidad",
+  school_guides: "Guías escolares y preparación para exámenes",
+};
+&nbsp;
+export default STRINGS_ES;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Dec 18 2023 16:27:02 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../sorter.js"></script>
+</body>
+</html>

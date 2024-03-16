@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for F2Pods.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> F2Pods.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react'
+import { filterList } from '../lib/utils'
+import platforms from '../lib/constants/platforms'
+import ShopRetry from './ShopRetry'
+import ShopSlider from './ShopSlider'
+import MultiItemPromo from './MultiItemPromo'
+import MultiItemSpreadPromo from './MultiItemSpreadPromo'
+import SingleItemPromo from './SingleItemPromo'
+import SubscriptionPromo from './SubscriptionPromo'
+&nbsp;
+import '../../style-dist/components/F2Pods.css'
+&nbsp;
+<span class="missing-if-branch" title="if path not taken" >I</span>if (window.location.href.match(platforms.epd)) {
+<span class="cstat-no" title="statement not covered" >  require('../../style-dist/components/F2Pods.epd.css');</span>
+<span class="cstat-no" title="statement not covered" >  require('../../style-dist/loading.epd.css');</span>
+}
+&nbsp;
+<span class="missing-if-branch" title="if path not taken" >I</span>if (window.location.href.match(platforms.quill)) {
+<span class="cstat-no" title="statement not covered" >  require('../../style-dist/components/F2Pods.quill.css');</span>
+}
+&nbsp;
+&nbsp;
+&nbsp;
+class F2Pods extends Component {
+&nbsp;
+  constructor() {
+    super();
+&nbsp;
+    // Define an empty pod to show during loading
+    this.loadingPod = [{
+      eanData: {},
+      display_order: 0,
+      html_template_name: 'audioPromotionSingle',
+      data: {
+        eans: {eans: [null]},
+        action_label: ''
+      }
+    }];
+    this.isEPD = window.location.href.match(platforms.epd) || window.location.href.match(platforms.quill);
+    // Bind methods
+    this.onClickMulti = this.onClickMulti.bind(this);
+    this.onClickSingle = this.onClickSingle.bind(this);
+    this.handleResize = this.handleResize.bind(this);
+  }
+&nbsp;
+  componentDidMount() {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (!this.isEPD) {
+      this.handleResize();
+    }
+  }
+&nbsp;
+  handleResize() {
+    window.addEventListener('resize', <span class="fstat-no" title="function not covered" >fu</span>nction() { <span class="cstat-no" title="statement not covered" >location.reload(); </span>}, false);
+  }
+  // All pods boil down to either single or multi (for now at least)
+  renderPod(pod, i) {
+    let eanData = this.props.eanData;
+    let filteredEANs = [];
+    let filteredListOfListEANs = [];
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (pod.data) {
+      if (pod.data.content_property === 'list' &amp;&amp; pod.data.list) {
+        filteredEANs = filterList(pod.data.list, eanData)[0];
+      } else if (pod.data.content_property === 'list_of_lists' &amp;&amp; pod.data.list_of_lists.lists) {
+        for (let i = 0; i &lt; pod.data.list_of_lists.lists.length; i++) {
+          // filter through each one of the list
+          filteredListOfListEANs = filterList(pod.data.list_of_lists.lists[i], eanData)[0];
+          // add only first element from the filtered array
+          filteredEANs.push(filteredListOfListEANs[0]); 
+        }
+      }
+    }
+    let order = pod.display_order;
+    pod.index = i+1;
+    const isLCD = window.Device.shopPlatform === platforms.android || <span class="branch-1 cbranch-no" title="branch not covered" >window.Device.shopPlatform === platforms.ios;</span>
+    const tncInfo = {
+      list_cloud_id: pod.data.list ? pod.data.list.list_cloud_id : '',
+      show_tnc: pod.flags ? pod.flags.show_tnc &amp;&amp; isLCD : false,
+      tnc: pod.tnc
+    }
+    const podCoverLimit = 6;
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (filteredEANs &amp;&amp; filteredEANs.length &gt; podCoverLimit) {
+      //remove duplicates
+<span class="cstat-no" title="statement not covered" >      filteredEANs = filteredEANs.filter(<span class="fstat-no" title="function not covered" >fu</span>nction (item, pos) {</span>
+<span class="cstat-no" title="statement not covered" >        return filteredEANs.indexOf(item) == pos;</span>
+      })
+      // slice off the eans greater than 6 to avoid display issues.
+<span class="cstat-no" title="statement not covered" >      filteredEANs = filteredEANs.slice(0, podCoverLimit);</span>
+    }
+    switch(pod.html_template_name) {
+<span class="branch-0 cbranch-no" title="branch not covered" >      case 'multiItemSpreadPromo':</span>
+<span class="cstat-no" title="statement not covered" >        return &lt;MultiItemSpreadPromo key={ order } tnc={ tncInfo } pod={ pod } filteredEans={ filteredEANs } eanData={ eanData } onClick={ this.onClickMulti } /&gt;;</span>
+      case 'multiItemPromo':
+        return &lt;MultiItemPromo key={ order } tnc={ tncInfo } pod={ pod } filteredEans={ filteredEANs } eanData={ eanData } onClick={ this.onClickMulti } /&gt;;
+      case 'singleItemPromo':
+        return &lt;SingleItemPromo key={ order } tnc={ tncInfo } pod={ pod } eanData={ eanData } onClick={ this.onClickSingle } /&gt;;
+      case 'singleItemNoPricePromo':
+          return &lt;SingleItemPromo key={ order } tnc={ tncInfo } pod={ pod } eanData={ eanData } onClick={ this.onClickSingle } /&gt;;
+      case 'audioPromotionSingle':
+        return &lt;SubscriptionPromo key={ order } tnc={ tncInfo } pod={ pod } eanData={ eanData } onClick={ this.onClickPromo }/&gt;;
+    }
+  }
+&nbsp;
+&nbsp;
+  render() {
+    let loading = false;
+    let f2Data = this.props.data;
+    let data = f2Data.data;
+    if (this.props.isFetchingF2 || !data) {
+      loading = true;
+      data = this.loadingPod;
+    }
+    const loadingAriaAttribs = {
+      "aria-busy": true, "aria-live":"off"
+    };
+    // Render the retry button
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (!loading &amp;&amp; data &amp;&amp; !data.length) {
+<span class="cstat-no" title="statement not covered" >      return &lt;div className="f2-pods"&gt;&lt;ShopRetry status={ f2Data.status } /&gt;&lt;/div&gt;</span>
+    }
+&nbsp;
+    this.setTnCSession(data);
+&nbsp;
+    let f2s = data.map(this.renderPod, this);
+    let f2PodPosition = sessionStorage.getItem('f2PodPosition') || 0;
+    return &lt;div  {...(loading ? loadingAriaAttribs : {"aria-live":"off"})} className={ 'f2-pods ' + (this.isTab ? <span class="branch-0 cbranch-no" title="branch not covered" >'tab' </span>: '') + (loading ? ' loading' : '') }&gt;
+      &lt;ShopSlider index={ f2PodPosition }&gt;
+        { f2s }
+      &lt;/ShopSlider&gt;
+    &lt;/div&gt;;
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  on</span>ClickMulti(pod) {
+    const shopPlatform = <span class="cstat-no" title="statement not covered" >window.Device.shopPlatform;</span>
+    const list = <span class="cstat-no" title="statement not covered" >pod.data.list || pod.data.list_of_lists;</span>
+<span class="cstat-no" title="statement not covered" >    if (!list) {</span>
+<span class="cstat-no" title="statement not covered" >      return console.error('Error: Pod does not open a list.', pod.data);</span>
+    }
+    const listId = <span class="cstat-no" title="statement not covered" >list.list_cloud_id ? list.list_cloud_id.toString() : null;</span>
+&nbsp;
+    // Send analytics data
+<span class="cstat-no" title="statement not covered" >    this.props.onPodClick({</span>
+      f2Title: pod.data.title,
+      f2Position: pod.index // (Added above)
+    });
+&nbsp;
+    // Load list view
+<span class="cstat-no" title="statement not covered" >    if (pod.data.content_property === "list_of_lists" &amp;&amp; pod.data.list_of_lists) {</span>
+<span class="cstat-no" title="statement not covered" >      window.location.hash = `/${shopPlatform}/listoflists/${pod.data.list_of_lists.list_ids.join(',')}/${pod.data.title}`</span>
+    } else <span class="cstat-no" title="statement not covered" >if (listId) {</span>
+<span class="cstat-no" title="statement not covered" >      window.location.hash = `/${shopPlatform}/list/${listId}`;</span>
+    }
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  on</span>ClickSingle(pod) {
+<span class="cstat-no" title="statement not covered" >    if (!pod.data.ean) {</span>
+<span class="cstat-no" title="statement not covered" >      return console.error('Error: Pod does not have an ean field.');</span>
+    }
+    const ean = <span class="cstat-no" title="statement not covered" >pod.data.ean.ean;</span>
+    const eanObj = <span class="cstat-no" title="statement not covered" >this.props.eanData[ean];</span>
+&nbsp;
+&nbsp;
+    // Send analytics data
+<span class="cstat-no" title="statement not covered" >    this.props.onPodClick({</span>
+      promotionEan: eanObj.ean,
+      f2Title: pod.data.title,
+      f2Position: pod.index // (Added above)
+    });
+&nbsp;
+    // Open the native PDP view for the clicked EAN
+<span class="cstat-no" title="statement not covered" >    window.Device.showProductDetails(eanObj.title, eanObj.ean);</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  on</span>ClickPromo(pod) {
+&nbsp;
+    // switch to onClickSingle if singleItem promo
+<span class="cstat-no" title="statement not covered" >    if (pod.data.content_type === "single_item") {</span>
+<span class="cstat-no" title="statement not covered" >      return this.onClickSingle(pod);</span>
+    }
+&nbsp;
+&nbsp;
+    let url = <span class="cstat-no" title="statement not covered" >null;</span>
+<span class="cstat-no" title="statement not covered" >    if (pod.data &amp;&amp; pod.data.url) {</span>
+<span class="cstat-no" title="statement not covered" >      url = pod.data.url.trim();</span>
+<span class="cstat-no" title="statement not covered" >      window.Device.launchUrl({url: url});</span>
+    }
+  }
+&nbsp;
+  setTnCSession(data) {
+    let tncInfo = [];
+      tncInfo = data.filter(eachPod =&gt; eachPod.flags)
+        .map(eachPod =&gt; (
+          {
+            list_cloud_id: eachPod.data.list ? 
+              eachPod.data.list.list_cloud_id : 
+              eachPod.data.list_of_lists ? eachPod.data.list_of_lists.list_ids : '',
+            show_tnc: eachPod.flags.show_tnc,
+            tnc: eachPod.tnc
+          }))
+&nbsp;
+          if (tncInfo.length &gt; 0) {
+            try {
+              localStorage.setItem('showTnC', JSON.stringify(tncInfo));
+            } catch (e) {
+<span class="cstat-no" title="statement not covered" >              console.log(e)</span>
+            }
+          }
+  }
+&nbsp;
+}
+&nbsp;
+export default F2Pods;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jan 04 2024 21:31:55 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>

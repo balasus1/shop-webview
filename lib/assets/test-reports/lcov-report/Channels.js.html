@@ -1,0 +1,783 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for Channels.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> Channels.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * This component renders Nook Channels. Nook Channels is a specially-created 
+ * list of lists, built in the LMS.
+ *
+ * Technically, Nook Channels is a "list of lists of lists" since there are two
+ * lists of lists: affinity &amp; popular.
+ * HOWEVER - we only render the popular lists and treat it like any other LoL
+ * 
+ * As the user scrolls to the bottom of Channels, more content is automatically
+ * fetched and rendered. This is called "demand loading".
+ */
+import React, { Component } from 'react'
+import Lol from './Lol'
+import Scroller from '../classes/Scroller'
+import platforms from '../lib/constants/platforms'
+import analytics from '../classes/Analytics'
+import { fetchChannels } from '../lib/fetch'
+import { screens, events, attributes } from '../lib/constants/analytics'
+&nbsp;
+import '../../style-dist/components/Channels.css'
+import textReplace from '../lib/i18n'
+import KEY from '../lib/constants/languages/keys'
+<span class="missing-if-branch" title="if path not taken" >I</span>if (window.location.href.match(platforms.epd))
+<span class="cstat-no" title="statement not covered" >  require('../../style-dist/components/Channels.epd.css')</span>
+&nbsp;
+&nbsp;
+class Channels extends Component {
+&nbsp;
+  constructor() {
+    super();
+&nbsp;
+    // State for this component only, not shared with others
+    this.state = {
+      isFetchingChannels: false, // Control the loading animation
+      isFetchingMoreChannels: false // Control the demand-loading animation
+    }
+&nbsp;
+    this.isEpd = window.location.href.match(platforms.epd);
+    this.isQuill = window.location.href.match(platforms.quill);
+&nbsp;
+    // Demand loading state is kept here locally for convenience
+    this.offset = 1;
+    this.listsPerSpot = 5;
+    // this.itemCount = 10; Not used
+    this.oldPopularListsCount = 0;
+    this.allLoaded = false;
+    this.isLoadingMore = false;
+    this.demandLoadOffset = this.isEpd || this.isQuill ? <span class="branch-0 cbranch-no" title="branch not covered" >900 </span>: 400;
+&nbsp;
+&nbsp;
+    // Bind methods
+    this.initAnalytics = this.initAnalytics.bind(this);
+    this.coverClicked = this.coverClicked.bind(this);
+    this.listClicked = this.listClicked.bind(this);
+    this.demandLoad = this.demandLoad.bind(this);
+  }
+&nbsp;
+&nbsp;
+  initAnalytics() {
+    this.analyticsEvent = Object.assign({}, events.channelsViewed);
+    this.analyticsEvent.data = Object.assign({}, events.channelsViewed.data);
+  }
+&nbsp;
+&nbsp;
+  componentDidMount() {
+&nbsp;
+    // Load the content
+    this.openChannels();
+&nbsp;
+    // Setup a scrolling handler to load more list items on scroll
+    this.scroller = new Scroller();
+    this.scroller.register(this.demandLoad, {
+      scrollOffset: this.demandLoadOffset
+    });
+    this.refinementType = this.props.refinementType;
+    // Analytics
+    analytics.enter(window.SHOW_AUDIOBOOKS ? <span class="branch-0 cbranch-no" title="branch not covered" >screens.audioBooks.channels </span>: screens.ebooks.channels);
+    this.initAnalytics();
+  }
+&nbsp;
+&nbsp;
+  componentWillMount() {
+&nbsp;
+    // Show the native back button and title
+    window.Device.modifyHeader({
+      enableBack: true,
+      title: textReplace(KEY.nook_channels)
+    });
+&nbsp;
+    // Always start at the top of page
+    window.scroll(0,0);
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  co</span>mponentWillUnmount() {
+&nbsp;
+    // Disable the scroller so events don't fire after this component is gone
+<span class="cstat-no" title="statement not covered" >    this.scroller.unregister();</span>
+&nbsp;
+    // Localytics Event
+<span class="cstat-no" title="statement not covered" >    this.sendAnalytics();</span>
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  co</span>mponentDidUpdate() {
+<span class="cstat-no" title="statement not covered" >    if (window.location.href.match(platforms.android) &amp;&amp; this.refinementType !== this.props.refinementType) {</span>
+<span class="cstat-no" title="statement not covered" >      window.location.reload(false);  </span>
+    }
+&nbsp;
+    // If demand loading has finished, check if all lists for each spot have been loaded
+<span class="cstat-no" title="statement not covered" >    if (this.isLoadingMore &amp;&amp; !this.state.isFetchingMoreChannels) {</span>
+<span class="cstat-no" title="statement not covered" >      this.isLoadingMore = false;</span>
+      let popularLists = <span class="cstat-no" title="statement not covered" >this.props.data.popularLists;</span>
+<span class="cstat-no" title="statement not covered" >      if (popularLists.length === this.oldPopularListsCount)  {</span>
+<span class="cstat-no" title="statement not covered" >        this.allLoaded = true; </span>// Loading is done for both LOLs
+      }
+<span class="cstat-no" title="statement not covered" >      this.oldPopularListsCount = popularLists.length;</span>
+    }
+  }
+&nbsp;
+&nbsp;
+  render() {
+    return &lt;div className="shop-channels"&gt;
+      &lt;div className="channel-wrapper"&gt;
+        &lt;div className="popular"&gt;
+          &lt;Lol
+            inStore={ this.props.inStore } 
+            isFetching={ this.state.isFetchingChannels } 
+            isFetchingMore={ this.state.isFetchingMoreChannels } 
+            lists={ this.props.data.popularLists }
+            eanData={ this.props.eanData }
+            coverClicked={ this.coverClicked }
+            listClicked={ this.listClicked } /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;;
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  co</span>verClicked(data) {
+<span class="cstat-no" title="statement not covered" >    this.analyticsEvent.data[attributes.listTitle] = data.listTitle;</span>
+<span class="cstat-no" title="statement not covered" >    this.analyticsEvent.data[attributes.listEanPosition] = data.listEanPosition;</span>
+<span class="cstat-no" title="statement not covered" >    this.analyticsEvent.data[attributes.listViewAllClicked] = 'No';</span>
+<span class="cstat-no" title="statement not covered" >    this.analyticsEvent.data[attributes.listPosition] = data.listPosition;</span>
+    
+    // Component doesn't unmount when goign to PDP
+<span class="cstat-no" title="statement not covered" >    this.sendAnalytics();</span>
+&nbsp;
+    // Reset the event data since we'll come back from PDP
+<span class="cstat-no" title="statement not covered" >    this.initAnalytics();</span>
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  li</span>stClicked(data) {
+<span class="cstat-no" title="statement not covered" >    this.analyticsEvent.data[attributes.listTitle] = data.listTitle;</span>
+<span class="cstat-no" title="statement not covered" >    this.analyticsEvent.data[attributes.listEanPosition] = data.listEanPosition;</span>
+<span class="cstat-no" title="statement not covered" >    this.analyticsEvent.data[attributes.listViewAllClicked] = 'Yes';</span>
+<span class="cstat-no" title="statement not covered" >    this.analyticsEvent.data[attributes.listPosition] = data.listPosition;</span>
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  se</span>ndAnalytics() {
+<span class="cstat-no" title="statement not covered" >    this.analyticsEvent.data[attributes.shopType] = window.Device.getShopType();</span>
+    // Send the event
+<span class="cstat-no" title="statement not covered" >    analytics.exit(this.analyticsEvent);</span>
+  }
+&nbsp;
+&nbsp;
+  // 
+  // Either load the initial content, or, load more content into the LOL. 
+  // 
+  openChannels(options={}) {
+    const refinementType = this.props.refinementType;
+    const device = this.props.device;
+    const customer = this.props.customer;
+    const urlParams = {
+      countryCode: customer.country,
+      accountId: customer.accountId,
+      profileId: customer.profileId,
+      productDeviceId: device.productDeviceId,
+      refinementType: refinementType,
+      // itemCount: this.itemCount, // EANs per list (not used)
+      startat: this.offset,
+      size: this.listsPerSpot
+    };
+&nbsp;
+    // Only load data into the redux store if we don't already have it or
+    // if we are demand loading (options.loadMore).
+    const data = this.props.data;
+    const isLoaded = data.popularLists.length &gt; 0;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (!isLoaded || options.loadMore) {
+&nbsp;
+      // Load Channels content
+<span class="cstat-no" title="statement not covered" >      this.loadChannels(urlParams, options);</span>
+    }
+  }
+&nbsp;
+&nbsp;
+  //
+  // Load the initial Nook Channels data
+  // 
+<span class="fstat-no" title="function not covered" >  lo</span>adChannels(urlParams, options=<span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
+<span class="cstat-no" title="statement not covered" >    if (options.loadMore) {</span>
+<span class="cstat-no" title="statement not covered" >      this.setState({ isFetchingMoreChannels: true });</span>
+    }
+    else {
+<span class="cstat-no" title="statement not covered" >      this.setState({ isFetchingChannels: true });</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    fetchChannels(urlParams, <span class="fstat-no" title="function not covered" >(e</span>rr, response) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      if (err) {</span>
+<span class="cstat-no" title="statement not covered" >        console.error('Error fetching channels items.', err.message);</span>
+<span class="cstat-no" title="statement not covered" >        window.Device.showError('Error fetching channels items.' + err.message);        </span>
+<span class="cstat-no" title="statement not covered" >        response = {affinityLists:[], popularLists:[], eans: []};</span>
+      }
+      else {
+<span class="cstat-no" title="statement not covered" >        this.setState({ isFetchingChannels: false, isFetchingMoreChannels: false });</span>
+      }
+&nbsp;
+      // Demand load more lists (triggered by scrolling)
+<span class="cstat-no" title="statement not covered" >      if (options.loadMore) {</span>
+<span class="cstat-no" title="statement not covered" >        this.props.updateChannels(response);</span>
+      }
+&nbsp;
+      // Initial channels load
+      else {
+<span class="cstat-no" title="statement not covered" >        this.props.setChannels(response);</span>
+      }
+    }, {cachedResponse: false});
+  }
+&nbsp;
+&nbsp;
+  //
+  // Callback when the user scrolls to the bottom
+  // 
+<span class="fstat-no" title="function not covered" >  de</span>mandLoad(scrollPos) {
+<span class="cstat-no" title="statement not covered" >    if (this.allLoaded || (this.isLoadingMore)) {</span>
+<span class="cstat-no" title="statement not covered" >      return;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    this.isLoadingMore = true;</span>
+<span class="cstat-no" title="statement not covered" >    this.offset += this.listsPerSpot;</span>
+<span class="cstat-no" title="statement not covered" >    this.openChannels({loadMore: true});</span>
+  }
+}
+&nbsp;
+export default Channels;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jan 04 2024 21:31:55 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>

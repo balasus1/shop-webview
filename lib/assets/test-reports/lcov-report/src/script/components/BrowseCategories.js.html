@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/script/components/BrowseCategories.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/script/components</a> BrowseCategories.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react'
+import storeCodes, { storeCodeMap, categoryStores } from '../lib/constants/storeCodes'
+import StoreCategories from './StoreCategories'
+&nbsp;
+&nbsp;
+class BrowseCategories extends Component {
+&nbsp;
+<span class="fstat-no" title="function not covered" >  co</span>nstructor(props) {
+<span class="cstat-no" title="statement not covered" >    super(props);</span>
+&nbsp;
+    // State for this component only, not shared with others
+<span class="cstat-no" title="statement not covered" >    this.state = {</span>
+      isFetchingCategories: false, // Control the loading animation
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.categoryStores = storeCodes.filter(<span class="fstat-no" title="function not covered" >(s</span>tore, idx) =&gt; <span class="cstat-no" title="statement not covered" >categoryStores.indexOf(idx) &gt;= 0 &amp;&amp; categoryStores.indexOf(idx) &lt;= storeCodeMap.digaud)</span>;</span>
+    
+    // Children can only see kids categories
+<span class="cstat-no" title="statement not covered" >    if (this.props.customer.childProfile) {</span>
+<span class="cstat-no" title="statement not covered" >      this.categoryStores = [storeCodes[storeCodeMap.kids]];</span>
+    }
+    // Bind methods
+<span class="cstat-no" title="statement not covered" >    window.addEventListener('onScrollToPage', this.setSubCategoriesHeight);</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  se</span>tSubCategoriesHeight(e) {
+<span class="cstat-no" title="statement not covered" >    if (window.subCategories &amp;&amp; !window.location.href.match("filter")) {</span>
+      const wrapper = <span class="cstat-no" title="statement not covered" >document.getElementById('shop-wrapper');</span>
+      let landingHeight = <span class="cstat-no" title="statement not covered" >wrapper.clientHeight - 50;</span>
+<span class="cstat-no" title="statement not covered" >      window.subCategories.style.height = (landingHeight * e.detail.page) + "px";</span>
+<span class="cstat-no" title="statement not covered" >      wrapper.scrollTop = (e.detail.page - 1) * landingHeight;</span>
+    }
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  co</span>mponentWillMount() {
+&nbsp;
+    // Always start at the top of the page
+    var position = <span class="cstat-no" title="statement not covered" >sessionStorage.getItem("categoriesPosition") || 0;</span>
+<span class="cstat-no" title="statement not covered" >    window.scroll(0, position);</span>
+<span class="cstat-no" title="statement not covered" >    sessionStorage.setItem("showCategoriesList", sessionStorage.getItem("showCategoriesList") || "list");</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  co</span>mponentDidMount() {
+    // Always start at the top of the list
+    var position = <span class="cstat-no" title="statement not covered" >sessionStorage.getItem("categoriesPosition") || 0;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (!this.props.noAnalytics) {</span>
+<span class="cstat-no" title="statement not covered" >      window.scroll(0, 0);</span>
+    }
+&nbsp;
+    let interval = <span class="cstat-no" title="statement not covered" >setInterval(<span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      if (document.readyState === 'complete') {</span>
+<span class="cstat-no" title="statement not covered" >        clearInterval(interval);</span>
+<span class="cstat-no" title="statement not covered" >        window.scroll(0, position);</span>
+      }
+    }, 300);
+    
+<span class="cstat-no" title="statement not covered" >    sessionStorage.removeItem('categoriesPosition');</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  co</span>mponentWillUnmount() {
+    // Store the last scroll position so we always come back to it
+<span class="cstat-no" title="statement not covered" >    sessionStorage.setItem('categoriesPosition', window.scrollY);</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  re</span>nderStoreCategories() {
+    let currentStore = <span class="cstat-no" title="statement not covered" >storeCodes[storeCodeMap[this.props.customer.childProfile</span>
+       ? (window.SHOW_AUDIOBOOKS ? "kidsdigaud" : "kids") : "nkbk"]] || null
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return &lt;StoreCategories</span>
+      childProfile={this.props.customer.childProfile}
+      currentStore={ currentStore }
+      currentDref={ (!this.props.isInFavoriteCategoriesPage ? this.props.match.params.catDref : null) }
+      isInFavoriteCategoriesPage={ this.props.isInFavoriteCategoriesPage || false }
+      addOrRemoveItem={ this.props.addOrRemoveItem }
+      selectedFavCategories={ this.props.selectedFavCategories }
+      drefHash={ this.props.data.drefHash }
+      isFetching={ this.state.isFetchingCategories}
+      setStoreCategories={this.props.setStoreCategories} /&gt;;
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  re</span>nder() {
+<span class="cstat-no" title="statement not covered" >    return this.renderStoreCategories();</span>
+  }
+}
+&nbsp;
+export default BrowseCategories;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Dec 18 2023 16:27:02 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

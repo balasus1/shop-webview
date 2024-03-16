@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/script/lib/polyfill.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/script/lib</a> polyfill.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">window.Set =  window.Set ? window.Set :<span class="cstat-no" title="statement not covered" > require('es6-set');</span>
+<span class="cstat-no" title="statement not covered" >window.Map = window.Map ? window.Map : require('es6-map/polyfill');</span>
+&nbsp;
+/* eslint-disable */
+// Array.find polyfill
+// https://tc39.github.io/ecma262/#sec-array.prototype.find
+<span class="cstat-no" title="statement not covered" >if (!Array.prototype.find) {</span>
+<span class="cstat-no" title="statement not covered" >  Object.defineProperty(Array.prototype, 'find', {</span>
+    value: <span class="fstat-no" title="function not covered" >fu</span>nction(predicate) {
+     // 1. Let O be ? ToObject(this value).
+<span class="cstat-no" title="statement not covered" >      if (this == null) {</span>
+<span class="cstat-no" title="statement not covered" >        throw new TypeError('"this" is null or not defined');</span>
+      }
+&nbsp;
+      var o = <span class="cstat-no" title="statement not covered" >Object(this);</span>
+&nbsp;
+      // 2. Let len be ? ToLength(? Get(O, "length")).
+      var len = <span class="cstat-no" title="statement not covered" >o.length &gt;&gt;&gt; 0;</span>
+&nbsp;
+      // 3. If IsCallable(predicate) is false, throw a TypeError exception.
+<span class="cstat-no" title="statement not covered" >      if (typeof predicate !== 'function') {</span>
+<span class="cstat-no" title="statement not covered" >        throw new TypeError('predicate must be a function');</span>
+      }
+&nbsp;
+      // 4. If thisArg was supplied, let T be thisArg; else let T be undefined.
+      var thisArg = <span class="cstat-no" title="statement not covered" >arguments[1];</span>
+&nbsp;
+      // 5. Let k be 0.
+      var k = <span class="cstat-no" title="statement not covered" >0;</span>
+&nbsp;
+      // 6. Repeat, while k &lt; len
+<span class="cstat-no" title="statement not covered" >      while (k &lt; len) {</span>
+        // a. Let Pk be ! ToString(k).
+        // b. Let kValue be ? Get(O, Pk).
+        // c. Let testResult be ToBoolean(? Call(predicate, T, « kValue, k, O »)).
+        // d. If testResult is true, return kValue.
+        var kValue = <span class="cstat-no" title="statement not covered" >o[k];</span>
+<span class="cstat-no" title="statement not covered" >        if (predicate.call(thisArg, kValue, k, o)) {</span>
+<span class="cstat-no" title="statement not covered" >          return kValue;</span>
+        }
+        // e. Increase k by 1.
+<span class="cstat-no" title="statement not covered" >        k++;</span>
+      }
+&nbsp;
+      // 7. Return undefined.
+<span class="cstat-no" title="statement not covered" >      return undefined;</span>
+    }
+  });
+}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >if ( ![].fill)  {</span>
+<span class="cstat-no" title="statement not covered" >  Array.prototype.fill = <span class="fstat-no" title="function not covered" >fu</span>nction( value ) {</span>
+&nbsp;
+    var O = <span class="cstat-no" title="statement not covered" >Object( this </span>);
+    var len = <span class="cstat-no" title="statement not covered" >parseInt( O.length, 10 </span>);
+    var start = <span class="cstat-no" title="statement not covered" >arguments[1];</span>
+    var relativeStart = <span class="cstat-no" title="statement not covered" >parseInt( start, 10 ) || </span>0;
+    var k = <span class="cstat-no" title="statement not covered" >relativeStart &lt; 0</span>
+            ? Math.max( len + relativeStart, 0) 
+            : Math.min( relativeStart, len );
+    var end = <span class="cstat-no" title="statement not covered" >arguments[2];</span>
+    var relativeEnd = <span class="cstat-no" title="statement not covered" >end === undefined</span>
+                      ? len 
+                      : ( parseInt( end)  || 0) ;
+    var final = <span class="cstat-no" title="statement not covered" >relativeEnd &lt; 0</span>
+                ? Math.max( len + relativeEnd, 0 )
+                : Math.min( relativeEnd, len );
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    for (; k &lt; final; k++) {</span>
+<span class="cstat-no" title="statement not covered" >        O[k] = value</span>;
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return O;</span>
+  };
+}</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Dec 18 2023 16:27:02 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

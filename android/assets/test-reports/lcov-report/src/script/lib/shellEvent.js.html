@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/script/lib/shellEvent.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/script/lib</a> shellEvent.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">class ShellEvent {
+  init(options = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
+    return <span class="fstat-no" title="function not covered" >(e</span>vt) =&gt; {
+<span class="cstat-no" title="statement not covered" >      switch (evt) {</span>
+        case 'activate':
+<span class="cstat-no" title="statement not covered" >          options.toggleAppActive(true);</span>
+<span class="cstat-no" title="statement not covered" >          break;</span>
+        case 'deactivate':
+<span class="cstat-no" title="statement not covered" >          options.toggleAppActive(false);</span>
+<span class="cstat-no" title="statement not covered" >          break;</span>
+        case 'inStore':
+<span class="cstat-no" title="statement not covered" >          options.toggleInStore(true);</span>
+<span class="cstat-no" title="statement not covered" >          break;</span>
+        case 'notInStore':
+<span class="cstat-no" title="statement not covered" >          options.toggleInStore(false);</span>
+<span class="cstat-no" title="statement not covered" >          break;</span>
+        case 'back':
+&nbsp;
+          const didNav = <span class="cstat-no" title="statement not covered" >checkSpecialCases();</span>
+<span class="cstat-no" title="statement not covered" >          if (didNav) {</span>
+<span class="cstat-no" title="statement not covered" >            return;</span>
+          }
+&nbsp;
+          // Close Shop if the back button is pressed from the for me tab
+<span class="cstat-no" title="statement not covered" >          if (window.location.hash.match('for_me')) {</span>
+<span class="cstat-no" title="statement not covered" >            return window.Device.close();</span>
+          }
+&nbsp;
+          // If we deep linked here, return to the landing
+<span class="cstat-no" title="statement not covered" >          if (window.history.length &lt; 2) {</span>
+<span class="cstat-no" title="statement not covered" >            return goToForMe();</span>
+          }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >          window.history.back();</span>
+<span class="cstat-no" title="statement not covered" >          break;</span>
+        case "purchase": {
+          {
+              let savedHash = <span class="cstat-no" title="statement not covered" >window.sessionStorage.getItem("hash_before_entering_pdp");</span>
+              let currentHash = <span class="cstat-no" title="statement not covered" >window.location.hash;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >              if(savedHash === currentHash &amp;&amp; window.listCover) {</span>
+<span class="cstat-no" title="statement not covered" >                window.sessionStorage.removeItem("hash_before_entering_pdp")</span>
+<span class="cstat-no" title="statement not covered" >                window.listCover.setPurchaseFlag();</span>
+              }
+<span class="cstat-no" title="statement not covered" >              return;</span>
+          }
+        }
+        default:
+<span class="cstat-no" title="statement not covered" >          return window.location.reload();</span>
+      }
+    }
+  }
+&nbsp;
+}
+&nbsp;
+&nbsp;
+function <span class="fstat-no" title="function not covered" >goToForMe(</span>) {
+  const hash = <span class="cstat-no" title="statement not covered" >window.location.hash.split('/');</span>
+<span class="cstat-no" title="statement not covered" >  hash.length = 2;</span>
+<span class="cstat-no" title="statement not covered" >  return window.location.hash = hash.join('/') + '/home/for_me';</span>
+}
+&nbsp;
+&nbsp;
+// Return TRUE if special cases match
+function <span class="fstat-no" title="function not covered" >checkSpecialCases(</span>) {
+&nbsp;
+  // If we deep link to the list of Serial Reads titles from Readouts, go back to Serial Reads
+  // NOTE: deep linking to serial reads was not possible before 5.3.0 native Android/iOS
+<span class="cstat-no" title="statement not covered" >  if (window.location.hash.match('list/10000012856')) {</span>
+    const appVersion = <span class="cstat-no" title="statement not covered" >window.APP_VERSION;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (appVersion &lt; "5.3.0") {</span>
+<span class="cstat-no" title="statement not covered" >      goToForMe();</span>
+    }
+    else {
+<span class="cstat-no" title="statement not covered" >      window.Device.launchUrl({url: 'http://www.nook.com/app/qr/serialreads'})</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return true;</span>
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  return false;</span>
+}
+&nbsp;
+export default new ShellEvent();</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Dec 18 2023 16:27:02 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

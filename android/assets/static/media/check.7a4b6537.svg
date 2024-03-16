@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/Filter/Active/Check</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="02_BOOKSTORE_MG" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Bookstore/SearchResults/SE/04_Sort" transform="translate(-20.000000, -81.000000)">
+            <g id="Filter" transform="translate(0.000000, 64.000000)">
+                <g id="Icon/Filter/Active/Check" transform="translate(20.000000, 17.000000)">
+                    <circle id="Oval-5" fill="#78C7AF" fill-rule="evenodd" cx="8" cy="8" r="8"></circle>
+                    <polyline id="Line-3" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="square" transform="translate(7.974874, 6.974874) rotate(45.000000) translate(-7.974874, -6.974874) " points="6.47487373 10.9748737 9.47487373 10.9748737 9.47487373 2.97487373"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 55.1 (78136) - https://sketchapp.com -->
+    <title>F9081563-F338-4977-AD8B-81495014F45F</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M14,28.9780203 C6.2680135,28.9780203 0,22.7100068 0,14.9780203 C0,7.24603376 6.2680135,0.978020261 14,0.978020261 C21.7319865,0.978020261 28,7.24603376 28,14.9780203 C28,22.7100068 21.7319865,28.9780203 14,28.9780203 Z M15.5585068,21.1885466 L15.5585068,18.135915 L12.5585068,18.135915 L12.5585068,21.1885466 L15.5585068,21.1885466 Z M15.5585068,15.0832834 L15.5585068,8.97802026 L12.5585068,8.97802026 L12.5585068,15.0832834 L15.5585068,15.0832834 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic_error">
+            <g id="icon/alert/warning_24px-2" transform="translate(8.000000, 7.021980)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="icon/alert/warning_24px" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

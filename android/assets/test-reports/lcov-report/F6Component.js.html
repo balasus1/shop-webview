@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for F6Component.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> F6Component.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react'
+import platforms from '../lib/constants/platforms'
+import ListCoverContainer from '../containers/ListCoverContainer'
+&nbsp;
+import '../../style-dist/components/ListCarousel.css'
+&nbsp;
+<span class="missing-if-branch" title="if path not taken" >I</span>if (window.location.href.match(platforms.epd) || (window.location.href.match(platforms.quill))) {
+<span class="cstat-no" title="statement not covered" >  require('../../style-dist/components/ListCarousel.epd.css')</span>
+<span class="cstat-no" title="statement not covered" >  require('../../style-dist/components/ListCarousel.quill.css')</span>
+<span class="cstat-no" title="statement not covered" >  require('../../style-dist/loading.epd.css');</span>
+}
+&nbsp;
+&nbsp;
+class F6Component extends Component {
+&nbsp;
+  constructor(props) {
+    super(props);
+    this.isEpd = window.Device.shopPlatform === 'epd' || window.Device.shopPlatform === 'quill';
+    this.state = {
+      inLibrary: {},
+      isTab: !this.isEpd &amp;&amp; window.innerWidth &gt; 480
+    };
+    window.addEventListener("resize", <span class="fstat-no" title="function not covered" >()</span> =&gt; { <span class="cstat-no" title="statement not covered" >this.setState({ isTab: !this.isEpd &amp;&amp; window.innerWidth &gt; 480 }); </span>});
+    
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (this.props.list.eans) {
+<span class="cstat-no" title="statement not covered" >      console.log('Fetching library items');</span>
+<span class="cstat-no" title="statement not covered" >      window.Device.getLibraryItems(this.props.list.eans,</span>
+<span class="fstat-no" title="function not covered" >        in</span>Library =&gt; <span class="cstat-no" title="statement not covered" >this.setState({ inLibrary }),</span>
+<span class="fstat-no" title="function not covered" >        er</span>r =&gt; <span class="cstat-no" title="statement not covered" >console.error('Error getting user\'s library items.', err)</span>
+      );
+    }
+  }
+&nbsp;
+  renderCover(ean, i) {
+    const eanObj = this.props.eanData[ean] || <span class="branch-1 cbranch-no" title="branch not covered" >{};</span>
+    const title = this.props.list.title;
+    const description = this.props.list.description;
+    const isInLibrary = this.state.inLibrary[ean] !== undefined &amp;&amp;
+      (<span class="branch-1 cbranch-no" title="branch not covered" >!this.state.inLibrary[ean].isSample </span>|| <span class="branch-2 cbranch-no" title="branch not covered" >this.state.inLibrary[ean].isSample === 'false')</span>;
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (!eanObj.ean || isInLibrary) { <span class="cstat-no" title="statement not covered" >return false; </span>}
+&nbsp;
+    return &lt;ListCoverContainer key={i}
+      productData={this.props.list}
+      title={this.props.list? this.props.list.title : <span class="branch-1 cbranch-no" title="branch not covered" >""}</span>
+      description={description}
+      isTab={this.state.isTab}
+      index={i + 1}
+      eanObj={eanObj}
+      isInLibrary={isInLibrary}
+      f6={true}
+      showDetails={true}
+      onClick={<span class="fstat-no" title="function not covered" >id</span>x =&gt; <span class="cstat-no" title="statement not covered" >this.sendData(title, idx)}</span> /&gt;;
+  }
+&nbsp;
+  render() {
+    const list = this.props.list
+    const title = list ? list.title : <span class="branch-1 cbranch-no" title="branch not covered" >"";</span>
+&nbsp;
+    return &lt;div ref={el =&gt; window.listcarousel = el} className={'f6 list-carousel' + (this.props.loading ? <span class="branch-0 cbranch-no" title="branch not covered" >' loading' </span>: '')}&gt;
+      {!this.state.isTab &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;div role="heading" aria-level="1"&gt;</span>
+        &lt;div className="list-carousel-title"&gt;
+          &lt;div className="title ellipses lines-1" role='link'&gt;{title}&lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;}
+&nbsp;
+      &lt;div className="list" aria-label={title}&gt;
+        &lt;div className="covers"
+          ref={elem =&gt; this.listElem = elem}&gt;
+          {this.renderCover(list.ean, 0)}
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;;
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  se</span>ndData(title, eanPos = <span class="branch-0 cbranch-no" title="branch not covered" >0)</span> {
+    const data = <span class="cstat-no" title="statement not covered" >{</span>
+      listTitle: title,
+      listEanPosition: eanPos,
+      listPosition: this.props.index
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.props.onCoverClick(data);</span>
+  }
+}
+&nbsp;
+export default F6Component;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jan 04 2024 21:31:55 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,1023 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for EpdControls.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> EpdControls.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { PureComponent } from 'react'
+import epdConstants, { categoryFilterHeight, quillCategoryFilterHeight } from '../lib/constants/epd'
+&nbsp;
+import upArrow from '../../images/up_arrow.svg'
+import downArrow from '../../images/down_arrow.svg'
+&nbsp;
+import '../../style-dist/components/EpdControls.epd.css'
+&nbsp;
+import platforms from '../lib/constants/platforms'
+import { constants } from '../lib/utils'
+import textReplace from '../lib/i18n'
+import KEY from '../lib/constants/languages/keys'
+<span class="missing-if-branch" title="if path not taken" >I</span>if (window.location.href.match(platforms.quill))
+<span class="cstat-no" title="statement not covered" >  require('../../style-dist/components/EpdControls.quill.css')</span>
+&nbsp;
+&nbsp;
+class EpdControls extends PureComponent {
+&nbsp;
+  constructor() {
+    super();
+&nbsp;
+    this.startSwipe = {};
+    this.initSwipeScrolling();
+&nbsp;
+    // Update the total page count every two seconds in case content demand loads
+    window.setInterval(<span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.countPages(),</span> 2000);
+&nbsp;
+    const platform = window.Device.shopPlatform;
+    this.LANDING_PAGE_HEIGHT = platform === 'epd' ? <span class="branch-0 cbranch-no" title="branch not covered" >epdConstants.LANDING_PAGE_HEIGHT </span>: epdConstants.QUILL_LANDING_PAGE_HEIGHT;
+    this.PAGE_HEIGHT = platform === 'epd' ? <span class="branch-0 cbranch-no" title="branch not covered" >epdConstants.PAGE_HEIGHT </span>: epdConstants.QUILL_PAGE_HEIGHT; 
+    this.CATEGORY_FILTER_HEIGHT = platform === 'epd' ? <span class="branch-0 cbranch-no" title="branch not covered" >categoryFilterHeight </span>: quillCategoryFilterHeight;
+&nbsp;
+    this.state = {
+      totalPages: 1,
+      pageNo: 1,
+      btnUpClass: 'showbtn',
+      btnDownClass: 'showbtn'
+    };
+&nbsp;
+    window.paginationComponent = this;
+&nbsp;
+    // Bind methods
+    this.initSwipeScrolling = this.initSwipeScrolling.bind(this);
+    this.pageDown = this.pageDown.bind(this);
+    this.pageUp = this.pageUp.bind(this);
+    this.handleClassUpArrow = this.handleClassUpArrow.bind(this);
+    this.handleClassDownArrow = this.handleClassDownArrow.bind(this);
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  co</span>mponentWillUpdate(nextProps, nextState) {
+    // Scroll when the page changes
+<span class="cstat-no" title="statement not covered" >    if (this.props.pageNo !== nextProps.currentPage) {</span>
+<span class="cstat-no" title="statement not covered" >      this.scrollToPage(nextState.pageNo);</span>
+    }
+    // Scroll to first page
+    else <span class="cstat-no" title="statement not covered" >if (this.props.screenLocation !== nextProps.screenLocation || window.resetPageNo) {</span>
+<span class="cstat-no" title="statement not covered" >      window.resetPageNo = false;</span>
+<span class="cstat-no" title="statement not covered" >      window.sortChanged = true;</span>
+<span class="cstat-no" title="statement not covered" >      this.setState(<span class="fstat-no" title="function not covered" >(p</span>revState, props) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        return { pageNo: this.props.pageNo }</span>
+      })
+<span class="cstat-no" title="statement not covered" >      this.scrollToPage('1');</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (this.state.pageNo &gt; this.state.totalPages) {</span>
+<span class="cstat-no" title="statement not covered" >      this.scrollToPage(this.state.pageNo);</span>
+<span class="cstat-no" title="statement not covered" >      this.setState(<span class="fstat-no" title="function not covered" >(p</span>revState, props) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        return {pageNo: this.state.pageNo}</span>
+      })
+    }
+&nbsp;
+    // Fire global events to the app knows when we're "scrolling"
+    // (used for demand loading)
+<span class="cstat-no" title="statement not covered" >    if (nextState.pageNo &gt; this.state.pageNo) {</span>
+      const event = <span class="cstat-no" title="statement not covered" >new CustomEvent('onEPDPageDown', {detail: {page: nextState.pageNo}});</span>
+<span class="cstat-no" title="statement not covered" >      window.dispatchEvent(event);</span>
+    }
+    else {
+      const event = <span class="cstat-no" title="statement not covered" >new CustomEvent('onEPDPageUp', {detail: {page: nextState.pageNo}});</span>
+<span class="cstat-no" title="statement not covered" >      window.dispatchEvent(event);</span>
+    }
+<span class="cstat-no" title="statement not covered" >    if (nextState.pageNo === 1) {</span>
+      const event = <span class="cstat-no" title="statement not covered" >new CustomEvent('onEPDFirstPage', {detail: {page: nextState.pageNo}});</span>
+<span class="cstat-no" title="statement not covered" >      window.dispatchEvent(event);</span>
+    }
+    // prefetch list from last 3rd page
+<span class="cstat-no" title="statement not covered" >    if ((nextState.totalPages &gt; this.state.pageNo) &amp;&amp; (nextState.totalPages - this.state.pageNo) === 3) {</span>
+      const event = <span class="cstat-no" title="statement not covered" >new CustomEvent('onEPDLastPage', {detail: {page: nextState.pageNo}});</span>
+<span class="cstat-no" title="statement not covered" >      window.dispatchEvent(event);</span>
+    }
+&nbsp;
+  }
+&nbsp;
+  initSwipeScrolling() {
+&nbsp;
+    const body = document.body;
+    const swiped = <span class="fstat-no" title="function not covered" >(e</span>) =&gt; {      
+<span class="cstat-no" title="statement not covered" >      if (e.timeStamp - this.startSwipe.timeStamp &lt; 3000) {</span>
+        const evt = <span class="cstat-no" title="statement not covered" >e;</span>
+        const deltaY = <span class="cstat-no" title="statement not covered" >evt.changedTouches[0].pageY - this.startSwipe.y;</span>
+        const deltaX = <span class="cstat-no" title="statement not covered" >evt.changedTouches[0].pageX - this.startSwipe.x;</span>
+        // Neglect swpies which are under 45 degree angle and 100 length
+<span class="cstat-no" title="statement not covered" >        try {</span>
+<span class="cstat-no" title="statement not covered" >          if (Math.abs(deltaY) &gt;= 10 &amp;&amp; Math.abs(deltaY/deltaX) &gt; 1) {</span>
+<span class="cstat-no" title="statement not covered" >            return deltaY / Math.abs(deltaY);</span>
+          }
+        } catch (e) {
+          // do nothing
+        }
+      }
+<span class="cstat-no" title="statement not covered" >      return 0;</span>
+    }
+&nbsp;
+    body.ontouchstart = <span class="fstat-no" title="function not covered" >(e</span>) =&gt; {
+<span class="cstat-no" title="statement not covered" >      e = e.timeStamp ? e : window.event; </span>// EPD sucks
+<span class="cstat-no" title="statement not covered" >      this.startSwipe = {</span>
+        timeStamp: e.timeStamp,
+        y: e.changedTouches[0].pageY,
+        x: e.changedTouches[0].pageX
+      }
+    };
+&nbsp;
+    body.ontouchcancel = <span class="fstat-no" title="function not covered" >(e</span>) =&gt; {
+<span class="cstat-no" title="statement not covered" >      e = e.timeStamp ? e : window.event; </span>// EPD sucks
+      const direction = <span class="cstat-no" title="statement not covered" >swiped(e);</span>
+<span class="cstat-no" title="statement not covered" >      switch (direction) {</span>
+        case -1: <span class="cstat-no" title="statement not covered" >this.pageDown(); <span class="cstat-no" title="statement not covered" ></span>break;</span>
+        case 1: <span class="cstat-no" title="statement not covered" >this.pageUp(); <span class="cstat-no" title="statement not covered" ></span>break;</span>
+        default: <span class="cstat-no" title="statement not covered" >return;</span>
+      }
+    };
+&nbsp;
+    body.ontouchend = <span class="fstat-no" title="function not covered" >(e</span>) =&gt; {
+<span class="cstat-no" title="statement not covered" >      e = e.timeStamp ? e : window.event; </span>// EPD sucks
+      const direction = <span class="cstat-no" title="statement not covered" >swiped(e);</span>
+<span class="cstat-no" title="statement not covered" >      switch (direction) {</span>
+        case -1: <span class="cstat-no" title="statement not covered" >this.pageDown(); <span class="cstat-no" title="statement not covered" ></span>break;</span>
+        case 1: <span class="cstat-no" title="statement not covered" >this.pageUp(); <span class="cstat-no" title="statement not covered" ></span>break;</span>
+        default: <span class="cstat-no" title="statement not covered" >return;</span>
+      }
+    };
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  ha</span>ndleClassUpArrow() {
+    // this.setState({ btnUpClass: 'hide'});
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  ha</span>ndleClassDownArrow() {
+    // this.setState({ btnDownClass: 'hide'});
+  }
+&nbsp;
+  render() {
+    const firstPageCustomDown = this.props.firstPageCustomDown;
+    const categoryType = this.props.categoryType;
+    const firstPageNav = firstPageCustomDown ? <span class="branch-0 cbranch-no" title="branch not covered" >'Recommended' </span>: 'SeeAll'
+    let seeAllCustom = this.props.seeAllCustom
+    //const currentPage = this.state.pageNo;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if(this.state.pageNo === this.state.totalPages &amp;&amp; seeAllCustom) {
+<span class="cstat-no" title="statement not covered" >      seeAllCustom = '';</span>
+    }
+    const currentPage = (firstPageCustomDown || seeAllCustom) &amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >this.state.pageNo === 1 </span>? <span class="branch-0 cbranch-no" title="branch not covered" >firstPageNav </span>: this.state.pageNo;
+    console.log('currentPage',currentPage);
+&nbsp;
+    return &lt;div ref={elt =&gt; window.epdControls = elt} className={(categoryType === 'selected-favorites' ? (<span class="branch-0 cbranch-no" title="branch not covered" >categoryType + '-')</span> : '') + 'epd-controls ' + 
+    (window.location.href.match('favCategories') ? <span class="branch-0 cbranch-no" title="branch not covered" >'edit-fav-categories ' </span>: '') + (categoryType ? <span class="branch-0 cbranch-no" title="branch not covered" >categoryType </span>: '')}&gt;
+      {
+        (this.props.firstPageCustomDown &amp;&amp; (<span class="branch-1 cbranch-no" title="branch not covered" >currentPage == 1 </span>|| <span class="branch-2 cbranch-no" title="branch not covered" >currentPage === 'Recommended')</span>) || (seeAllCustom &amp;&amp; <span class="branch-4 cbranch-no" title="branch not covered" >currentPage === 'SeeAll')</span> ? 
+<span class="branch-0 cbranch-no" title="branch not covered" >          &lt;div className={this.props.noborder ? "noborder" : "border"}&gt;</span>
+            { this.props.firstPageCustomDown &amp;&amp; (currentPage == 1 || currentPage === 'Recommended') &amp;&amp; !seeAllCustom ?
+              &lt;div className="custom page-down" onClick={ this.pageDown }&gt;
+                { this.props.firstPageCustomDown }
+                &lt;img alt={textReplace(KEY.down_arrow)} src={ downArrow } /&gt;
+              &lt;/div&gt;
+              :
+              &lt;div className="seeall page-down" onClick={ this.pageDown }&gt;
+                { seeAllCustom }
+                &lt;img alt={textReplace(KEY.down_arrow)} src={ downArrow } /&gt;
+              &lt;/div&gt;
+            }
+          &lt;/div&gt;
+          :
+          &lt;div className={this.props.noborder ? <span class="branch-0 cbranch-no" title="branch not covered" >"noborder" </span>: "border"}&gt;
+            &lt;div className={ 'arrow ' + (currentPage === 1 ? ' disabled' : <span class="branch-1 cbranch-no" title="branch not covered" >'')</span> }
+                onTouchStart={ this.handleClassUpArrow } onTouchEnd={ this.pageUp }&gt;
+              &lt;img className={'imgleft' + (currentPage === 1 ? ' disabled' : <span class="branch-1 cbranch-no" title="branch not covered" >'')</span> + ' ' + this.state.btnUpClass } alt={textReplace(KEY.up_arrow)} src={ upArrow } /&gt;
+              &lt;div className='arrow page-up' onClick={ this.pageUp } /&gt;
+            &lt;/div&gt;
+            &lt;div className="page-count"&gt;
+              { currentPage } {textReplace(KEY.of)} { this.state.totalPages }
+            &lt;/div&gt;
+            &lt;div className={ 'arrow ' + (currentPage &gt;= this.state.totalPages ? ' disabled' : <span class="branch-1 cbranch-no" title="branch not covered" >'')</span> }
+                onTouchStart={ this.handleClassDownArrow } onTouchEnd={ this.pageDown }&gt;
+              &lt;img className={'imgRight' + (currentPage &gt;= this.state.totalPages ? ' disabled' : <span class="branch-1 cbranch-no" title="branch not covered" >'')</span>+ ' ' + this.state.btnDownClass } alt={textReplace(KEY.down_arrow)} src={ downArrow } /&gt;
+              &lt;div className='arrow page-down' onClick={ this.pageDown } /&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+      }
+    &lt;/div&gt;;
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  go</span>toPage(pageNo) {
+<span class="cstat-no" title="statement not covered" >    this.setState({ pageNo });</span>
+<span class="cstat-no" title="statement not covered" >    this.scrollToPage(pageNo);</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  ge</span>tPageNo() {
+<span class="cstat-no" title="statement not covered" >    return this.state.pageNo;</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  sc</span>rollToPage(page) {
+    // console.log('page',page);
+    const elem = <span class="cstat-no" title="statement not covered" >this.getScrollableElement();</span>
+    const isCategoryList = <span class="cstat-no" title="statement not covered" >window.location.hash.match(/categories.*\/list$/);</span>
+&nbsp;
+    let landingHeight = <span class="cstat-no" title="statement not covered" >this.props.firstPageCustomDown ?</span>
+      this.LANDING_PAGE_HEIGHT :
+      this.PAGE_HEIGHT;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (isCategoryList) {</span>
+<span class="cstat-no" title="statement not covered" >      landingHeight -= this.CATEGORY_FILTER_HEIGHT;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (!window.subCategories &amp;&amp; !this.props.categoryType) {</span>
+<span class="cstat-no" title="statement not covered" >      elem.scrollTop = ((page - 1) * landingHeight - (window.forMe ? 50 : 0));</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (isCategoryList) {</span>
+<span class="cstat-no" title="statement not covered" >      elem.scrollTop = (page - 1) * this.PAGE_HEIGHT;</span>
+    }
+&nbsp;
+    //else { // If subcategories are loaded, need to call logic that includes setting subcategories div height and also to set correct scroll position
+      //to avoid seeing duplicate values in subsequent pages.
+      const event = <span class="cstat-no" title="statement not covered" >new CustomEvent('onScrollToPage', { detail: { page, categoryType: this.props.categoryType }});</span>
+<span class="cstat-no" title="statement not covered" >      event.stopPropagation();</span>
+<span class="cstat-no" title="statement not covered" >      window.dispatchEvent(event);</span>
+    //}
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  pa</span>geDown(e) {
+<span class="cstat-no" title="statement not covered" >    if (e) {</span>
+<span class="cstat-no" title="statement not covered" >      e.preventDefault();</span>
+    }
+    let page = <span class="cstat-no" title="statement not covered" >this.state.pageNo;</span>
+<span class="cstat-no" title="statement not covered" >    this.setState({ btnDownClass: 'showbtn'});</span>
+    let nextPage = <span class="cstat-no" title="statement not covered" >page+1 &gt; this.countPages() ? page : page+1;</span>
+<span class="cstat-no" title="statement not covered" >    this.props.setPage(nextPage);</span>
+<span class="cstat-no" title="statement not covered" >    if (page &gt; this.countPages()) {</span>
+<span class="cstat-no" title="statement not covered" >      this.setState(<span class="fstat-no" title="function not covered" >(p</span>revState, props) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        return {pageNo: this.countPages()};</span>
+      });
+    }
+<span class="cstat-no" title="statement not covered" >    if (page &lt; this.countPages()) {</span>
+<span class="cstat-no" title="statement not covered" >      this.setState(<span class="fstat-no" title="function not covered" >(p</span>revState, props) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        return {pageNo: (Number(prevState.pageNo) + 1)};</span>
+      });
+    }
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  pa</span>geUp(e) {
+<span class="cstat-no" title="statement not covered" >    if (e) {</span>
+<span class="cstat-no" title="statement not covered" >      e.preventDefault();</span>
+    }
+    let page = <span class="cstat-no" title="statement not covered" >this.state.pageNo;</span>
+<span class="cstat-no" title="statement not covered" >    this.setState({ btnUpClass: 'showbtn'});</span>
+    let previousPage = <span class="cstat-no" title="statement not covered" >page &gt; this.countPages() ? page-1 : page;</span>
+<span class="cstat-no" title="statement not covered" >    this.props.setPage(previousPage);</span>
+<span class="cstat-no" title="statement not covered" >    if (page &gt; 1) {</span>
+<span class="cstat-no" title="statement not covered" >      this.setState(<span class="fstat-no" title="function not covered" >(p</span>revState, props) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        return {pageNo: (prevState.pageNo - 1)};</span>
+      });
+    }
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  co</span>untPages() {
+    let scrollHeight = <span class="cstat-no" title="statement not covered" >this.getScrollHeight();</span>
+    let totalPages;
+&nbsp;
+    //Added this if condition to perform this only for subcategories and not to affect rest of the pagination logics.
+    //parseInt to Eliminate value after decimal. If result is 5.03, 03 should not be used to create new page as it may create empty page at the end. 
+    //However, we need 5.10 to 5.99. so just multiplied by 10, and then converted to whole number and divided by 10.
+    //Math.ceil is used to round off to 1 even if totalPages has values between 0.10 to 0.99.
+<span class="cstat-no" title="statement not covered" >    totalPages = Math.ceil(parseInt((scrollHeight / (this.PAGE_HEIGHT)) * 10, 10) / 10);</span>
+&nbsp;
+    //totalPages = Math.round(scrollHeight / (this.props.firstPageCustomDown ? this.LANDING_PAGE_HEIGHT : this.PAGE_HEIGHT));
+<span class="cstat-no" title="statement not covered" >    this.setState({ totalPages });</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (this.state.pageNo &gt; totalPages) {</span>
+<span class="cstat-no" title="statement not covered" >      this.setState({ pageNo: totalPages });</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return totalPages;</span>
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  ge</span>tScrollHeight() {
+    const elem = <span class="cstat-no" title="statement not covered" >this.getScrollableElement();</span>
+<span class="cstat-no" title="statement not covered" >    return Math.max(((elem == null || undefined) ? 0 : elem.scrollHeight), (elem == null || undefined) ? 0 : elem.offsetHeight);</span>
+  }
+&nbsp;
+  
+<span class="fstat-no" title="function not covered" >  ge</span>tScrollableElement() {
+    let container = <span class="cstat-no" title="statement not covered" >document.getElementById('shop-wrapper');</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (this.props.categoryType === constants.SELECTED_FAVS) {</span>
+<span class="cstat-no" title="statement not covered" >      container = window.selectedCats;</span>
+<span class="cstat-no" title="statement not covered" >      if (!window.favInProfile) {</span>
+<span class="cstat-no" title="statement not covered" >        this.PAGE_HEIGHT = window.Device.shopPlatform === 'epd' ? 440 : 650;</span>
+      } else {
+<span class="cstat-no" title="statement not covered" >        this.PAGE_HEIGHT = window.Device.shopPlatform === 'epd' ? 492 : 704;</span>
+      }
+    } else <span class="cstat-no" title="statement not covered" >if (this.props.categoryType === constants.ALL_FAVS) {</span>
+<span class="cstat-no" title="statement not covered" >      container = window.allCats;</span>
+<span class="cstat-no" title="statement not covered" >      this.PAGE_HEIGHT = window.Device.shopPlatform === 'epd' ? 492 : 704;</span>
+    }
+    else <span class="cstat-no" title="statement not covered" >if(window.favInProfile) {</span>
+<span class="cstat-no" title="statement not covered" >      container = window.favInProfileContainer;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return container;</span>
+  }
+}
+&nbsp;
+export default EpdControls;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jan 04 2024 21:31:55 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>

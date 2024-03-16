@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/script/reducers/forMeReducer.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/script/reducers</a> forMeReducer.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import actions from '../lib/constants/actionTypes'
+&nbsp;
+const initialState = {
+  f1: {},
+  f2: {
+    data: [],
+    status: true
+  },
+  favCategories: [],
+  f3: {
+    links: [],
+    affinities: {}, // Some links have associated affinities. Map them here for easy lookup
+    status: true
+  },
+  f4: {
+    data: [],
+    eans:{},
+    status: true
+  },
+  f5: []
+};
+&nbsp;
+const forMeData = (state = initialState, action) =&gt; {
+  let stateCopy = Object.assign({}, state);
+&nbsp;
+  switch (action.type) {
+&nbsp;
+<span class="branch-0 cbranch-no" title="branch not covered" >    case actions.SET_F1_DATA:</span>
+<span class="cstat-no" title="statement not covered" >      stateCopy.f1 = action.f1Data;</span>
+<span class="cstat-no" title="statement not covered" >      return stateCopy;</span>
+    
+<span class="branch-1 cbranch-no" title="branch not covered" >    case actions.SET_F2_DATA:</span>
+      const f2Copy = <span class="cstat-no" title="statement not covered" >Object.assign({}, stateCopy.f2)</span>
+<span class="cstat-no" title="statement not covered" >      f2Copy.data = action.f2Data;</span>
+<span class="cstat-no" title="statement not covered" >      f2Copy.status = action.status;</span>
+<span class="cstat-no" title="statement not covered" >      stateCopy.f2 = f2Copy;</span>
+<span class="cstat-no" title="statement not covered" >      return stateCopy;</span>
+    
+<span class="branch-2 cbranch-no" title="branch not covered" >    case actions.SET_FAV_CATEGORIES_DATA:</span>
+<span class="cstat-no" title="statement not covered" >      stateCopy.favCategories = action.favCategoriesData;</span>
+<span class="cstat-no" title="statement not covered" >      return stateCopy;</span>
+&nbsp;
+<span class="branch-3 cbranch-no" title="branch not covered" >    case actions.UPDATE_FAV_CATEGORIES_DATA:</span>
+<span class="cstat-no" title="statement not covered" >        stateCopy.favCategories = action.UPDATE_FAV_CATEGORIES_DATA;</span>
+<span class="cstat-no" title="statement not covered" >        return stateCopy;</span>
+&nbsp;
+<span class="branch-4 cbranch-no" title="branch not covered" >    case actions.SET_F3_DATA:</span>
+      const f3Copy = <span class="cstat-no" title="statement not covered" >Object.assign({}, stateCopy.f3);</span>
+<span class="cstat-no" title="statement not covered" >      f3Copy.links = action.f3Data.links;</span>
+<span class="cstat-no" title="statement not covered" >      f3Copy.status = action.status;</span>
+<span class="cstat-no" title="statement not covered" >      stateCopy.f3 = f3Copy;</span>
+&nbsp;
+      const affinityMap = <span class="cstat-no" title="statement not covered" >{};</span>
+<span class="cstat-no" title="statement not covered" >      action.f3Data.links.forEach( <span class="fstat-no" title="function not covered" >(l</span>ink, idx) =&gt; {</span>
+        let affinityIds = <span class="cstat-no" title="statement not covered" >link.affinity_ids || [];</span>
+<span class="cstat-no" title="statement not covered" >        affinityIds.forEach( <span class="fstat-no" title="function not covered" >af</span>finity =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >          affinityMap[affinity] = idx; </span>// Store the index of the link in the links array
+        });
+      });
+<span class="cstat-no" title="statement not covered" >      stateCopy.f3.affinities = affinityMap;</span>
+<span class="cstat-no" title="statement not covered" >      return stateCopy;</span>
+    
+<span class="branch-5 cbranch-no" title="branch not covered" >    case actions.SET_F4_DATA:</span>
+      const f4Copy = <span class="cstat-no" title="statement not covered" >Object.assign({}, stateCopy.f4)</span>
+<span class="cstat-no" title="statement not covered" >      f4Copy.data = action.f4Data;</span>
+<span class="cstat-no" title="statement not covered" >      f4Copy.status = action.status;</span>
+<span class="cstat-no" title="statement not covered" >      stateCopy.f4 = f4Copy;</span>
+<span class="cstat-no" title="statement not covered" >      return stateCopy;</span>
+&nbsp;
+<span class="branch-6 cbranch-no" title="branch not covered" >    case actions.SET_F5_DATA:</span>
+<span class="cstat-no" title="statement not covered" >      stateCopy.f5 = action.f5Data;</span>
+<span class="cstat-no" title="statement not covered" >      return stateCopy;</span>
+    
+    default:
+      return state;
+  }}
+&nbsp;
+export default forMeData</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Dec 18 2023 16:27:02 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

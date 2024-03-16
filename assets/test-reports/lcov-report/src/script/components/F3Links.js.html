@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/script/components/F3Links.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/script/components</a> F3Links.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { Component } from 'react'
+import viewTypes from '../lib/constants/viewTypes'
+import f3Images, { defaultIcon } from '../lib/constants/f3Images'
+import platforms from '../lib/constants/platforms'
+import ShopRetry from './ShopRetry'
+import { constants } from '../lib/utils'
+import '../../style-dist/components/F3Links.css'
+import chevronRight from '../../images/f3-icons/6.4/chevron/chevron_right.svg'
+import textReplace from '../lib/i18n'
+import KEY from '../lib/constants/languages/keys'
+<span class="missing-if-branch" title="if path not taken" >I</span>if (window.location.href.match(platforms.epd))
+<span class="cstat-no" title="statement not covered" >  require('../../style-dist/components/F3Links.epd.css')</span>
+<span class="missing-if-branch" title="if path not taken" >I</span>if (window.location.href.match(platforms.quill))
+<span class="cstat-no" title="statement not covered" >  require('../../style-dist/components/F3Links.quill.css')</span>
+&nbsp;
+&nbsp;
+class F3Links extends Component {
+&nbsp;
+  constructor(props) {
+    super(props);
+&nbsp;
+    // Define empty links to show while loading
+    this.loadingLinks = {
+      links: [
+        {title: ''}, {title: ''}, {title: ''}, {title: ''},
+        {title: ''}, {title: ''}, {title: ''}, {title: ''}
+      ]
+    };
+&nbsp;
+    // Bind methods
+    this.mapF3sToAffinities = this.mapF3sToAffinities.bind(this);
+  }
+&nbsp;
+  
+  renderLink(link, i) {
+    link.title = (this.props.childProfile &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >link.title === 'Bestsellers')</span> ? <span class="branch-0 cbranch-no" title="branch not covered" >"Kids Bestsellers" </span>: link.title;
+&nbsp;
+    let f3Icon = f3Images[link.title];
+    if (!f3Icon) {
+      f3Icon = defaultIcon;
+    }
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (!link.title) {
+<span class="cstat-no" title="statement not covered" >      f3Icon = null;</span>
+    }
+&nbsp;
+    // Hack b/c categories api returns garbage in
+    // the 'Browse Categories' title.
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (link.title.match(/ &amp;rsaquo;/)) {
+<span class="cstat-no" title="statement not covered" >      link.title = link.title.replace(' &amp;rsaquo;', '');</span>
+    }
+&nbsp;
+    return &lt;div key={i} className="link-wrapper"&gt;
+      &lt;div className="link" onClick={ <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >this.handleClick(link, i) </span>}&gt;
+        { f3Icon &amp;&amp;
+          &lt;div className="icon-wrapper"&gt;&lt;img src={ f3Icon } className="icon" alt="" /&gt;&lt;/div&gt;
+        }
+        &lt;div role="link" className="link-title ellipses lines-1"&gt;{ link.title }&lt;/div&gt;
+        &lt;div className="chevron"&gt;
+          &lt;img src={ chevronRight } className="right-arrow" alt={textReplace(KEY.right_arrow)} /&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;;
+  }
+&nbsp;
+  componentDidMount() {
+&nbsp;
+    window.addEventListener('onScrollToPage', this.alignF3);
+  }
+&nbsp;
+  alignF3 = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
+&nbsp;
+    let f4s = <span class="cstat-no" title="statement not covered" >document.getElementsByClassName("f4-lists")[0];</span>
+<span class="cstat-no" title="statement not covered" >    if (this.f3Link &amp;&amp; f4s &amp;&amp; f4s.children.length % 2 === 0) {</span>
+<span class="cstat-no" title="statement not covered" >      this.f3Link.classList.add("align-f3");</span>
+    }
+    else <span class="cstat-no" title="statement not covered" >if (this.f3Link &amp;&amp; this.f3Link.classList.contains("align-f3")) {</span>
+<span class="cstat-no" title="statement not covered" >      this.f3Link.classList.remove("align-f3");</span>
+    }
+  }
+&nbsp;
+&nbsp;
+  render() {
+    let loading = false;
+    let data = this.props.data;
+    const linkCount = 9; // Use CSS to show/hide so that it updates when rotating large tablets
+    const loadingAriaAttribs = {
+      "aria-busy": true, "aria-live":"off"
+    };
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (this.props.isFetchingF3) {
+<span class="cstat-no" title="statement not covered" >      loading = true;</span>
+<span class="cstat-no" title="statement not covered" >      data = this.loadingLinks;</span>
+    }
+&nbsp;
+    // Render the retry button
+    if (!this.props.isFetchingF3 &amp;&amp; data &amp;&amp; Array.isArray(data.links) &amp;&amp; data.links.length === 0) {
+      return &lt;div className="f3-links"&gt;&lt;ShopRetry status={ data.status } /&gt;&lt;/div&gt;;
+    }
+&nbsp;
+    // Filter the f3 links based on the user's affinities
+    let f3s = data.links.filter(this.mapF3sToAffinities);
+&nbsp;
+    // Backfill any F3s needed to show a total of linkCount (8 or 9 depending on device size)
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (f3s.length &lt; linkCount) {
+      const rest = this.backfillF3s(data.links, linkCount - f3s.length);
+      f3s = f3s.concat(rest);
+    }
+&nbsp;
+    f3s = f3s.map(this.renderLink, this);
+    const f3LinksHeaderTitle = &lt;div className="header-title"&gt;
+      { constants.F3_HEADER_TITLE }
+    &lt;/div&gt;
+    return &lt;div ref={elt =&gt; this.f3Link = elt} {...(loading ? <span class="branch-0 cbranch-no" title="branch not covered" >loadingAriaAttribs </span>: {"aria-live":"off"})} className={ 'f3-links' + (loading ? <span class="branch-0 cbranch-no" title="branch not covered" >' loading' </span>: '') }&gt;
+      { f3LinksHeaderTitle }
+        &lt;div className="f3-links-container"&gt;
+          { f3s }
+      &lt;/div&gt;
+    &lt;/div&gt;;
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  is</span>LargeTablet() {
+<span class="cstat-no" title="statement not covered" >    return window.Device.getMinDimension() &gt; 700;</span>
+  }
+&nbsp;
+&nbsp;
+  // Note that the F3s are ordered such that there are 6 "normal" links, followed
+  // by N "affinity" links, which are followed by at least 2 more "normal" links
+  // (to be used as backfill if no affinities match). 
+  //
+  // Rules:
+  // 1. Always show 8 (or 9 for tablets) F3s (LMS must have enough scheduled)
+  // 2. Always display the first 6 F3s
+  // 3. The next two should be:
+  //    a. If any "affinity f3" matches the user's affinities, show it (in affinity order)
+  //    b. If not, show whatever F3s are published after the affinity F3s (they will always be in this order)
+  // 4. (optional for tablets) the final (9th) F3 should be the first unused link after the affinity links
+  mapF3sToAffinities(link, i) {
+    if (i &lt; 6) {
+      return true;
+    }
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (!link.affinity_ids || !link.affinity_ids.length) {
+<span class="cstat-no" title="statement not covered" >      return false;</span>
+    }
+&nbsp;
+    const affinities = this.props.affinities || []; // At most 5 in this array
+    for (let a=0; a&lt;affinities.length; a++) {
+      const affinity = <span class="cstat-no" title="statement not covered" >Number(affinities[a].Id);</span>
+<span class="cstat-no" title="statement not covered" >      if (link.affinity_ids.indexOf( affinity ) &gt;= 0) {</span>
+<span class="cstat-no" title="statement not covered" >        return true;</span>
+      }
+    }
+  }
+&nbsp;
+&nbsp;
+  // Based on rule "3b" above, we should append "count" links from the array
+  // which come after the affinity links
+  backfillF3s(links, count) {
+    
+    // THe first 6 links should not have affinities.
+    // Start at the first affinity-mapped link so we can find the first non-affinity
+    // link to backfill with
+    const FIRST_AFFINITY_INDEX = 6;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (links.length &lt;= FIRST_AFFINITY_INDEX) {
+<span class="cstat-no" title="statement not covered" >      return []; </span>// We don't have the required 8 links
+    }
+&nbsp;
+    // Loop through all the available links starting at the first affinity index
+    // If the link does not have any affinity IDs, use it
+    const endLinks = [];
+    for (let l=FIRST_AFFINITY_INDEX; l&lt;links.length; l++) {
+      const link = links[l];
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (link.affinity_ids &amp;&amp; link.affinity_ids.length === 0) {
+<span class="cstat-no" title="statement not covered" >        endLinks.push(link);</span>
+      }
+&nbsp;
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (endLinks.length === count) {
+<span class="cstat-no" title="statement not covered" >        return endLinks;</span>
+      }
+    }
+&nbsp;
+    // Loading logic
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (!endLinks.length) {
+      return links.slice(links.length - count); // Just use the ones from the end
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return endLinks;</span>
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  ha</span>ndleClick(link, i) {
+    const shopPlatform = <span class="cstat-no" title="statement not covered" >window.Device.shopPlatform;</span>
+&nbsp;
+    // Send analytics
+<span class="cstat-no" title="statement not covered" >    this.props.onLinkClick({</span>
+      f3Title: link.title,
+      f3Position: i+1
+    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    switch (link.link_type) {</span>
+      case 'channels':
+<span class="cstat-no" title="statement not covered" >        try {</span>
+          const refinementType = <span class="cstat-no" title="statement not covered" >window.Device.isGreaterOrEqualsAudioBookVersion() ? "digaud" : JSON.parse(link.data).refinementType;</span>
+<span class="cstat-no" title="statement not covered" >          window.location.hash = `/${shopPlatform}/channels/${refinementType}/${viewTypes.channels.AFFINITY}`;</span>
+        } catch (e) {
+<span class="cstat-no" title="statement not covered" >          console.error('Error opening Nook Channels.', e);</span>
+        }
+<span class="cstat-no" title="statement not covered" >        break;</span>
+      case 'list':
+        const listId = <span class="cstat-no" title="statement not covered" >link.data.replace(" ","").replace("\t","").match(/category_id=\d+/)[0].replace('category_id=', '');</span>
+<span class="cstat-no" title="statement not covered" >        window.location.hash = `/${shopPlatform}/list/${listId}`;</span>
+<span class="cstat-no" title="statement not covered" >        break;</span>
+      case 'listsoflists':
+<span class="cstat-no" title="statement not covered" >        try {</span>
+          const titleEncoded = <span class="cstat-no" title="statement not covered" >encodeURIComponent(link.title);</span>
+          const listIds = <span class="cstat-no" title="statement not covered" >JSON.parse(link.data).listIds;</span>
+<span class="cstat-no" title="statement not covered" >          window.location.hash = `${shopPlatform}/listoflists/${listIds.join(',')}/${titleEncoded}`</span>
+        } catch (e) {
+<span class="cstat-no" title="statement not covered" >          console.error('Error opening List of Lists');</span>
+        }
+<span class="cstat-no" title="statement not covered" >        break;</span>
+      default:
+<span class="cstat-no" title="statement not covered" >        console.log('DEFAULT', link);</span>
+    }
+  }
+}
+&nbsp;
+export default F3Links;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Dec 18 2023 16:27:02 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

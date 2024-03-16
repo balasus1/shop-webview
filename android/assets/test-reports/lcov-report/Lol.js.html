@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for Lol.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="prettify.css" />
+    <link rel="stylesheet" href="base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="index.html">All files</a> Lol.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * This component renders a List of Lists. Each list is redered as a 
+ * carousel of covers. Clicking on any list title will open that list. 
+ * Clicking on an item cover will open the item in Native PDP.
+ */
+import React, { Component } from 'react'
+import Spinner from './Spinner'
+import ListCarousel from './ListCarousel'
+import ContainerFiller from "./ContainerFiller";
+import platforms from '../lib/constants/platforms'
+&nbsp;
+import '../../style-dist/components/Lol.css'
+import textReplace from '../lib/i18n';
+import KEY from '../lib/constants/languages/keys';
+<span class="missing-if-branch" title="if path not taken" >I</span>if (window.location.href.match(platforms.epd))
+<span class="cstat-no" title="statement not covered" >  require('../../style-dist/components/Lol.epd.css');</span>
+  require('../../style-dist/loading.epd.css');
+<span class="missing-if-branch" title="if path not taken" >I</span>if (window.location.href.match(platforms.quill))
+<span class="cstat-no" title="statement not covered" >  require('../../style-dist/components/Lol.quill.css');</span>
+  require('../../style-dist/loading.epd.css');
+&nbsp;
+&nbsp;
+class Lol extends Component {
+&nbsp;
+  constructor() {
+    super();
+&nbsp;
+    // Define empty lists to show while loading
+    this.loadingLists = [
+      { title: ' ', description: ' ', eans: [null, null, null, null, null, null] },
+      { title: ' ', description: ' ', eans: [null, null, null, null, null, null] },
+      { title: ' ', description: ' ', eans: [null, null, null, null, null, null] },
+      { title: ' ', description: ' ', eans: [null, null, null, null, null, null] },
+      { title: ' ', description: ' ', eans: [null, null, null, null, null, null] },
+      { title: ' ', description: ' ', eans: [null, null, null, null, null, null] }
+    ];
+    this.isEpd = window.Device.shopPlatform === 'epd' || window.Device.shopPlatform === 'quill';
+  }
+&nbsp;
+  componentDidMount() {
+    //set scroll position
+    var position = sessionStorage.getItem("lolPosition") || 0;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (window.paginationComponent &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.isEpd)</span> {
+      let pageNo = <span class="cstat-no" title="statement not covered" >sessionStorage.getItem("EPDLolPosition") || 1;</span>
+<span class="cstat-no" title="statement not covered" >      window.paginationComponent.gotoPage(pageNo);</span>
+    }
+    else {
+      window.scroll(0, position);
+      let interval = setInterval(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >        if (document.readyState === 'complete') {</span>
+<span class="cstat-no" title="statement not covered" >          clearInterval(interval);</span>
+<span class="cstat-no" title="statement not covered" >          window.scroll(0, position);</span>
+        }
+      }, 500);
+    }
+&nbsp;
+    sessionStorage.removeItem('lolPosition');
+    sessionStorage.removeItem('EPDLolPosition');
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  co</span>mponentWillUnmount() {
+<span class="cstat-no" title="statement not covered" >    sessionStorage.setItem('lolPosition', window.scrollY);</span>
+<span class="cstat-no" title="statement not covered" >    if (window.paginationComponent &amp;&amp; this.isEpd) {</span>
+      let currentPage = <span class="cstat-no" title="statement not covered" >window.paginationComponent.getPageNo();</span>
+<span class="cstat-no" title="statement not covered" >      sessionStorage.setItem('EPDLolPosition', currentPage);</span>
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  ge</span>nerateFillers(data) {
+    let fillers = <span class="cstat-no" title="statement not covered" >[];</span>
+    const NO_ROWS_PER_PAGE = <span class="cstat-no" title="statement not covered" >3;</span>
+<span class="cstat-no" title="statement not covered" >    if(data &amp;&amp; data.length % NO_ROWS_PER_PAGE  !== 0) {</span>
+      let noOfFillers = <span class="cstat-no" title="statement not covered" >NO_ROWS_PER_PAGE - (data.length % NO_ROWS_PER_PAGE);</span>
+<span class="cstat-no" title="statement not covered" >      for (let i = 0; (i &lt; noOfFillers &amp;&amp; noOfFillers &lt; NO_ROWS_PER_PAGE); i++) {</span>
+<span class="cstat-no" title="statement not covered" >        fillers.push(&lt;ContainerFiller key={i} fillContainer="list-carousel" /&gt;);</span>
+      }
+    }
+<span class="cstat-no" title="statement not covered" >    return fillers;</span>
+  }
+  render() {
+    let loading = false;
+    let data = this.props.lists;
+    let spinner = &lt;div/&gt;;
+    const loadingAriaAttribs = {
+      "aria-busy": true, "aria-live":"off"
+    };
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (this.props.isFetching) {
+<span class="cstat-no" title="statement not covered" >      loading = true;</span>
+<span class="cstat-no" title="statement not covered" >      data = this.loadingLists;</span>
+<span class="cstat-no" title="statement not covered" >      spinner = &lt;Spinner /&gt;;</span>
+    }
+    else <span class="missing-if-branch" title="if path not taken" >I</span>if (this.props.isFetchingMore) {
+<span class="cstat-no" title="statement not covered" >      spinner = &lt;Spinner /&gt;</span>
+    }
+    else <span class="missing-if-branch" title="if path not taken" >I</span>if (this.props.lists &amp;&amp; this.props.lists.length === 0) {
+<span class="cstat-no" title="statement not covered" >      return &lt;div className='no-results'&gt;{textReplace(KEY.no_results_found)}&lt;/div&gt;</span>
+    }
+    else {
+      spinner = &lt;React.Fragment&gt;&lt;/React.Fragment&gt;
+    }
+&nbsp;
+    return &lt;div {...(loading ? <span class="branch-0 cbranch-no" title="branch not covered" >loadingAriaAttribs </span>: {"aria-live":"off"})} className={ 'shop-lol' + (loading ? <span class="branch-0 cbranch-no" title="branch not covered" >' loading' </span>: '') }&gt;
+      &lt;div className="lists"&gt;
+        { 
+          data.map((list, i) =&gt; (
+            &lt;ListCarousel key={ i }
+              noEPDSwipe
+              index={ i+1 }
+              loading={ loading }
+              list={ list } 
+              eanData={ this.props.eanData } 
+              showDescription={ true }
+              onCoverClick={ this.props.coverClicked }
+              onListClick={ this.props.listClicked } /&gt;
+          ))
+&nbsp;
+        }
+        {spinner}
+        {this.isEpd &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.generateFillers(data)}</span>
+      &lt;/div&gt;
+    &lt;/div&gt;;
+  }
+}
+&nbsp;
+export default Lol;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Jan 04 2024 21:31:55 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="sorter.js"></script>
+</body>
+</html>

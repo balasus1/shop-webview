@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/script/components/EpdHome.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/script/components</a> EpdHome.js
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*
+* Note: the native code caches this pqge for offline use.
+*/
+import React, { Component } from 'react'
+import Spinner from './Spinner'
+import { fetchF1, fetchRecommendByRecentEan, fetchList } from '../lib/fetch'
+import F1Recommendations from './F1Recommendations'
+import EpdHomeOffline from './EpdHomeOffline'
+import EpdUpgrade from './EpdUpgrade.js'
+import ListCarousel from './ListCarousel'
+import textReplace from '../lib/i18n'
+import KEY from '../lib/constants/languages/keys'
+&nbsp;
+// The below Assembler proxy API can be used, which internally forward all parameters to "http://pnjsrchg.barnesandnoble.com:8083/personalization-service/rest/api/recommendByAlgorithm".
+&nbsp;
+// Request:
+// https://bncs.barnesandnoble.com/bncloud/api/internal/proxy/v1/recommender?requesttype=byEan&amp;eans=9780345547200&amp;customerid=i00qtHVQZe8pqFd1&amp;PROFILEID=717545&amp;device_id=61&amp;recprodrestrict=1&amp;size=20&amp;country=US&amp;retailer=BN2
+&nbsp;
+// Only import the EPD Home styles if this component is rendered. That way
+// they don't interfere with Shop
+<span class="missing-if-branch" title="if path not taken" >I</span>if (window.location.hash.match('device-home')) 
+<span class="cstat-no" title="statement not covered" >  require('../../style-dist/components/EpdHome.epd.css')</span>
+  require('../../style-dist/components/EpdHome.quill.css')
+	
+&nbsp;
+class EpdHome  extends Component {
+&nbsp;
+<span class="fstat-no" title="function not covered" >  co</span>nstructor(props) {
+<span class="cstat-no" title="statement not covered" >    super(props);</span>
+    // State for this component only, not shared with others
+<span class="cstat-no" title="statement not covered" >    this.state = {</span>
+      isFetching: false, // Control the loading animation
+      showNYT: false,
+      isOffline: !window.navigator.onLine
+    }
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  co</span>mponentDidMount(){
+<span class="cstat-no" title="statement not covered" >    window.addEventListener('online', <span class="fstat-no" title="function not covered" >()</span> =&gt; {<span class="cstat-no" title="statement not covered" >console.log('Became online'); <span class="cstat-no" title="statement not covered" ></span>window.location.reload(); </span>});</span>
+<span class="cstat-no" title="statement not covered" >    window.addEventListener('offline', <span class="fstat-no" title="function not covered" >()</span> =&gt; {<span class="cstat-no" title="statement not covered" >console.log('Became offline'); <span class="cstat-no" title="statement not covered" ></span>this.setState({"isOffline": true});}</span>);</span>
+<span class="cstat-no" title="statement not covered" >    this.loadRecommedations();</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  lo</span>adRecommedations() {
+    const device = <span class="cstat-no" title="statement not covered" >this.props.device;</span>
+    const customer = <span class="cstat-no" title="statement not covered" >this.props.customer;</span>
+    // if (this.randomBool()) {
+<span class="cstat-no" title="statement not covered" >    if (true &amp;&amp; !(window.APP_VERSION === '4.9.2' &amp;&amp; (window.location.hash.match('device-home')) &amp;&amp; !this.props.customer.childProfile)) {</span>
+<span class="cstat-no" title="statement not covered" >      this.loadF1({</span>
+        countryCode: customer.country,
+        accountId: customer.accountId,
+        profileId: customer.profileId,
+        productDeviceId: device.productDeviceId
+      });
+    }
+    else {
+<span class="cstat-no" title="statement not covered" >      this.loadBYR({</span>
+        countryCode: customer.country,
+        accountId: customer.accountId,
+        profileId: customer.profileId,
+        productDeviceId: device.productDeviceId,
+        size: 4
+      });
+    }
+<span class="cstat-no" title="statement not covered" >    if (window.location.href.match(/staging/)) {</span>
+<span class="cstat-no" title="statement not covered" >      window.Device.showToast({ message: 'Staging Home version: ' + process.env.REACT_APP_VERSION })</span>
+    }
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  lo</span>adF1(urlParams) {
+    
+    // Load Recommendations Carousel
+    // This data will be cached in case the user views Home offline (native code
+    // does caching to allow the page to be viewed when offline).
+<span class="cstat-no" title="statement not covered" >    this.setState({ isFetching: true });</span>
+<span class="cstat-no" title="statement not covered" >    fetchF1(urlParams, <span class="fstat-no" title="function not covered" >(e</span>rr, resp) =&gt; {</span>
+      
+<span class="cstat-no" title="statement not covered" >      if (err || !resp) {</span>
+<span class="cstat-no" title="statement not covered" >        console.error('Error fetching F1 recommendations.', err);</span>
+<span class="cstat-no" title="statement not covered" >        resp = { eans:[], recommendations:{} };</span>
+      }
+      
+      else {
+<span class="cstat-no" title="statement not covered" >        this.setState({ isFetching: false });</span>
+      }
+&nbsp;
+      const data = <span class="cstat-no" title="statement not covered" >{</span>
+        data: resp.recommendations,
+        eanData: resp.eans
+      };
+<span class="cstat-no" title="statement not covered" >      this.props.setF1(data); </span>// Trigger a redux dispatch
+      /////////////////////////////////////////////////////////////////
+      //
+      // New code
+      //
+<span class="cstat-no" title="statement not covered" >      if (err || !resp || !resp.eans || !resp.recommendations) {</span>
+        const listParams = <span class="cstat-no" title="statement not covered" >Object.assign(urlParams, {</span>
+          category_id: '10000000031', // NYT Bestsellers
+          offset: 0,
+          itemCount: 6 // Might only need 4?
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        fetchList(listParams, <span class="fstat-no" title="function not covered" >(e</span>rr, data) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >          if (err || !data.eans || !data.listData) {</span>
+<span class="cstat-no" title="statement not covered" >            return; </span>// Ignore and give up (show the same thing we would show if we didn't have this carousel)
+          }
+<span class="cstat-no" title="statement not covered" >          data.listData.title = textReplace(KEY.recommended_for_you);</span>
+          const NYTData = <span class="cstat-no" title="statement not covered" >{</span>
+            eanData: data.eans,
+            data: data.listData,
+          };
+          
+<span class="cstat-no" title="statement not covered" >          this.setState({ showNYT: true, NYTData });</span>
+        });
+&nbsp;
+      }
+      //
+      // New code
+      //
+      //////////////////////////////////////////////////////////////////////
+    }, {
+      offlineCache: true,
+      size: 4
+    });
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  lo</span>adBYR(urlParams) {
+&nbsp;
+    // Load Recommendations Carousel
+<span class="cstat-no" title="statement not covered" >    this.setState({ isFetching: true });</span>
+<span class="cstat-no" title="statement not covered" >    fetchRecommendByRecentEan(urlParams, <span class="fstat-no" title="function not covered" >(e</span>rr, resp) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      if (err) {</span>
+<span class="cstat-no" title="statement not covered" >        console.error('Error fetching Because You Read recommendations.');</span>
+<span class="cstat-no" title="statement not covered" >        resp = {eans: []};</span>
+      }
+      else {
+<span class="cstat-no" title="statement not covered" >        this.setState({ isFetching: false });</span>
+      }
+&nbsp;
+      const data = <span class="cstat-no" title="statement not covered" >{</span>
+        data: resp,
+        eanData: {}
+      };
+<span class="cstat-no" title="statement not covered" >      this.props.setBYR(data); </span>// Trigger a redux dispatch
+    });
+  }
+   
+&nbsp;
+<span class="fstat-no" title="function not covered" >  re</span>nder() {
+<span class="cstat-no" title="statement not covered" >    if(!window.shopPermissionEnable) {</span>
+<span class="cstat-no" title="statement not covered" >      return &lt;div&gt;&lt;/div&gt;;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (this.state.isFetching) {</span>
+<span class="cstat-no" title="statement not covered" >      return &lt;div&gt;</span>
+        &lt;Spinner /&gt;
+      &lt;/div&gt;;
+    }
+    else <span class="cstat-no" title="statement not covered" >if (this.state.isOffline) {</span>
+<span class="cstat-no" title="statement not covered" >      return &lt;div&gt;</span>
+        &lt;EpdHomeOffline /&gt;
+      &lt;/div&gt;
+    }
+&nbsp;
+    // Only one of these will have data
+    let data = <span class="cstat-no" title="statement not covered" >this.props.data.f1 !== undefined &amp;&amp; this.props.data.f1.eans ? this.props.data.f1 : {};</span>
+<span class="cstat-no" title="statement not covered" >    data = this.props.data.becauseYouRead &amp;&amp; this.props.data.becauseYouRead.eans ? this.props.data.becauseYouRead : data;</span>
+&nbsp;
+		// We don't want a scrolling carousel. Limit the number of covers shown
+    let carouselData = <span class="cstat-no" title="statement not covered" >Object.assign({}, data);</span>
+<span class="cstat-no" title="statement not covered" >    if (carouselData.eans) {</span>
+<span class="cstat-no" title="statement not covered" >      carouselData.eans = carouselData.eans.slice(0, 4);</span>
+    } 
+<span class="cstat-no" title="statement not covered" >    console.log('window.APP_VERSION EPD Home111',window.APP_VERSION);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (this.state.showNYT === true &amp;&amp; this.state.NYTData) {</span>
+<span class="cstat-no" title="statement not covered" >      console.log('showNYT')</span>
+<span class="cstat-no" title="statement not covered" >      return &lt;div className="epd-home nyt-bestsellsers"&gt;</span>
+        &lt;ListCarousel 
+          loading={ false }
+          index={ 1 }
+          list={ this.state.NYTData.data }
+          eanData={ this.state.NYTData.eanData }
+          onCoverClick={ <span class="fstat-no" title="function not covered" >da</span>ta =&gt; <span class="cstat-no" title="statement not covered" >this.prepareAnalytics('f1-cover', data) </span>} 
+          onListClick={ <span class="fstat-no" title="function not covered" >()</span> =&gt; {/*IGNORE*/} } /&gt;
+      &lt;/div&gt;;
+    }
+    
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		return (</span>
+      &lt;div className="epd-home"&gt;
+      {window.APP_VERSION === '4.9.2' &amp;&amp; (window.location.hash.match('device-home') &amp;&amp; !this.props.customer.childProfile)  ? &lt;EpdUpgrade /&gt; :
+        &lt;F1Recommendations
+          isFetching={ this.state.isFetching }
+          data={ carouselData }
+          eanData={ this.props.eanData }
+          onCoverClick={ <span class="fstat-no" title="function not covered" >da</span>ta =&gt; <span class="cstat-no" title="statement not covered" >this.prepareAnalytics('f1-cover', data) </span>} /&gt;
+      }
+      &lt;/div&gt;
+    );
+  }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  pr</span>epareAnalytics(type, data) {
+<span class="cstat-no" title="statement not covered" >    console.log('CLICK') </span>// TODO
+  }
+&nbsp;
+&nbsp;
+  // More random than Math.random
+<span class="fstat-no" title="function not covered" >  ra</span>ndomBool() {
+    const a = <span class="cstat-no" title="statement not covered" >new Uint8Array(1);</span>
+<span class="cstat-no" title="statement not covered" >    window.crypto.getRandomValues(a);</span>
+<span class="cstat-no" title="statement not covered" >    return a[0] &lt; 127;</span>
+  }
+}
+&nbsp;
+export default EpdHome;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Dec 18 2023 16:27:02 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
