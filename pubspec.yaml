@@ -92,3 +92,20 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+  # To add Linux desktop support to your application, add 'linux'
+  # under 'targets'.
+targets:
+    $default:
+      # Replace `path/to/your/main.dart` with the path to the entry
+      # point of your application.
+      main: path/to/your/main.dart
+    # Configure your app to support Linux desktop.
+    linux:
+      # Specify plugins for Linux.
+      plugin:
+        platforms:
+          # Replace `path/to/your/linux/plugins` with the path to
+          # your Linux-specific plugins.
+          linux:
+            package: path/to/your/linux/plugins
